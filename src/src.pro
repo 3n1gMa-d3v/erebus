@@ -1,10 +1,10 @@
-# SPDX-FileCopyrightText: © 2020 Alias Developers
+# SPDX-FileCopyrightText: © 2020 Phantom Developers
 # SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 #
 # SPDX-License-Identifier: MIT
 
 TEMPLATE = app
-TARGET = Alias
+TARGET = Phantom
 CONFIG += c++1z
 
 DEFINES += DEBUGGER_CONNECTED

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!-- SPDX-FileCopyrightText: © 2020 Alias Developers -->
+<!-- SPDX-FileCopyrightText: © 2020 Phantom Developers -->
 <!-- SPDX-FileCopyrightText: © 2016 SpectreCoin Developers -->
 <!-- SPDX-License-Identifier: MIT -->
 <plist version="1.0">
@@ -8,13 +8,13 @@
         <key>CFBundleName</key>
         <string>${MACOSX_BUNDLE_BUNDLE_NAME}</string>
         <key>CFBundleExecutable</key>
-        <string>Alias</string>
+        <string>Phantom</string>
         <key>CFBundleGetInfoString</key>
         <string>${MACOSX_BUNDLE_INFO_STRING}</string>
         <key>CFBundleDisplayName</key>
-        <string>Alias</string>
+        <string>Phantom</string>
         <key>CFBundleIconFile</key>
-        <string>alias-app.icns</string>
+        <string>phantom-app.icns</string>
         <key>CFBundleIdentifier</key>
         <string>${MACOSX_BUNDLE_GUI_IDENTIFIER}</string>
         <key>CFBundlePackageType</key>

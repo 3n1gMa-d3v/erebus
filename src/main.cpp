@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: © 2020 Alias Developers
+// SPDX-FileCopyrightText: © 2020 Phantom Developers
 // SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 // SPDX-FileCopyrightText: © 2009 Bitcoin Developers
 // SPDX-FileCopyrightText: © 2009 Satoshi Nakamoto
@@ -88,7 +88,7 @@ std::vector<CMerkleBlockIncoming> vIncomingMerkleBlocks; // blocks with txns att
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Alias Signed Message:\n";
+const string strMessageMagic = "Phantom Signed Message:\n";
 
 // Settings
 int64_t nTransactionFee = nMinTxFee;
@@ -4218,7 +4218,7 @@ bool CheckDiskSpace(uint64_t nAdditionalBytes)
         string strMessage = _("Warning: Disk space is low!");
         strMiscWarning = strMessage;
         LogPrintf("*** %s\n", strMessage.c_str());
-        uiInterface.ThreadSafeMessageBox(strMessage, "Alias", CClientUIInterface::BTN_OK | CClientUIInterface::ICON_WARNING | CClientUIInterface::MODAL);
+        uiInterface.ThreadSafeMessageBox(strMessage, "Phantom", CClientUIInterface::BTN_OK | CClientUIInterface::ICON_WARNING | CClientUIInterface::MODAL);
         StartShutdown();
         return false;
     }
@@ -4534,7 +4534,7 @@ struct CImportingNow
 
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
-    RenameThread("alias-loadblk");
+    RenameThread("phantom-loadblk");
     CImportingNow imp;
 
     // -loadblock=

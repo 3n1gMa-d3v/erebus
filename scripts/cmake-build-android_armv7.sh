@@ -1,13 +1,13 @@
 #!/bin/bash
 # ===========================================================================
 #
-# SPDX-FileCopyrightText: © 2020 Alias Developers
+# SPDX-FileCopyrightText: © 2020 Phantom Developers
 # SPDX-FileCopyrightText: © 2019 SpectreCoin Developers
 # SPDX-License-Identifier: MIT
 #
 # Created: 2019-10-22 HLXEasy
 #
-# This script can be used to build Alias for Android using CMake
+# This script can be used to build Phantom for Android using CMake
 #
 # ===========================================================================
 
@@ -81,7 +81,7 @@ BUILD_DIR=cmake-build-cmdline-android${ANDROID_API}_${ANDROID_ARCH}
 helpMe() {
     echo "
 
-    Helper script to build Alias wallet and daemon using CMake.
+    Helper script to build Phantom wallet and daemon using CMake.
     Required library archives will be downloaded once and will be used
     on subsequent builds. This includes also Android NDK.
 
@@ -97,12 +97,12 @@ helpMe() {
         the script determines the available cores on this machine.
         Not used for build steps of external libraries like OpenSSL or
         BerkeleyDB.
-    -d  Do _not_ build Alias but only the dependencies. Used to prepare
+    -d  Do _not_ build Phantom but only the dependencies. Used to prepare
         build slaves a/o builder docker images.
     -f  Perform fullbuild by cleanup all generated data from previous
         build runs.
     -g  Build GUI (Qt) components
-    -o  Perfom only Alias fullbuild. Only the alias buildfolder
+    -o  Perfom only Phantom fullbuild. Only the phantom buildfolder
         will be wiped out before. All other folders stay in place.
     -p <path-to-build-and-install-dependencies-directory>
         Build/install the required dependencies onto the given directory.
@@ -139,7 +139,7 @@ checkOpenSSLArchive() {
 }
 
 # For OpenSSL we're using a fork of https://github.com/viaduck/openssl-cmake
-# with some slight modifications for Alias
+# with some slight modifications for Phantom
 checkOpenSSLClone() {
     local currentDir=$(pwd)
     cd ${ownLocation}/../external
@@ -149,7 +149,7 @@ checkOpenSSLClone() {
         git pull --prune
     else
         info " -> Cloning openssl-cmake"
-        git clone --branch alias https://github.com/aliascash/openssl-cmake.git openssl-cmake
+        git clone --branch phantom https://github.com/3n1gMa-d3v/openssl-cmake.git openssl-cmake
     fi
     cd "${currentDir}"
 }
@@ -933,7 +933,7 @@ fi
 FULLBUILD=false
 ENABLE_GUI=false
 ENABLE_GUI_PARAMETERS='OFF'
-BUILD_ONLY_ALIAS=false
+BUILD_ONLY_PHM=false
 BUILD_ONLY_DEPENDENCIES=false
 WITH_TOR=false
 GIVEN_DEPENDENCIES_BUILD_DIR=''
@@ -948,7 +948,7 @@ while getopts a:c:dfgop:th? option; do
         ENABLE_GUI=true
         ENABLE_GUI_PARAMETERS="ON -DQT_CMAKE_MODULE_PATH=${ANDROID_QT_LIBRARYDIR}/cmake"
         ;;
-    o) BUILD_ONLY_ALIAS=true ;;
+    o) BUILD_ONLY_PHM=true ;;
     p) GIVEN_DEPENDENCIES_BUILD_DIR="${OPTARG}" ;;
     t) WITH_TOR=true ;;
     h | ?) helpMe && exit 0 ;;
@@ -956,7 +956,7 @@ while getopts a:c:dfgop:th? option; do
     esac
 done
 
-# Go to alias-wallet repository root directory
+# Go to phantom-wallet repository root directory
 cd ..
 
 # ============================================================================
@@ -1033,20 +1033,20 @@ fi
 
 # ============================================================================
 # Dependencies are ready. Go ahead with the main project
-ALIAS_BUILD_DIR=${ownLocation}/../${BUILD_DIR}/aliaswallet
-if [[ ! -d ${ALIAS_BUILD_DIR} ]]; then
+PHM_BUILD_DIR=${ownLocation}/../${BUILD_DIR}/phantomwallet
+if [[ ! -d ${PHM_BUILD_DIR} ]]; then
     info ""
-    info "Creating Alias build directory ${ALIAS_BUILD_DIR}"
-    mkdir -p "${ALIAS_BUILD_DIR}"
+    info "Creating Phantom build directory ${PHM_BUILD_DIR}"
+    mkdir -p "${PHM_BUILD_DIR}"
     info " -> Done"
 fi
-cd "${ALIAS_BUILD_DIR}" || die 1 "Unable to cd into Alias build directory '${ALIAS_BUILD_DIR}'"
+cd "${PHM_BUILD_DIR}" || die 1 "Unable to cd into Phantom build directory '${PHM_BUILD_DIR}'"
 
-# Update $ALIAS_BUILD_DIR with full path
-ALIAS_BUILD_DIR=$(pwd)
+# Update $PHM_BUILD_DIR with full path
+PHM_BUILD_DIR=$(pwd)
 
 # If requested, cleanup leftovers from previous build
-if [[ ${FULLBUILD} = true ]] || [[ ${BUILD_ONLY_ALIAS} = true ]]; then
+if [[ ${FULLBUILD} = true ]] || [[ ${BUILD_ONLY_PHM} = true ]]; then
     info ""
     info "Cleanup leftovers from previous build run"
     rm -rf ./*
@@ -1054,7 +1054,7 @@ if [[ ${FULLBUILD} = true ]] || [[ ${BUILD_ONLY_ALIAS} = true ]]; then
 fi
 
 info ""
-info "Generating Alias build configuration"
+info "Generating Phantom build configuration"
 read -r -d '' cmd <<EOM
 cmake \
     -DANDROID=1 \
@@ -1094,7 +1094,7 @@ EOM
 # Finalize build cmd
 read -r -d '' cmd <<EOM
 ${cmd} \
-    ${ALIAS_BUILD_DIR}/../..
+    ${PHM_BUILD_DIR}/../..
 EOM
 
 echo "=============================================================================="

@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: © 2020 Alias Developers
+// SPDX-FileCopyrightText: © 2020 Phantom Developers
 // SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 // SPDX-FileCopyrightText: © 2011 Bitcoin Developers
 //
@@ -354,11 +354,11 @@ QString TransactionTableModel::formatTxStatus(const TransactionRecord *wtx) cons
         break;
     case TransactionStatus::MaturesWarning:
         status = tr("Orphan %1 stake, block was not received by any other nodes and will probably not be accepted!").
-                arg(wtx->currency == PRIVATE ? "ALIAS (private)" : "ALIAS (public)");;
+                arg(wtx->currency == PRIVATE ? "PHM (private)" : "PHM (public)");;
         break;
     case TransactionStatus::NotAccepted:
         status = tr("Orphan %1 stake, someone else submitted the block before you.").
-                arg(wtx->currency == PRIVATE ? "ALIAS (private)" : "ALIAS (public)");
+                arg(wtx->currency == PRIVATE ? "PHM (private)" : "PHM (public)");
         break;
     }
 

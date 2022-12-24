@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: © 2020 Alias Developers
+// SPDX-FileCopyrightText: © 2020 Phantom Developers
 // SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 // SPDX-FileCopyrightText: © 2010 Satoshi Nakamoto
 // SPDX-FileCopyrightText: © 2009 Bitcoin Developers
@@ -176,10 +176,10 @@ Value checkkernel(const Array& params, bool fHelp)
     bool fCreateBlockTemplate = params.size() > 1 ? params[1].get_bool() : false;
 
     if (vNodes.empty())
-        throw JSONRPCError(-9, "Alias is not connected!");
+        throw JSONRPCError(-9, "Phantom is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(-10, "Alias is downloading blocks...");
+        throw JSONRPCError(-10, "Phantom is downloading blocks...");
 
     COutPoint kernel;
     CBlockIndex* pindexPrev = pindexBest;
@@ -257,10 +257,10 @@ Value getworkex(const Array& params, bool fHelp)
         );
 
     if (vNodes.empty())
-        throw JSONRPCError(-9, "Alias is not connected!");
+        throw JSONRPCError(-9, "Phantom is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(-10, "Alias is downloading blocks...");
+        throw JSONRPCError(-10, "Phantom is downloading blocks...");
 
     if (pindexBest->nHeight >= Params().LastPOWBlock())
         throw JSONRPCError(RPC_MISC_ERROR, "No more PoW blocks");
@@ -393,10 +393,10 @@ Value getwork(const Array& params, bool fHelp)
         throw JSONRPCError(RPC_MISC_ERROR, "Not running as a full node!");
 
     if (vNodes.empty())
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Alias is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Phantom is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Alias is downloading blocks...");
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Phantom is downloading blocks...");
 
     if (pindexBest->nHeight >= Params().LastPOWBlock())
         throw JSONRPCError(RPC_MISC_ERROR, "No more PoW blocks");
@@ -537,10 +537,10 @@ Value getblocktemplate(const Array& params, bool fHelp)
         throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid mode");
 
     if (vNodes.empty())
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Alias is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Phantom is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Alias is downloading blocks...");
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Phantom is downloading blocks...");
 
     if (pindexBest->nHeight >= Params().LastPOWBlock())
         throw JSONRPCError(RPC_MISC_ERROR, "No more PoW blocks");

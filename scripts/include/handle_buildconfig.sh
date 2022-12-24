@@ -1,7 +1,7 @@
 #!/bin/bash
 # ===========================================================================
 #
-# SPDX-FileCopyrightText: © 2020 Alias Developers
+# SPDX-FileCopyrightText: © 2020 Phantom Developers
 # SPDX-FileCopyrightText: © 2019 SpectreCoin Developers
 # SPDX-License-Identifier: MIT
 #
@@ -113,17 +113,17 @@ info "Build configuration:"
 info " -> Loading general build configuration"
 . .buildconfig
 
-if [ -e "${HOME}/.alias_buildconfig" ] ; then
+if [ -e "${HOME}/.phantom_buildconfig" ] ; then
     info " -> Loading personal build configuration"
     # Personal build config found, so load it
-    . ${HOME}/.alias_buildconfig
+    . ${HOME}/.phantom_buildconfig
 else
     # Personal build config not existing, create it with all entries commented
     info ""
     warning " -> Personal build configuration not found, creating it now!"
-    sed "s/^\([a-zA-Z]\)/#\1/g" .buildconfig > ${HOME}/.alias_buildconfig
+    sed "s/^\([a-zA-Z]\)/#\1/g" .buildconfig > ${HOME}/.phantom_buildconfig
     info ""
-    info "If you like to modify '${HOME}/.alias_buildconfig',"
+    info "If you like to modify '${HOME}/.phantom_buildconfig',"
     info "you should break script execution now (Ctrl-C)"
     for i in $(seq 10 -1 0) ; do
         info "${i}"

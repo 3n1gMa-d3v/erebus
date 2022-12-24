@@ -1,7 +1,7 @@
 #!/bin/bash
 # ===========================================================================
 #
-# SPDX-FileCopyrightText: © 2020 Alias Developers
+# SPDX-FileCopyrightText: © 2020 Phantom Developers
 # SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 # SPDX-License-Identifier: MIT
 #
@@ -18,7 +18,7 @@ ownLocation="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd ${ownLocation}
 . ./include/helpers_console.sh
 
-# Go to Aliaswallet repository root directory
+# Go to Phantomwallet repository root directory
 cd ..
 
 if [[ -z "${MACOSX_DEPLOYMENT_TARGET}" ]] ; then

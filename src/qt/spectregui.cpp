@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: © 2020 Alias Developers
+// SPDX-FileCopyrightText: © 2020 Phantom Developers
 // SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 // SPDX-FileCopyrightText: © 2014 ShadowCoin Developers
 //
@@ -149,10 +149,10 @@ SpectreGUI::SpectreGUI(QWebChannel *webChannel, QWidget *parent):
     addJavascriptObjects(QStringLiteral("bridge"), bridge);
 
     resize(1280, 720);
-    setWindowTitle(tr("Alias") + " - " + tr("Client") + " - " + tr(CLIENT_PLAIN_VERSION.c_str()));
+    setWindowTitle(tr("Phantom") + " - " + tr("Client") + " - " + tr(CLIENT_PLAIN_VERSION.c_str()));
 #ifndef Q_OS_MAC
-    qApp->setWindowIcon(QIcon(":icons/alias-app"));
-    setWindowIcon(QIcon(":icons/alias-app"));
+    qApp->setWindowIcon(QIcon(":icons/phantom-app"));
+    setWindowIcon(QIcon(":icons/phantom-app"));
 #else
     setUnifiedTitleAndToolBarOnMac(true);
     QApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
@@ -194,11 +194,11 @@ unsigned short const onion_port = 9089;
 
 void SpectreGUI::loadIndex(QString webSocketToken) {
 #ifdef Q_OS_WIN
-    QFile html("C:/alias-wallet-ui/index.html");
-    QFileInfo webchannelJS("C:/alias-wallet-ui/qtwebchannel/qwebchannel.js");
+    QFile html("C:/phantom-wallet-ui/index.html");
+    QFileInfo webchannelJS("C:/phantom-wallet-ui/qtwebchannel/qwebchannel.js");
 #else
-    QFile html("/opt/alias-wallet-ui/index.html");
-    QFileInfo webchannelJS("/opt/alias-wallet-ui/qtwebchannel/qwebchannel.js");
+    QFile html("/opt/phantom-wallet-ui/index.html");
+    QFileInfo webchannelJS("/opt/phantom-wallet-ui/qtwebchannel/qwebchannel.js");
 #endif
     // Check if external qwebchannel exists and if not, create it! (this is how you get the right qwebchannel.js)
     if (html.exists() && !webchannelJS.exists()) {
@@ -314,16 +314,16 @@ void SpectreGUI::createActions()
     quitAction->setToolTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(QIcon(":/icons/spectre"), tr("&About Alias"), this);
-    aboutAction->setToolTip(tr("Show information about Alias"));
+    aboutAction = new QAction(QIcon(":/icons/spectre"), tr("&About Phantom"), this);
+    aboutAction->setToolTip(tr("Show information about Phantom"));
     aboutAction->setMenuRole(QAction::AboutRole);
     aboutQtAction = new QAction(QIcon(":/trolltech/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
     aboutQtAction->setToolTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
-    optionsAction->setToolTip(tr("Modify configuration options for Alias"));
+    optionsAction->setToolTip(tr("Modify configuration options for Phantom"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
-    toggleHideAction = new QAction(QIcon(":/icons/alias-app"), tr("&Show / Hide"), this);
+    toggleHideAction = new QAction(QIcon(":/icons/phantom-app"), tr("&Show / Hide"), this);
     encryptWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Encrypt Wallet..."), this);
     encryptWalletAction->setToolTip(tr("Encrypt or decrypt wallet"));
     encryptWalletAction->setCheckable(true);
@@ -402,7 +402,7 @@ void SpectreGUI::setClientModel(ClientModel *clientModel)
             if (sMode.length() > 0)
                 sMode[0] = sMode[0].toUpper();
 
-            setWindowTitle(tr("Alias") + " - " + tr("Wallet") + ", " + sMode);
+            setWindowTitle(tr("Phantom") + " - " + tr("Wallet") + ", " + sMode);
         };
 
         // Replace some strings and icons, when using the testnet
@@ -410,15 +410,15 @@ void SpectreGUI::setClientModel(ClientModel *clientModel)
         {
             setWindowTitle(windowTitle() + QString(" ") + tr("[testnet]"));
 #ifndef Q_OS_MAC
-            qApp->setWindowIcon(QIcon(":icons/alias-app_testnet"));
-            setWindowIcon(QIcon(":icons/alias-app_testnet"));
+            qApp->setWindowIcon(QIcon(":icons/phantom-app_testnet"));
+            setWindowIcon(QIcon(":icons/phantom-app_testnet"));
 #else
-            MacDockIconHandler::instance()->setIcon(QIcon(":icons/alias-app_testnet"));
+            MacDockIconHandler::instance()->setIcon(QIcon(":icons/phantom-app_testnet"));
 #endif
             if(trayIcon)
             {
-                trayIcon->setToolTip(tr("Alias") + QString(" ") + tr("[testnet]"));
-                trayIcon->setIcon(QIcon(":/icons/alias-app_testnet"));
+                trayIcon->setToolTip(tr("Phantom") + QString(" ") + tr("[testnet]"));
+                trayIcon->setIcon(QIcon(":/icons/phantom-app_testnet"));
                 toggleHideAction->setIcon(QIcon(":/icons/toolbar_testnet"));
             }
 
@@ -477,8 +477,8 @@ void SpectreGUI::createTrayIcon()
     trayIcon = new QSystemTrayIcon(this);
     trayIconMenu = new QMenu(this);
     trayIcon->setContextMenu(trayIconMenu);
-    trayIcon->setToolTip(tr("Alias"));
-    trayIcon->setIcon(QIcon(":/icons/alias-app"));
+    trayIcon->setToolTip(tr("Phantom"));
+    trayIcon->setIcon(QIcon(":/icons/phantom-app"));
     connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
           this, SLOT(trayIconActivated(QSystemTrayIcon::ActivationReason)));
     trayIcon->show();
@@ -559,7 +559,7 @@ void SpectreGUI::setNumConnections(int count)
         connectionIconText.removeClass("none");
     }
 
-    QString dataTitle = tr("%n active connection(s) to Alias network", "", count);
+    QString dataTitle = tr("%n active connection(s) to Phantom network", "", count);
     connectionIcon.setAttribute("data-title", dataTitle);
 }
 
@@ -787,7 +787,7 @@ void SpectreGUI::askFee(qint64 nFeeRequired, bool *payFee)
     QString strMessage =
         tr("To process this transaction, a fee of %1 will be charged to support the network. "
            "Do you want to submit the transaction?").arg(
-                BitcoinUnits::formatWithUnit(BitcoinUnits::ALIAS, nFeeRequired));
+                BitcoinUnits::formatWithUnit(BitcoinUnits::PHM, nFeeRequired));
     QMessageBox::StandardButton retval = QMessageBox::question(
           this, tr("Confirm transaction fee"), strMessage,
           QMessageBox::Yes|QMessageBox::Cancel, QMessageBox::Yes);
@@ -861,7 +861,7 @@ void SpectreGUI::dropEvent(QDropEvent *event)
         if (nValidUrisFound)
             bridge->triggerElement("#navitems a[href=#send]", "click");
         else
-            notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Alias address or malformed URI parameters."));
+            notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Phantom address or malformed URI parameters."));
     }
 
     event->acceptProposedAction();
@@ -883,7 +883,7 @@ void SpectreGUI::handleURI(QString strURI)
         showNormalIfMinimized();
     }
     else
-        notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Alias address or malformed URI parameters."));
+        notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Phantom address or malformed URI parameters."));
 }
 
 void SpectreGUI::setEncryptionStatus(int status)

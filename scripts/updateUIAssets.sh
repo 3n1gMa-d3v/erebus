@@ -1,7 +1,7 @@
 #!/bin/bash
 # ===========================================================================
 #
-# SPDX-FileCopyrightText: © 2020 Alias Developers
+# SPDX-FileCopyrightText: © 2020 Phantom Developers
 # SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 # SPDX-License-Identifier: MIT
 #
@@ -19,13 +19,13 @@ ownLocation="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd ${ownLocation}
 . ./include/helpers_console.sh
 
-# Go to Aliaswallet repository root directory
+# Go to Phantomwallet repository root directory
 cd ..
 
 _init
 
 if [[ -z "$1" ]] ; then
-    downloadURL=https://ci.alias.cash/job/Alias/job/alias-wallet-ui/job/Aliaswallet-UI/lastSuccessfulBuild/artifact/alias-wallet-ui-assets.tgz
+    downloadURL=https://ci.phantom.cash/job/Phantom/job/phantom-wallet-ui/job/Phantomwallet-UI/lastSuccessfulBuild/artifact/phantom-wallet-ui-assets.tgz
 else
     downloadURL=$1
 fi

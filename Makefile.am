@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: © 2020 Alias Developers
+# SPDX-FileCopyrightText: © 2020 Phantom Developers
 # SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 #
 # SPDX-License-Identifier: MIT
@@ -13,12 +13,12 @@ endif
 export CC CXX AR LD
 SUBDIRS = db4.8/build_unix leveldb src
 
-Aliaswallet.app: all-am
-	mkdir -p Aliaswallet.app/Contents/{MacOS,Resources}
-	cp Info.plist Aliaswallet.app/Contents
-	cp aliaswallet.icns Aliaswallet.app/Contents/Resources
-	cp src/aliaswallet Aliaswallet.app/Contents/MacOS/Aliaswallet
-	echo "APPL????" > Aliaswallet.app/Contents/PkgInfo
-	@MACDEPLOYQT@ Aliaswallet.app @MACDEPLOYQT_LIBPATH@
+Phantomwallet.app: all-am
+	mkdir -p Phantomwallet.app/Contents/{MacOS,Resources}
+	cp Info.plist Phantomwallet.app/Contents
+	cp phantomwallet.icns Phantomwallet.app/Contents/Resources
+	cp src/phantomwallet Phantomwallet.app/Contents/MacOS/Phantomwallet
+	echo "APPL????" > Phantomwallet.app/Contents/PkgInfo
+	@MACDEPLOYQT@ Phantomwallet.app @MACDEPLOYQT_LIBPATH@
 
-.PHONY: Aliaswallet.app
+.PHONY: Phantomwallet.app

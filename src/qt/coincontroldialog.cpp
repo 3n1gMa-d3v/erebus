@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: © 2020 Alias Developers
+// SPDX-FileCopyrightText: © 2020 Phantom Developers
 // SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 // SPDX-FileCopyrightText: © 2009 Bitcoin Developers
 //
@@ -535,7 +535,7 @@ void CoinControlDialog::updateLabels(WalletModel *model, QDialog *dialog, Spectr
     } else
     {
         // actually update labels
-        int nDisplayUnit = BitcoinUnits::ALIAS;
+        int nDisplayUnit = BitcoinUnits::PHM;
         if (model && model->getOptionsModel())
             nDisplayUnit = model->getOptionsModel()->getDisplayUnit();
 
@@ -601,7 +601,7 @@ void CoinControlDialog::updateView()
     QFlags<Qt::ItemFlag> flgCheckbox=Qt::ItemIsSelectable | Qt::ItemIsEnabled | Qt::ItemIsUserCheckable;
     QFlags<Qt::ItemFlag> flgTristate=Qt::ItemIsSelectable | Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsTristate;
 
-    int nDisplayUnit = BitcoinUnits::ALIAS;
+    int nDisplayUnit = BitcoinUnits::PHM;
     if (model && model->getOptionsModel())
         nDisplayUnit = model->getOptionsModel()->getDisplayUnit();
 

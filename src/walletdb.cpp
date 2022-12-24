@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: © 2020 Alias Developers
+// SPDX-FileCopyrightText: © 2020 Phantom Developers
 // SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 // SPDX-FileCopyrightText: © 2014 ShadowCoin Developers
 // SPDX-FileCopyrightText: © 2014 BlackCoin Developers
@@ -669,7 +669,7 @@ DBErrors CWalletDB::LoadWallet(CWallet* pwallet, int& oldWalletVersion, std::fun
     }
 
     // Add Development Contribution Address to address book
-    pwallet->mapAddressBook[CBitcoinAddress(Params().GetDevContributionAddress()).Get()] = "Alias Foundation";
+    pwallet->mapAddressBook[CBitcoinAddress(Params().GetDevContributionAddress()).Get()] = "Phantom Foundation";
 
     if (wss.fAnyUnordered)
         result = ReorderTransactions(pwallet);

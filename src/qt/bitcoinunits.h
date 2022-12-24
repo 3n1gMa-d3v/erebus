@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: © 2020 Alias Developers
+// SPDX-FileCopyrightText: © 2020 Phantom Developers
 // SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 // SPDX-FileCopyrightText: © 2009 Bitcoin Developers
 //
@@ -25,10 +25,10 @@ public:
      */
     enum Unit
     {
-        ALIAS,
-        mALIAS,
-        uALIAS,
-        satALIAS
+        PHM,
+        mPHM,
+        uPHM,
+        satPHM
     };
 
     //! @name Static API

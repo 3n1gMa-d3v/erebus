@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: © 2020 Alias Developers
+# SPDX-FileCopyrightText: © 2020 Phantom Developers
 # SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 #
 # SPDX-License-Identifier: MIT
@@ -6,8 +6,8 @@
 [main]
 host = https://www.transifex.com
 
-[alias-wallet.alias_qt]
-file_filter = src/qt/locale/alias_<lang>.ts
-source_file = src/qt/locale/alias_en.ts
+[phantom-wallet.phantom_qt]
+file_filter = src/qt/locale/phantom_<lang>.ts
+source_file = src/qt/locale/phantom_en.ts
 source_lang = en
 type = QT

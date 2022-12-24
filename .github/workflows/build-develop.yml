@@ -12,7 +12,7 @@ jobs:
     outputs:
       upload_url: ${{ steps.create_release.outputs.url }}
       github_sha_short: ${{ steps.slug.outputs.sha8 }}
-      alias_release: ${{ steps.determine_release.outputs.alias_release }}
+      phantom_release: ${{ steps.determine_release.outputs.phantom_release }}
     steps:
       - uses: actions/checkout@v1
       - name: Get short SHA
@@ -21,17 +21,17 @@ jobs:
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d %H:%M:%S')"
-      - name: Set Alias release/tag name
+      - name: Set Phantom release/tag name
         id: determine_release
         run: |
-          echo "::set-output name=alias_release::Build${{ github.run_number }}"
+          echo "::set-output name=phantom_release::Build${{ github.run_number }}"
 
       # First create the plain release, so the upload URL could be exported
       - name: Create release
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ steps.determine_release.outputs.alias_release }}
+          tag_name: ${{ steps.determine_release.outputs.phantom_release }}
           draft: false
           prerelease: false
           target_commitish: "develop"
@@ -42,7 +42,7 @@ jobs:
         id: create_release_develop
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ steps.determine_release.outputs.alias_release }}
+          tag_name: ${{ steps.determine_release.outputs.phantom_release }}
           name: "Continuous build #${{ github.run_number }}"
           body: |
             Build #${{ github.run_number }} from ${{ steps.date.outputs.date }}
@@ -73,21 +73,21 @@ jobs:
           --build-arg BUILD_THREADS=2
           --build-arg GITHUB_CI_TOKEN=${{ secrets.GITHUB_TOKEN }}
           --build-arg GIT_COMMIT=${{ needs.prepareRelease.outputs.github_sha_short }}
-          --build-arg ALIAS_RELEASE=${{ needs.prepareRelease.outputs.alias_release }}
+          --build-arg PHM_RELEASE=${{ needs.prepareRelease.outputs.phantom_release }}
           --build-arg REPLACE_EXISTING_ARCHIVE=--replace
           .
         env:
           GITHUB_CI_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   # ==========================================================================
-  # Build Ubuntu 20.04 version, which is also base for Alias Docker image
+  # Build Ubuntu 20.04 version, which is also base for Phantom Docker image
   # This steps is followed by the Docker image build
   buildLinuxBinariesAlsoForDockerImage:
     runs-on: ubuntu-latest
     needs: prepareRelease
     outputs:
       github_sha_short: ${{ needs.prepareRelease.outputs.github_sha_short }}
-      alias_release: ${{ needs.prepareRelease.outputs.alias_release }}
+      phantom_release: ${{ needs.prepareRelease.outputs.phantom_release }}
     steps:
       - uses: actions/checkout@v2
         with:
@@ -100,7 +100,7 @@ jobs:
           --build-arg BUILD_THREADS=2
           --build-arg GITHUB_CI_TOKEN=${{ secrets.GITHUB_TOKEN }}
           --build-arg GIT_COMMIT=${{ needs.prepareRelease.outputs.github_sha_short }}
-          --build-arg ALIAS_RELEASE=${{ needs.prepareRelease.outputs.alias_release }}
+          --build-arg PHM_RELEASE=${{ needs.prepareRelease.outputs.phantom_release }}
           --build-arg REPLACE_EXISTING_ARCHIVE=--replace
           .
         env:
@@ -129,7 +129,7 @@ jobs:
           --build-arg BUILD_THREADS=2
           --build-arg GITHUB_CI_TOKEN=${{ secrets.GITHUB_TOKEN }}
           --build-arg GIT_COMMIT=${{ needs.prepareRelease.outputs.github_sha_short }}
-          --build-arg ALIAS_RELEASE=${{ needs.prepareRelease.outputs.alias_release }}
+          --build-arg PHM_RELEASE=${{ needs.prepareRelease.outputs.phantom_release }}
           --build-arg REPLACE_EXISTING_ARCHIVE=--replace
           .
         env:
@@ -167,7 +167,7 @@ jobs:
         with:
           path: |
             ${{ github.workspace }}/cmake-build-cmdline-mac/*
-            !${{ github.workspace }}/cmake-build-cmdline-mac/aliaswallet
+            !${{ github.workspace }}/cmake-build-cmdline-mac/phantomwallet
             ~/Archives/Tor/Tor.libraries.MacOS.zip
           key: ${{ runner.os }}-${{ env.cache-name }}
 
@@ -178,17 +178,17 @@ jobs:
 
       - name: Create MacOS dmg sha256 checksum file
         run: |
-          shasum -a 256 ${{ github.workspace }}/cmake-build-cmdline-mac/aliaswallet/Alias.dmg | awk '{ print $1 }' > ${{ github.workspace }}/cmake-build-cmdline-mac/aliaswallet/Alias.sha256
-          cat ${{ github.workspace }}/cmake-build-cmdline-mac/aliaswallet/Alias.sha256
+          shasum -a 256 ${{ github.workspace }}/cmake-build-cmdline-mac/phantomwallet/Phantom.dmg | awk '{ print $1 }' > ${{ github.workspace }}/cmake-build-cmdline-mac/phantomwallet/Phantom.sha256
+          cat ${{ github.workspace }}/cmake-build-cmdline-mac/phantomwallet/Phantom.sha256
 
       - name: Upload MacOS Build
         id: upload-release-asset
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ${{ github.workspace }}/cmake-build-cmdline-mac/aliaswallet/Alias.dmg
-          asset_name: Alias-${{ needs.prepareRelease.outputs.alias_release }}-${{ needs.prepareRelease.outputs.github_sha_short }}-Mac.dmg
-          tag: ${{ needs.prepareRelease.outputs.alias_release }}
+          file: ${{ github.workspace }}/cmake-build-cmdline-mac/phantomwallet/Phantom.dmg
+          asset_name: Phantom-${{ needs.prepareRelease.outputs.phantom_release }}-${{ needs.prepareRelease.outputs.github_sha_short }}-Mac.dmg
+          tag: ${{ needs.prepareRelease.outputs.phantom_release }}
           overwrite: true
 
       - name: Upload MacOS checksum file
@@ -196,9 +196,9 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ${{ github.workspace }}/cmake-build-cmdline-mac/aliaswallet/Alias.sha256
-          asset_name: Alias-${{ needs.prepareRelease.outputs.alias_release }}-${{ needs.prepareRelease.outputs.github_sha_short }}-Mac.sha256
-          tag: ${{ needs.prepareRelease.outputs.alias_release }}
+          file: ${{ github.workspace }}/cmake-build-cmdline-mac/phantomwallet/Phantom.sha256
+          asset_name: Phantom-${{ needs.prepareRelease.outputs.phantom_release }}-${{ needs.prepareRelease.outputs.github_sha_short }}-Mac.sha256
+          tag: ${{ needs.prepareRelease.outputs.phantom_release }}
           overwrite: true
 
   # ==========================================================================
@@ -209,7 +209,7 @@ jobs:
     outputs:
       upload_url: ${{ needs.prepareRelease.outputs.upload_url }}
       github_sha_short: ${{ needs.prepareRelease.outputs.github_sha_short }}
-      alias_release: ${{ needs.prepareRelease.outputs.alias_release }}
+      phantom_release: ${{ needs.prepareRelease.outputs.phantom_release }}
     steps:
       - uses: actions/checkout@v2
         with:
@@ -240,19 +240,19 @@ jobs:
 
       - name: Create zip archive and sha256 checksum
         run: |
-          powershell Compress-Archive build/delivery/Alias Alias.zip
-          powershell "(Get-FileHash Alias.zip).Hash > Alias.sha256"
-          powershell "(Get-Content Alias.sha256) | Out-File Alias.sha256 -Encoding ascii"
-          type Alias.sha256
+          powershell Compress-Archive build/delivery/Phantom Phantom.zip
+          powershell "(Get-FileHash Phantom.zip).Hash > Phantom.sha256"
+          powershell "(Get-Content Phantom.sha256) | Out-File Phantom.sha256 -Encoding ascii"
+          type Phantom.sha256
 
       - name: Upload Windows Build
         id: upload-release-asset
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ${{ github.workspace }}/Alias.zip
-          asset_name: Alias-${{ needs.prepareRelease.outputs.alias_release }}-${{ needs.prepareRelease.outputs.github_sha_short }}-Win64.zip
-          tag: ${{ needs.prepareRelease.outputs.alias_release }}
+          file: ${{ github.workspace }}/Phantom.zip
+          asset_name: Phantom-${{ needs.prepareRelease.outputs.phantom_release }}-${{ needs.prepareRelease.outputs.github_sha_short }}-Win64.zip
+          tag: ${{ needs.prepareRelease.outputs.phantom_release }}
           overwrite: true
 
       - name: Upload Windows checksum file
@@ -260,9 +260,9 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ${{ github.workspace }}/Alias.sha256
-          asset_name: Alias-${{ needs.prepareRelease.outputs.alias_release }}-${{ needs.prepareRelease.outputs.github_sha_short }}-Win64.sha256
-          tag: ${{ needs.prepareRelease.outputs.alias_release }}
+          file: ${{ github.workspace }}/Phantom.sha256
+          asset_name: Phantom-${{ needs.prepareRelease.outputs.phantom_release }}-${{ needs.prepareRelease.outputs.github_sha_short }}-Win64.sha256
+          tag: ${{ needs.prepareRelease.outputs.phantom_release }}
           overwrite: true
 
   # ==========================================================================
@@ -273,7 +273,7 @@ jobs:
     outputs:
       upload_url: ${{ needs.prepareRelease.outputs.upload_url }}
       github_sha_short: ${{ needs.prepareRelease.outputs.github_sha_short }}
-      alias_release: ${{ needs.prepareRelease.outputs.alias_release }}
+      phantom_release: ${{ needs.prepareRelease.outputs.phantom_release }}
     steps:
       - uses: actions/checkout@v2
         with:
@@ -305,19 +305,19 @@ jobs:
 
       - name: Create zip archive and sha256 checksum
         run: |
-          powershell Compress-Archive build-x86/delivery/Alias Alias.zip
-          powershell "(Get-FileHash Alias.zip).Hash > Alias.sha256"
-          powershell "(Get-Content Alias.sha256) | Out-File Alias.sha256 -Encoding ascii"
-          type Alias.sha256
+          powershell Compress-Archive build-x86/delivery/Phantom Phantom.zip
+          powershell "(Get-FileHash Phantom.zip).Hash > Phantom.sha256"
+          powershell "(Get-Content Phantom.sha256) | Out-File Phantom.sha256 -Encoding ascii"
+          type Phantom.sha256
 
       - name: Upload Windows Build
         id: upload-release-asset
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ${{ github.workspace }}/Alias.zip
-          asset_name: Alias-${{ needs.prepareRelease.outputs.alias_release }}-${{ needs.prepareRelease.outputs.github_sha_short }}-Win32.zip
-          tag: ${{ needs.prepareRelease.outputs.alias_release }}
+          file: ${{ github.workspace }}/Phantom.zip
+          asset_name: Phantom-${{ needs.prepareRelease.outputs.phantom_release }}-${{ needs.prepareRelease.outputs.github_sha_short }}-Win32.zip
+          tag: ${{ needs.prepareRelease.outputs.phantom_release }}
           overwrite: true
 
       - name: Upload Windows checksum file
@@ -325,14 +325,14 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ${{ github.workspace }}/Alias.sha256
-          asset_name: Alias-${{ needs.prepareRelease.outputs.alias_release }}-${{ needs.prepareRelease.outputs.github_sha_short }}-Win32.sha256
-          tag: ${{ needs.prepareRelease.outputs.alias_release }}
+          file: ${{ github.workspace }}/Phantom.sha256
+          asset_name: Phantom-${{ needs.prepareRelease.outputs.phantom_release }}-${{ needs.prepareRelease.outputs.github_sha_short }}-Win32.sha256
+          tag: ${{ needs.prepareRelease.outputs.phantom_release }}
           overwrite: true
 
   # ==========================================================================
   # Create Windows x64 installer
-  # Based on the content of https://github.com/aliascash/installer
+  # Based on the content of https://github.com/3n1gMa-d3v/installer
   createWindowsInstaller:
     runs-on: windows-latest
     needs: buildWindows
@@ -341,19 +341,19 @@ jobs:
       - uses: actions/checkout@v2
         with:
           persist-credentials: false
-          repository: aliascash/installer
+          repository: phantomcash/installer
 
       # Download installable content...
       - name: Download content to install
         uses: carlosperate/download-file-action@v1.0.3
         with:
-          file-url: https://github.com/aliascash/alias-wallet/releases/download/${{ needs.buildWindows.outputs.alias_release }}/Alias-${{ needs.buildWindows.outputs.alias_release }}-${{ needs.buildWindows.outputs.github_sha_short }}-Win64.zip
-          file-name: Alias.zip
+          file-url: https://github.com/3n1gMa-d3v/phantom-wallet/releases/download/${{ needs.buildWindows.outputs.phantom_release }}/Phantom-${{ needs.buildWindows.outputs.phantom_release }}-${{ needs.buildWindows.outputs.github_sha_short }}-Win64.zip
+          file-name: Phantom.zip
           location: ${{ github.workspace }}
 
       # ... and extract it
       - name: Extract content to install
-        run: 7z x -o"${{ github.workspace }}/windows/content" "${{ github.workspace }}/Alias.zip"
+        run: 7z x -o"${{ github.workspace }}/windows/content" "${{ github.workspace }}/Phantom.zip"
 
       # Create installer
       - name: Create Windows installer
@@ -361,13 +361,13 @@ jobs:
         with:
           arguments: "/V4"
           additional-plugin-paths: "${{ github.workspace }}/windows/plugins"
-          script-file: "windows/Alias.nsi"
+          script-file: "windows/Phantom.nsi"
 
       - name: Create installer checksum file
         run: |
-          powershell "(Get-FileHash ${{ github.workspace }}/windows/Alias-Installer.exe).Hash > ${{ github.workspace }}/windows/Alias-Installer.sha256"
-          powershell "(Get-Content ${{ github.workspace }}/windows/Alias-Installer.sha256) | Out-File ${{ github.workspace }}/windows/Alias-Installer.sha256 -Encoding ascii"
-          type ${{ github.workspace }}/windows/Alias-Installer.sha256
+          powershell "(Get-FileHash ${{ github.workspace }}/windows/Phantom-Installer.exe).Hash > ${{ github.workspace }}/windows/Phantom-Installer.sha256"
+          powershell "(Get-Content ${{ github.workspace }}/windows/Phantom-Installer.sha256) | Out-File ${{ github.workspace }}/windows/Phantom-Installer.sha256 -Encoding ascii"
+          type ${{ github.workspace }}/windows/Phantom-Installer.sha256
 
       # Upload the installer to Github
       - name: Upload installer
@@ -375,9 +375,9 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ${{ github.workspace }}/windows/Alias-Installer.exe
-          asset_name: Alias-${{ needs.buildWindows.outputs.alias_release }}-${{ needs.buildWindows.outputs.github_sha_short }}-Win64-Installer.exe
-          tag: ${{ needs.buildWindows.outputs.alias_release }}
+          file: ${{ github.workspace }}/windows/Phantom-Installer.exe
+          asset_name: Phantom-${{ needs.buildWindows.outputs.phantom_release }}-${{ needs.buildWindows.outputs.github_sha_short }}-Win64-Installer.exe
+          tag: ${{ needs.buildWindows.outputs.phantom_release }}
           overwrite: true
 
       - name: Upload installer checksum
@@ -385,14 +385,14 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ${{ github.workspace }}/windows/Alias-Installer.sha256
-          asset_name: Alias-${{ needs.buildWindows.outputs.alias_release }}-${{ needs.buildWindows.outputs.github_sha_short }}-Win64-Installer.sha256
-          tag: ${{ needs.buildWindows.outputs.alias_release }}
+          file: ${{ github.workspace }}/windows/Phantom-Installer.sha256
+          asset_name: Phantom-${{ needs.buildWindows.outputs.phantom_release }}-${{ needs.buildWindows.outputs.github_sha_short }}-Win64-Installer.sha256
+          tag: ${{ needs.buildWindows.outputs.phantom_release }}
           overwrite: true
 
   # ==========================================================================
   # Create Windows x86 installer
-  # Based on the content of https://github.com/aliascash/installer
+  # Based on the content of https://github.com/3n1gMa-d3v/installer
   createWindowsX86Installer:
     runs-on: windows-latest
     needs: buildWindowsX86
@@ -401,19 +401,19 @@ jobs:
       - uses: actions/checkout@v2
         with:
           persist-credentials: false
-          repository: aliascash/installer
+          repository: phantomcash/installer
 
       # Download installable content...
       - name: Download content to install
         uses: carlosperate/download-file-action@v1.0.3
         with:
-          file-url: https://github.com/aliascash/alias-wallet/releases/download/${{ needs.buildWindowsX86.outputs.alias_release }}/Alias-${{ needs.buildWindowsX86.outputs.alias_release }}-${{ needs.buildWindowsX86.outputs.github_sha_short }}-Win32.zip
-          file-name: Alias.zip
+          file-url: https://github.com/3n1gMa-d3v/phantom-wallet/releases/download/${{ needs.buildWindowsX86.outputs.phantom_release }}/Phantom-${{ needs.buildWindowsX86.outputs.phantom_release }}-${{ needs.buildWindowsX86.outputs.github_sha_short }}-Win32.zip
+          file-name: Phantom.zip
           location: ${{ github.workspace }}
 
       # ... and extract it
       - name: Extract content to install
-        run: 7z x -o"${{ github.workspace }}/windows/content" "${{ github.workspace }}/Alias.zip"
+        run: 7z x -o"${{ github.workspace }}/windows/content" "${{ github.workspace }}/Phantom.zip"
 
       # Create installer
       - name: Create Windows installer
@@ -421,13 +421,13 @@ jobs:
         with:
           arguments: "/V4"
           additional-plugin-paths: "${{ github.workspace }}/windows/plugins"
-          script-file: "windows/Alias.nsi"
+          script-file: "windows/Phantom.nsi"
 
       - name: Create installer checksum file
         run: |
-          powershell "(Get-FileHash ${{ github.workspace }}/windows/Alias-Installer.exe).Hash > ${{ github.workspace }}/windows/Alias-Installer.sha256"
-          powershell "(Get-Content ${{ github.workspace }}/windows/Alias-Installer.sha256) | Out-File ${{ github.workspace }}/windows/Alias-Installer.sha256 -Encoding ascii"
-          type ${{ github.workspace }}/windows/Alias-Installer.sha256
+          powershell "(Get-FileHash ${{ github.workspace }}/windows/Phantom-Installer.exe).Hash > ${{ github.workspace }}/windows/Phantom-Installer.sha256"
+          powershell "(Get-Content ${{ github.workspace }}/windows/Phantom-Installer.sha256) | Out-File ${{ github.workspace }}/windows/Phantom-Installer.sha256 -Encoding ascii"
+          type ${{ github.workspace }}/windows/Phantom-Installer.sha256
 
       # Upload the installer to Github
       - name: Upload installer
@@ -435,9 +435,9 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ${{ github.workspace }}/windows/Alias-Installer.exe
-          asset_name: Alias-${{ needs.buildWindowsX86.outputs.alias_release }}-${{ needs.buildWindowsX86.outputs.github_sha_short }}-Win32-Installer.exe
-          tag: ${{ needs.buildWindowsX86.outputs.alias_release }}
+          file: ${{ github.workspace }}/windows/Phantom-Installer.exe
+          asset_name: Phantom-${{ needs.buildWindowsX86.outputs.phantom_release }}-${{ needs.buildWindowsX86.outputs.github_sha_short }}-Win32-Installer.exe
+          tag: ${{ needs.buildWindowsX86.outputs.phantom_release }}
           overwrite: true
 
       - name: Upload installer checksum
@@ -445,14 +445,14 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ${{ github.workspace }}/windows/Alias-Installer.sha256
-          asset_name: Alias-${{ needs.buildWindowsX86.outputs.alias_release }}-${{ needs.buildWindowsX86.outputs.github_sha_short }}-Win32-Installer.sha256
-          tag: ${{ needs.buildWindowsX86.outputs.alias_release }}
+          file: ${{ github.workspace }}/windows/Phantom-Installer.sha256
+          asset_name: Phantom-${{ needs.buildWindowsX86.outputs.phantom_release }}-${{ needs.buildWindowsX86.outputs.github_sha_short }}-Win32-Installer.sha256
+          tag: ${{ needs.buildWindowsX86.outputs.phantom_release }}
           overwrite: true
 
   # ==========================================================================
-  # Build Alias Docker image
-  # Based on the content of https://github.com/aliascash/docker-aliaswalletd
+  # Build Phantom Docker image
+  # Based on the content of https://github.com/3n1gMa-d3v/docker-phantomwalletd
   buildDockerImage:
     runs-on: ubuntu-latest
     needs: buildLinuxBinariesAlsoForDockerImage
@@ -461,7 +461,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           persist-credentials: false
-          repository: aliascash/docker-aliaswalletd
+          repository: phantomcash/docker-phantomwalletd
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
@@ -478,9 +478,9 @@ jobs:
         with:
           push: true
           context: .
-          tags: aliascash/docker-aliaswalletd:latest,aliascash/docker-aliaswalletd:${{ needs.buildLinuxBinariesAlsoForDockerImage.outputs.alias_release }}
+          tags: phantomcash/docker-phantomwalletd:latest,phantomcash/docker-phantomwalletd:${{ needs.buildLinuxBinariesAlsoForDockerImage.outputs.phantom_release }}
           build-args: |
-            DOWNLOAD_URL=https://github.com/aliascash/alias-wallet/releases/download/${{ needs.buildLinuxBinariesAlsoForDockerImage.outputs.alias_release }}/Alias-${{ needs.buildLinuxBinariesAlsoForDockerImage.outputs.alias_release }}-${{ needs.buildLinuxBinariesAlsoForDockerImage.outputs.github_sha_short }}-Ubuntu-20-04.tgz
+            DOWNLOAD_URL=https://github.com/3n1gMa-d3v/phantom-wallet/releases/download/${{ needs.buildLinuxBinariesAlsoForDockerImage.outputs.phantom_release }}/Phantom-${{ needs.buildLinuxBinariesAlsoForDockerImage.outputs.phantom_release }}-${{ needs.buildLinuxBinariesAlsoForDockerImage.outputs.github_sha_short }}-Ubuntu-20-04.tgz
           #arg2=value2
 
       - name: Image digest
@@ -494,6 +494,6 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ${{ github.workspace }}/Dockerimage.sha256
-          asset_name: Alias-${{ needs.buildLinuxBinariesAlsoForDockerImage.outputs.alias_release }}-${{ needs.buildLinuxBinariesAlsoForDockerImage.outputs.github_sha_short }}-Dockerimage.sha256
-          tag: ${{ needs.buildLinuxBinariesAlsoForDockerImage.outputs.alias_release }}
+          asset_name: Phantom-${{ needs.buildLinuxBinariesAlsoForDockerImage.outputs.phantom_release }}-${{ needs.buildLinuxBinariesAlsoForDockerImage.outputs.github_sha_short }}-Dockerimage.sha256
+          tag: ${{ needs.buildLinuxBinariesAlsoForDockerImage.outputs.phantom_release }}
           overwrite: true

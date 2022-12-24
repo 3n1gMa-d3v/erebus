@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: © 2020 Alias Developers
+// SPDX-FileCopyrightText: © 2020 Phantom Developers
 // SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 // SPDX-FileCopyrightText: © 2014 ShadowCoin Developers
 // SPDX-FileCopyrightText: © 2014 BlackCoin Developers
@@ -1021,7 +1021,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "alias";
+    const char* pszModule = "phantom";
 #endif
     if (pex)
         return strprintf(
@@ -1051,15 +1051,15 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Aliaswallet
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Aliaswallet
-    // Mac: ~/Library/Application Support/Aliaswallet
-    // Unix: ~/.aliaswallet
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Phantomwallet
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Phantomwallet
+    // Mac: ~/Library/Application Support/Phantomwallet
+    // Unix: ~/.phantomwallet
 
 
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Aliaswallet";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Phantomwallet";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -1071,10 +1071,10 @@ boost::filesystem::path GetDefaultDataDir()
         // Mac
         pathRet /= "Library/Application Support";
         fs::create_directory(pathRet);
-        return pathRet / "Aliaswallet";
+        return pathRet / "Phantomwallet";
     #else
         // Unix
-        return pathRet / ".aliaswallet";
+        return pathRet / ".phantomwallet";
     #endif
 #endif
 
@@ -1169,11 +1169,11 @@ boost::filesystem::path GetConfigFile()
 
     // Migrate spectrecoin.conf
     fs::path oldConfigFile = dataDir / "spectrecoin.conf";
-    fs::path newConfigFile = dataDir / "alias.conf";
+    fs::path newConfigFile = dataDir / "phantom.conf";
     if (fs::exists(oldConfigFile) && !fs::exists(newConfigFile))
         fs::rename(oldConfigFile, newConfigFile);
 
-    fs::path pathConfigFile(GetArg("-conf", "alias.conf"));
+    fs::path pathConfigFile(GetArg("-conf", "phantom.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = dataDir / pathConfigFile;
     return pathConfigFile;
 }
@@ -1206,7 +1206,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", "alias.pid"));
+    boost::filesystem::path pathPidFile(GetArg("-pid", "phantom.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }
@@ -1394,10 +1394,10 @@ void AddTimeData(const CNetAddr& ip, int64_t nTime)
                 if (!fMatch)
                 {
                     fDone = true;
-                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong Alias will not work properly.");
+                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong Phantom will not work properly.");
                     strMiscWarning = strMessage;
                     LogPrintf("*** %s\n", strMessage.c_str());
-                    uiInterface.ThreadSafeMessageBox(strMessage+" ", string("Alias"), CClientUIInterface::BTN_OK | CClientUIInterface::ICON_WARNING);
+                    uiInterface.ThreadSafeMessageBox(strMessage+" ", string("Phantom"), CClientUIInterface::BTN_OK | CClientUIInterface::ICON_WARNING);
                 }
             }
         }

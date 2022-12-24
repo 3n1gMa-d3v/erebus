@@ -109,7 +109,7 @@ namespace tinyformat {}
 //------------------------------------------------------------------------------
 // Config section.  Customize to your liking!
 
-// Namespace alias to encourage brevity
+// Namespace phantom to encourage brevity
 namespace tfm = tinyformat;
 
 // Error handling; calls assert() by default.

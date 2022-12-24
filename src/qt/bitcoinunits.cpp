@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: © 2020 Alias Developers
+// SPDX-FileCopyrightText: © 2020 Phantom Developers
 // SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 // SPDX-FileCopyrightText: © 2009 Bitcoin Developers
 //
@@ -17,10 +17,10 @@ BitcoinUnits::BitcoinUnits(QObject *parent):
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(ALIAS);
-    unitlist.append(mALIAS);
-    unitlist.append(uALIAS);
-    unitlist.append(satALIAS);
+    unitlist.append(PHM);
+    unitlist.append(mPHM);
+    unitlist.append(uPHM);
+    unitlist.append(satPHM);
     return unitlist;
 }
 
@@ -28,10 +28,10 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case ALIAS:
-    case mALIAS:
-    case uALIAS:
-    case satALIAS:
+    case PHM:
+    case mPHM:
+    case uPHM:
+    case satPHM:
         return true;
     default:
         return false;
@@ -42,10 +42,10 @@ QString BitcoinUnits::name(int unit)
 {
     switch(unit)
     {
-    case ALIAS: return QString("ALIAS");
-    case mALIAS: return QString("mALIAS");
-    case uALIAS: return QString::fromUtf8("μALIAS");
-    case satALIAS: return QString::fromUtf8("satALIAS");
+    case PHM: return QString("PHM");
+    case mPHM: return QString("mPHM");
+    case uPHM: return QString::fromUtf8("μPHM");
+    case satPHM: return QString::fromUtf8("satPHM");
     default: return QString("???");
     }
 }
@@ -54,10 +54,10 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case ALIAS:  return QString("ALIAS (public)");
-    case mALIAS: return QString("Milli-ALIAS (1 / 1,000)");
-    case uALIAS: return QString("Micro-ALIAS (1 / 1,000,000)");
-    case satALIAS: return QString("Satoshi-ALIAS (1 / 100,000,000)");
+    case PHM:  return QString("PHM (public)");
+    case mPHM: return QString("Milli-PHM (1 / 1,000)");
+    case uPHM: return QString("Micro-PHM (1 / 1,000,000)");
+    case satPHM: return QString("Satoshi-PHM (1 / 100,000,000)");
     default:   return QString("???");
     }
 }
@@ -66,9 +66,9 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case mALIAS: return 100000;
-    case uALIAS: return 100;
-    case satALIAS: return 1;
+    case mPHM: return 100000;
+    case uPHM: return 100;
+    case satPHM: return 1;
     default:   return 100000000;
     }
 }
@@ -77,10 +77,10 @@ int BitcoinUnits::amountDigits(int unit)
 {
     switch(unit)
     {
-    case ALIAS: return 8; // 21,000,000 (# digits, without commas)
-    case mALIAS: return 11; // 21,000,000,000
-    case uALIAS: return 14; // 21,000,000,000,000
-    case satALIAS: return 16; // 2,100,000,000,000,000
+    case PHM: return 8; // 21,000,000 (# digits, without commas)
+    case mPHM: return 11; // 21,000,000,000
+    case uPHM: return 14; // 21,000,000,000,000
+    case satPHM: return 16; // 2,100,000,000,000,000
     default: return 0;
     }
 }
@@ -89,9 +89,9 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case ALIAS: return 8;
-    case mALIAS: return 5;
-    case uALIAS: return 2;
+    case PHM: return 8;
+    case mPHM: return 5;
+    case uPHM: return 2;
     default: return 0;
     }
 }

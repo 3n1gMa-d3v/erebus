@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: © 2020 Alias Developers
+// SPDX-FileCopyrightText: © 2020 Phantom Developers
 // SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 // SPDX-FileCopyrightText: © 2010 Satoshi Nakamoto
 // SPDX-FileCopyrightText: © 2009 Bitcoin Developers
@@ -36,7 +36,7 @@ std::string HTTPPost(const std::string& strMsg, const std::map<std::string,std::
 {
     std::ostringstream s;
     s << "POST / HTTP/1.1\r\n"
-      << "User-Agent: alias-json-rpc/" << FormatFullVersion() << "\r\n"
+      << "User-Agent: phantom-json-rpc/" << FormatFullVersion() << "\r\n"
       << "Host: 127.0.0.1\r\n"
       << "Content-Type: application/json\r\n"
       << "Content-Length: " << strMsg.size() << "\r\n"
@@ -59,7 +59,7 @@ std::string HTTPReply(int nStatus, const std::string& strMsg, bool keepalive)
     if (nStatus == HTTP_UNAUTHORIZED)
         return strprintf("HTTP/1.0 401 Authorization Required\r\n"
             "Date: %s\r\n"
-            "Server: alias-json-rpc/%s\r\n"
+            "Server: phantom-json-rpc/%s\r\n"
             "WWW-Authenticate: Basic realm=\"jsonrpc\"\r\n"
             "Content-Type: text/html\r\n"
             "Content-Length: 296\r\n"
@@ -86,7 +86,7 @@ std::string HTTPReply(int nStatus, const std::string& strMsg, bool keepalive)
             "Connection: %s\r\n"
             "Content-Length: %u\r\n"
             "Content-Type: application/json\r\n"
-            "Server: alias-json-rpc/%s\r\n"
+            "Server: phantom-json-rpc/%s\r\n"
             "\r\n"
             "%s",
         nStatus,

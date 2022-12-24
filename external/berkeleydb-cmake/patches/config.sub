@@ -36,7 +36,7 @@ timestamp='2020-10-13'
 # https://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.sub
 
 # This file is supposed to be the same for all GNU packages
-# and recognize all the CPU types, system types and aliases
+# and recognize all the CPU types, system types and phantomes
 # that are meaningful with *any* GNU software.
 # Each package is responsible for reporting which valid configurations
 # it does not support.  The user should be able to distinguish
@@ -53,7 +53,7 @@ timestamp='2020-10-13'
 me=`echo "$0" | sed -e 's,.*/,,'`
 
 usage="\
-Usage: $0 [OPTION] CPU-MFR-OPSYS or ALIAS
+Usage: $0 [OPTION] CPU-MFR-OPSYS or PHM
 
 Canonicalize a configuration name.
 
@@ -673,7 +673,7 @@ case $basic_machine in
 		vendor=apple
 		;;
 
-	# Recognize the various machine names and aliases which stand
+	# Recognize the various machine names and phantomes which stand
 	# for a CPU type and a company and sometimes even an OS.
 	3b1 | 7300 | 7300-att | att-7300 | pc7300 | safari | unixpc)
 		cpu=m68000
@@ -1264,7 +1264,7 @@ case $cpu-$vendor in
 		;;
 esac
 
-# Here we canonicalize certain aliases for manufacturers.
+# Here we canonicalize certain phantomes for manufacturers.
 case $vendor in
 	digital*)
 		vendor=dec
@@ -1276,7 +1276,7 @@ case $vendor in
 		;;
 esac
 
-# Decode manufacturer-specific aliases for certain operating systems.
+# Decode manufacturer-specific phantomes for certain operating systems.
 
 if test x$basic_os != x
 then
@@ -1320,7 +1320,7 @@ esac
 # Now, normalize the OS (knowing we just have one component, it's not a kernel,
 # etc.)
 case $os in
-	# First match some system type aliases that might get confused
+	# First match some system type phantomes that might get confused
 	# with valid system types.
 	# solaris* is a basic system type, with this one exception.
 	auroraux)

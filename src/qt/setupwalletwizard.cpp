@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: © 2020 Alias Developers
+// SPDX-FileCopyrightText: © 2020 Phantom Developers
 // SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 //
 // SPDX-License-Identifier: MIT
@@ -34,12 +34,12 @@ SetupWalletWizard::SetupWalletWizard(QWidget *parent)
 //#endif
     setOption(HaveHelpButton, true);
 
-    setPixmap(QWizard::LogoPixmap, GUIUtil::createPixmap(QString(":/assets/svg/alias-app.svg"), 48, 48));
+    setPixmap(QWizard::LogoPixmap, GUIUtil::createPixmap(QString(":/assets/svg/phantom-app.svg"), 48, 48));
 
     connect(this, &QWizard::helpRequested, this, &SetupWalletWizard::showHelp);
 
-    setWindowTitle(tr("Alias Wallet Setup"));
-    setWindowIcon(QIcon(":icons/alias-app"));
+    setWindowTitle(tr("Phantom Wallet Setup"));
+    setWindowIcon(QIcon(":icons/phantom-app"));
 }
 
 void SetupWalletWizard::showHelp()
@@ -75,7 +75,7 @@ void SetupWalletWizard::showHelp()
         message = tr("This help is likely not to be of any help.");
     }
 
-    QMessageBox::information(this, tr("Alias Wallet Setup Help"), message);
+    QMessageBox::information(this, tr("Phantom Wallet Setup Help"), message);
 
     lastHelpMessage = message;
 }
@@ -85,7 +85,7 @@ IntroPage::IntroPage(QWidget *parent)
 {
     setTitle(tr("Set Up Your Wallet"));
 
-    setPixmap(QWizard::WatermarkPixmap, GUIUtil::createPixmap(96, 400, QColor(55, 43, 62), QString(":/assets/svg/Alias-Stacked-Reverse.svg"), QRect(3, 155, 90, 90)));
+    setPixmap(QWizard::WatermarkPixmap, GUIUtil::createPixmap(96, 400, QColor(55, 43, 62), QString(":/assets/svg/Phantom-Stacked-Reverse.svg"), QRect(3, 155, 90, 90)));
 
     topLabel = new QLabel(tr("The application has detected that you don't have a wallet.dat file, which holds your private keys. Please choose how you want to create or restore your private keys."));
     topLabel->setWordWrap(true);

@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: © 2020 Alias Developers
+// SPDX-FileCopyrightText: © 2020 Phantom Developers
 // SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 // SPDX-FileCopyrightText: © 2011 Bitcoin Developers
 //
@@ -30,8 +30,8 @@ void OptionsModel::Init()
     }
 
     // These are Qt-only settings:
-    //nDisplayUnit = settings.value("nDisplayUnit", BitcoinUnits::ALIAS).toInt();
-    nDisplayUnit = BitcoinUnits::ALIAS;
+    //nDisplayUnit = settings.value("nDisplayUnit", BitcoinUnits::PHM).toInt();
+    nDisplayUnit = BitcoinUnits::PHM;
     bDisplayAddresses = settings.value("bDisplayAddresses", false).toBool();
     fMinimizeToTray = settings.value("fMinimizeToTray", false).toBool();
     fMinimizeOnClose = settings.value("fMinimizeOnClose", false).toBool();
@@ -211,7 +211,7 @@ bool OptionsModel::setData(const QModelIndex & index, const QVariant & value, in
         case DisplayAddresses:
             bDisplayAddresses = value.toBool();
             settings.setValue("bDisplayAddresses", bDisplayAddresses);
-            emit displayUnitChanged(settings.value("nDisplayUnit", BitcoinUnits::ALIAS).toInt());
+            emit displayUnitChanged(settings.value("nDisplayUnit", BitcoinUnits::PHM).toInt());
             break;
         case DetachDatabases: {
             bool fDetachDB = value.toBool();

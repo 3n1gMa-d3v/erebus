@@ -34,7 +34,7 @@
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antiphantomed;
   padding-right: 5px;
   font-size: 14px;
   color: #888888;
@@ -133,7 +133,7 @@
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antiphantomed;
   padding-left: 5px;
 }
 .footable > thead > tr > th > span.footable-sort-indicator:before {

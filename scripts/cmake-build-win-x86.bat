@@ -1,12 +1,12 @@
 :: ===========================================================================
 ::
-:: SPDX-FileCopyrightText: © 2020 Alias Developers
+:: SPDX-FileCopyrightText: © 2020 Phantom Developers
 :: SPDX-FileCopyrightText: © 2019 SpectreCoin Developers
 :: SPDX-License-Identifier: MIT
 ::
 :: Created: 2019-10-22 HLXEasy
 ::
-:: Helper script to build Alias on Windows using VS2019 and QT.
+:: Helper script to build Phantom on Windows using VS2019 and QT.
 ::
 :: ===========================================================================
 
@@ -39,9 +39,9 @@ cd %BUILD_DIR%
 
 "%CMAKEDIR_x86%\cmake.exe" -D CMAKE_TOOLCHAIN_FILE=%VCPKGDIR%\scripts\buildsystems\vcpkg.cmake -D CMAKE_FIND_ROOT_PATH_MODE_LIBRARY=NEVER -D CMAKE_FIND_ROOT_PATH_MODE_INCLUDE=NEVER -D ENABLE_GUI=ON -D QT_CMAKE_MODULE_PATH=%QTDIR_x86%\lib\cmake -D CMAKE_BUILD_TYPE=Release -G "Visual Studio 16 2019" -A Win32 .. || goto :ERROR
 
-"%CMAKEDIR_x86%\cmake.exe" --build . --target Aliaswallet --config Release || goto :ERROR
+"%CMAKEDIR_x86%\cmake.exe" --build . --target Phantomwallet --config Release || goto :ERROR
 
-::ren "%OUT_DIR%" Alias
+::ren "%OUT_DIR%" Phantom
 ::echo "The prepared package is in: %BUILD_DIR%\delivery"
 
 echo "Everything is OK"

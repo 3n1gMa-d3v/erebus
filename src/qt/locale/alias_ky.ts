@@ -3,17 +3,17 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="14"/>
-        <source>About Alias</source>
+        <source>About Phantom</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../forms/aboutdialog.ui" line="127"/>
-        <source>&lt;b&gt;Alias&lt;/b&gt; version</source>
+        <source>&lt;b&gt;Phantom&lt;/b&gt; version</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../forms/aboutdialog.ui" line="216"/>
-        <source>© 2020 Alias developers
+        <source>© 2020 Phantom developers
 © 2016 Spectrecoin developers
 © 2014 ShadowCash developers
 © 2014 BlackCoin developers
@@ -118,12 +118,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="60"/>
-        <source>Your wallet contains locked ATXOs for which its spending state can only be determinate with your private key. Your &lt;b&gt;private ALIAS balance might be shown wrong&lt;/b&gt;.</source>
+        <source>Your wallet contains locked ATXOs for which its spending state can only be determinate with your private key. Your &lt;b&gt;private PHM balance might be shown wrong&lt;/b&gt;.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="62"/>
-        <source>&lt;b&gt;Alias Wallet Login&lt;/b&gt;</source>
+        <source>&lt;b&gt;Phantom Wallet Login&lt;/b&gt;</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -179,7 +179,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="134"/>
-        <source>Alias will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <source>Phantom will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -554,7 +554,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../editaddressdialog.cpp" line="121"/>
-        <source>The entered address &quot;%1&quot; is not a valid Alias address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid Phantom address.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -621,7 +621,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../guiutil.cpp" line="550"/>
         <location filename="../guiutil.cpp" line="562"/>
-        <source>Alias</source>
+        <source>Phantom</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -819,7 +819,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="109"/>
-        <source>Cannot start Alias: click-to-pay handler</source>
+        <source>Cannot start Phantom: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -884,7 +884,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>RPCConsole</name>
     <message>
         <location filename="../forms/rpcconsole.ui" line="14"/>
-        <source>Alias - Debug window</source>
+        <source>Phantom - Debug window</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -894,7 +894,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../forms/rpcconsole.ui" line="39"/>
-        <source>Alias Core</source>
+        <source>Phantom Core</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -999,7 +999,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../forms/rpcconsole.ui" line="357"/>
-        <source>Open the Alias debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the Phantom debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1014,7 +1014,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../forms/rpcconsole.ui" line="383"/>
-        <source>Show the Alias help message to get a list with possible Alias command-line options.</source>
+        <source>Show the Phantom help message to get a list with possible Phantom command-line options.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1148,7 +1148,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="353"/>
-        <source>Welcome to the Alias Core RPC console.</source>
+        <source>Welcome to the Phantom Core RPC console.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1236,7 +1236,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>SetupWalletWizard</name>
     <message>
         <location filename="../setupwalletwizard.cpp" line="41"/>
-        <source>Alias Wallet Setup</source>
+        <source>Phantom Wallet Setup</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1276,7 +1276,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../setupwalletwizard.cpp" line="78"/>
-        <source>Alias Wallet Setup Help</source>
+        <source>Phantom Wallet Setup Help</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1405,7 +1405,7 @@ Ring size of one is not anonymous.</source>
     </message>
     <message>
         <location filename="../spectrebridge.cpp" line="562"/>
-        <source>Only ALIAS from your Private balance can be send to a stealth address.</source>
+        <source>Only PHM from your Private balance can be send to a stealth address.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1475,7 +1475,7 @@ Ring size of one is not anonymous.</source>
     </message>
     <message>
         <location filename="../spectrebridge.cpp" line="646"/>
-        <source>Convert Alias from Private to Public</source>
+        <source>Convert Phantom from Private to Public</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1485,12 +1485,12 @@ Ring size of one is not anonymous.</source>
     </message>
     <message>
         <location filename="../spectrebridge.cpp" line="653"/>
-        <source>The amount exceeds your ALIAS balance.</source>
+        <source>The amount exceeds your PHM balance.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../spectrebridge.cpp" line="659"/>
-        <source>The total exceeds your private ALIAS balance when the %1 transaction fee is included.</source>
+        <source>The total exceeds your private PHM balance when the %1 transaction fee is included.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1625,7 +1625,7 @@ Ring size of one is not anonymous.</source>
     </message>
     <message>
         <location filename="../bridgetranslations.h" line="37"/>
-        <source>About Alias</source>
+        <source>About Phantom</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1870,7 +1870,7 @@ Ring size of one is not anonymous.</source>
     </message>
     <message>
         <location filename="../bridgetranslations.h" line="86"/>
-        <source>0 active connection(s) to Alias network</source>
+        <source>0 active connection(s) to Phantom network</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1905,7 +1905,7 @@ Ring size of one is not anonymous.</source>
     </message>
     <message>
         <location filename="../bridgetranslations.h" line="93"/>
-        <source>Enter a Alias address to sign the message with (e.g. SaKYqfD8J3vw4RTnqtgk2K9B67CBaL3mhV)</source>
+        <source>Enter a Phantom address to sign the message with (e.g. SaKYqfD8J3vw4RTnqtgk2K9B67CBaL3mhV)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1925,7 +1925,7 @@ Ring size of one is not anonymous.</source>
     </message>
     <message>
         <location filename="../bridgetranslations.h" line="97"/>
-        <source>Enter a Alias address to verify the message with (e.g. SaKYqfD8J3vw4RTnqtgk2K9B67CBaL3mhV)</source>
+        <source>Enter a Phantom address to verify the message with (e.g. SaKYqfD8J3vw4RTnqtgk2K9B67CBaL3mhV)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1935,7 +1935,7 @@ Ring size of one is not anonymous.</source>
     </message>
     <message>
         <location filename="../bridgetranslations.h" line="99"/>
-        <source>Enter a Alias signature</source>
+        <source>Enter a Phantom signature</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2185,7 +2185,7 @@ Ring size of one is not anonymous.</source>
     </message>
     <message>
         <location filename="../bridgetranslations.h" line="149"/>
-        <source>Public ALIAS requires 1 block confirmation&lt;br&gt;Private ALIAS requires 10 blocks confirmations</source>
+        <source>Public PHM requires 1 block confirmation&lt;br&gt;Private PHM requires 10 blocks confirmations</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2301,7 +2301,7 @@ Ring size of one is not anonymous.</source>
         <location filename="../spectregui.cpp" line="405"/>
         <location filename="../spectregui.cpp" line="420"/>
         <location filename="../spectregui.cpp" line="480"/>
-        <source>Alias</source>
+        <source>Phantom</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2331,12 +2331,12 @@ Ring size of one is not anonymous.</source>
     </message>
     <message>
         <location filename="../spectregui.cpp" line="317"/>
-        <source>&amp;About Alias</source>
+        <source>&amp;About Phantom</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../spectregui.cpp" line="318"/>
-        <source>Show information about Alias</source>
+        <source>Show information about Phantom</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2356,7 +2356,7 @@ Ring size of one is not anonymous.</source>
     </message>
     <message>
         <location filename="../spectregui.cpp" line="324"/>
-        <source>Modify configuration options for Alias</source>
+        <source>Modify configuration options for Phantom</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2452,7 +2452,7 @@ Ring size of one is not anonymous.</source>
     </message>
     <message numerus="yes">
         <location filename="../spectregui.cpp" line="562"/>
-        <source>%n active connection(s) to Alias network</source>
+        <source>%n active connection(s) to Phantom network</source>
         <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message>
@@ -2593,7 +2593,7 @@ Note: %2
     <message>
         <location filename="../spectregui.cpp" line="864"/>
         <location filename="../spectregui.cpp" line="886"/>
-        <source>URI can not be parsed! This can be caused by an invalid Alias address or malformed URI parameters.</source>
+        <source>URI can not be parsed! This can be caused by an invalid Phantom address or malformed URI parameters.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3047,7 +3047,7 @@ Note: %2
     </message>
 </context>
 <context>
-    <name>alias-core</name>
+    <name>phantom-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="15"/>
         <source>To use the %s option</source>
@@ -3058,13 +3058,13 @@ Note: %2
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=aliasrpc
+rpcuser=phantomrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Alias Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Phantom Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -3092,7 +3092,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="40"/>
-        <source>Alias version</source>
+        <source>Phantom version</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3102,7 +3102,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="42"/>
-        <source>Send command to -server or aliaswalletd</source>
+        <source>Send command to -server or phantomwalletd</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3117,7 +3117,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="45"/>
-        <source>Alias</source>
+        <source>Phantom</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3132,12 +3132,12 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="48"/>
-        <source>Specify configuration file (default: alias.conf)</source>
+        <source>Specify configuration file (default: phantom.conf)</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="49"/>
-        <source>Specify pid file (default: alias.pid)</source>
+        <source>Specify pid file (default: phantom.pid)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3503,7 +3503,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
     <message>
         <location filename="../bitcoinstrings.cpp" line="143"/>
         <location filename="../bitcoinstrings.cpp" line="221"/>
-        <source>Cannot obtain a lock on data directory %s.  Alias is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s.  Phantom is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3605,12 +3605,12 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="172"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Alias</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of Phantom</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="173"/>
-        <source>Wallet needed to be rewritten: restart Alias to complete</source>
+        <source>Wallet needed to be rewritten: restart Phantom to complete</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3665,7 +3665,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="184"/>
-        <source>Unable to bind to %s on this computer. Alias is probably already running.</source>
+        <source>Unable to bind to %s on this computer. Phantom is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3715,7 +3715,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="200"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Alias will not work properly.</source>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Phantom will not work properly.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3765,7 +3765,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="216"/>
-        <source>Initialization sanity check failed. Alias is shutting down.</source>
+        <source>Initialization sanity check failed. Phantom is shutting down.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3960,7 +3960,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="258"/>
-        <source>Error: Alias is not connected!</source>
+        <source>Error: Phantom is not connected!</source>
         <translation type="unfinished"/>
     </message>
     <message>

@@ -1,8 +1,8 @@
-// SPDX-FileCopyrightText: © 2020 Alias Developers
+// SPDX-FileCopyrightText: © 2020 Phantom Developers
 // SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 // SPDX-License-Identifier: MIT
 
-IDI_ICON1 ICON DISCARDABLE "icons/alias-app.ico"
+IDI_ICON1 ICON DISCARDABLE "icons/phantom-app.ico"
 
 #include <windows.h>             // needed for VERSIONINFO
 #include "../../clientversion.h" // holds the needed client version information
@@ -22,14 +22,14 @@ BEGIN
 BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
 BEGIN
-        VALUE "CompanyName",        "Alias"
-VALUE "FileDescription",    "Alias wallet (OSS GUI client for Alias)"
+        VALUE "CompanyName",        "Phantom"
+VALUE "FileDescription",    "Phantom wallet (OSS GUI client for Phantom)"
 VALUE "FileVersion",        VER_FILEVERSION_STR
-VALUE "InternalName",       "alias"
-VALUE "LegalCopyright",     "2020 (c) The Alias developers, 2016 (c) The SpectreCoin developers, 2014 (c) The ShadowCoin developers, 2014 (c) The BlackCoin developers, 2012 (c) The NovaCoin & PPCoin developers, 2009 (c) The Bitcoin developers"
+VALUE "InternalName",       "phantom"
+VALUE "LegalCopyright",     "2020 (c) The Phantom developers, 2016 (c) The SpectreCoin developers, 2014 (c) The ShadowCoin developers, 2014 (c) The BlackCoin developers, 2012 (c) The NovaCoin & PPCoin developers, 2009 (c) The Bitcoin developers"
 VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license"
-VALUE "OriginalFilename",   "Alias.exe"
-VALUE "ProductName",        "Alias"
+VALUE "OriginalFilename",   "Phantom.exe"
+VALUE "ProductName",        "Phantom"
 VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
 END
         END

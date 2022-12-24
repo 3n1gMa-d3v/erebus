@@ -1,9 +1,9 @@
-# SPDX-FileCopyrightText: © 2020 Alias Developers
+# SPDX-FileCopyrightText: © 2020 Phantom Developers
 # SPDX-FileCopyrightText: © 2019 SpectreCoin Developers
 # SPDX-License-Identifier: MIT
 
 cmake_minimum_required(VERSION 3.13)
-project(Alias
+project(Phantom
         VERSION 4.3
         LANGUAGES
         CXX
@@ -299,7 +299,7 @@ if(CMAKE_SYSTEM_NAME STREQUAL "Darwin")
     if (NOT TOR_ARCHIVE)
         include(DownloadFile)
         set(TOR_ARCHIVE "${CMAKE_BINARY_DIR}/Tor.libraries.MacOS.zip")
-        download_file(https://github.com/aliascash/resources/raw/master/resources/Tor.libraries.MacOS.zip ${TOR_ARCHIVE} SHA1 ${TOR_ARCHIVE_MAC_HASH})
+        download_file(https://github.com/3n1gMa-d3v/resources/raw/master/resources/Tor.libraries.MacOS.zip ${TOR_ARCHIVE} SHA1 ${TOR_ARCHIVE_MAC_HASH})
     endif ()
 elseif(CMAKE_SYSTEM_NAME STREQUAL "Windows")
     message(STATUS "=== Tor and VCRuntime binary archives ======================================")
@@ -318,7 +318,7 @@ elseif(CMAKE_SYSTEM_NAME STREQUAL "Windows")
         message(STATUS "Downloading Tor archive")
         include(DownloadFile)
         set(TOR_ARCHIVE "${CMAKE_BINARY_DIR}/Tor.libraries.${WINDOWS_ARCH_SUFFIX}.zip")
-        download_file(https://github.com/aliascash/resources/raw/master/resources/Tor.libraries.${WINDOWS_ARCH_SUFFIX}.zip ${TOR_ARCHIVE} SHA1 ${WINDOWS_TOR_ARCHIVE_HASH})
+        download_file(https://github.com/3n1gMa-d3v/resources/raw/master/resources/Tor.libraries.${WINDOWS_ARCH_SUFFIX}.zip ${TOR_ARCHIVE} SHA1 ${WINDOWS_TOR_ARCHIVE_HASH})
     else()
         message(STATUS "Using Tor archive from given path")
     endif()
@@ -326,7 +326,7 @@ elseif(CMAKE_SYSTEM_NAME STREQUAL "Windows")
         message(STATUS "Downloading VCRuntime archive")
         include(DownloadFile)
         set(VCRUNTIME_ARCHIVE "${CMAKE_BINARY_DIR}/VCRuntime.libraries.${WINDOWS_ARCH_SUFFIX}.zip")
-        download_file(https://github.com/aliascash/resources/raw/master/resources/VCRuntime.libraries.${WINDOWS_ARCH_SUFFIX}.zip ${VCRUNTIME_ARCHIVE} SHA1 ${WINDOWS_VCRUNTIME_ARCHIVE_HASH})
+        download_file(https://github.com/3n1gMa-d3v/resources/raw/master/resources/VCRuntime.libraries.${WINDOWS_ARCH_SUFFIX}.zip ${VCRUNTIME_ARCHIVE} SHA1 ${WINDOWS_VCRUNTIME_ARCHIVE_HASH})
     else()
         message(STATUS "Using VCRuntime archive from given path")
     endif()

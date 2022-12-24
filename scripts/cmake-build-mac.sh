@@ -1,13 +1,13 @@
 #!/bin/bash
 # ===========================================================================
 #
-# SPDX-FileCopyrightText: © 2020 Alias Developers
+# SPDX-FileCopyrightText: © 2020 Phantom Developers
 # SPDX-FileCopyrightText: © 2019 SpectreCoin Developers
 # SPDX-License-Identifier: MIT
 #
 # Created: 2019-10-10 HLXEasy
 #
-# This script can be used to build Alias on and for Mac using CMake
+# This script can be used to build Phantom on and for Mac using CMake
 #
 # ===========================================================================
 
@@ -65,7 +65,7 @@ BUILD_DIR=cmake-build-cmdline-mac
 helpMe() {
     echo "
 
-    Helper script to build Alias wallet and daemon using CMake.
+    Helper script to build Phantom wallet and daemon using CMake.
     Required library archives will be downloaded once and will be used
     on subsequent builds.
 
@@ -81,12 +81,12 @@ helpMe() {
         the script determines the available cores on this machine.
         Not used for build steps of external libraries like OpenSSL or
         LevelDB.
-    -d  Do _not_ build Alias but only the dependencies. Used to prepare
+    -d  Do _not_ build Phantom but only the dependencies. Used to prepare
         build slaves a/o builder docker images.
     -f  Perform fullbuild by cleanup all generated data from previous
         build runs.
     -g  Build GUI (Qt) components
-    -o  Perfom only Alias fullbuild. Only the alias buildfolder
+    -o  Perfom only Phantom fullbuild. Only the phantom buildfolder
         will be wiped out before. All other folders stay in place.
     -p <path-to-build-and-install-dependencies-directory>
         Build/install the required dependencies onto the given directory.
@@ -626,7 +626,7 @@ checkTorMacArchive() {
     if [[ -e "${TOR_ARCHIVE_LOCATION}/${TOR_RESOURCE_ARCHIVE}" ]]; then
         info " -> Using Tor archive ${TOR_ARCHIVE_LOCATION}/${TOR_RESOURCE_ARCHIVE}"
     else
-        TOR_ARCHIVE_URL=https://github.com/aliascash/resources/raw/master/resources/${TOR_RESOURCE_ARCHIVE}
+        TOR_ARCHIVE_URL=https://github.com/3n1gMa-d3v/resources/raw/master/resources/${TOR_RESOURCE_ARCHIVE}
         info " -> Downloading Tor archive ${TOR_RESOURCE_ARCHIVE}"
         if [[ ! -e ${TOR_ARCHIVE_LOCATION} ]]; then
             mkdir -p ${TOR_ARCHIVE_LOCATION}
@@ -662,7 +662,7 @@ fi
 FULLBUILD=false
 ENABLE_GUI=false
 ENABLE_GUI_PARAMETERS='OFF'
-BUILD_ONLY_ALIAS=false
+BUILD_ONLY_PHM=false
 BUILD_ONLY_DEPENDENCIES=false
 WITH_TOR=false
 GIVEN_DEPENDENCIES_BUILD_DIR=''
@@ -676,7 +676,7 @@ while getopts c:dfgop:th? option; do
         ENABLE_GUI=true
         ENABLE_GUI_PARAMETERS="ON -DQT_CMAKE_MODULE_PATH=${MAC_QT_LIBRARYDIR}/cmake"
         ;;
-    o) BUILD_ONLY_ALIAS=true ;;
+    o) BUILD_ONLY_PHM=true ;;
     p) GIVEN_DEPENDENCIES_BUILD_DIR="${OPTARG}" ;;
     t) WITH_TOR=true ;;
     h | ?) helpMe && exit 0 ;;
@@ -684,7 +684,7 @@ while getopts c:dfgop:th? option; do
     esac
 done
 
-# Go to alias-wallet repository root directory
+# Go to phantom-wallet repository root directory
 cd ..
 
 # ============================================================================
@@ -764,20 +764,20 @@ fi
 
 # ============================================================================
 # Dependencies are ready. Go ahead with the main project
-ALIAS_BUILD_DIR=${ownLocation}/../${BUILD_DIR}/aliaswallet
-if [[ ! -d ${ALIAS_BUILD_DIR} ]]; then
+PHM_BUILD_DIR=${ownLocation}/../${BUILD_DIR}/phantomwallet
+if [[ ! -d ${PHM_BUILD_DIR} ]]; then
     info ""
-    info "Creating Alias build directory ${ALIAS_BUILD_DIR}"
-    mkdir -p "${ALIAS_BUILD_DIR}"
+    info "Creating Phantom build directory ${PHM_BUILD_DIR}"
+    mkdir -p "${PHM_BUILD_DIR}"
     info " -> Done"
 fi
-cd "${ALIAS_BUILD_DIR}" || die 1 "Unable to cd into Alias build directory '${ALIAS_BUILD_DIR}'"
+cd "${PHM_BUILD_DIR}" || die 1 "Unable to cd into Phantom build directory '${PHM_BUILD_DIR}'"
 
-# Update $ALIAS_BUILD_DIR with full path
-ALIAS_BUILD_DIR=$(pwd)
+# Update $PHM_BUILD_DIR with full path
+PHM_BUILD_DIR=$(pwd)
 
 # If requested, cleanup leftovers from previous build
-if [[ ${FULLBUILD} = true ]] || [[ ${BUILD_ONLY_ALIAS} = true ]]; then
+if [[ ${FULLBUILD} = true ]] || [[ ${BUILD_ONLY_PHM} = true ]]; then
     info ""
     info "Cleanup leftovers from previous build run"
     rm -rf ./*
@@ -785,7 +785,7 @@ if [[ ${FULLBUILD} = true ]] || [[ ${BUILD_ONLY_ALIAS} = true ]]; then
 fi
 
 info ""
-info "Generating Alias build configuration"
+info "Generating Phantom build configuration"
 read -r -d '' cmd <<EOM
 cmake \
     -DCMAKE_FIND_ROOT_PATH_MODE_LIBRARY=NEVER \
@@ -819,7 +819,7 @@ EOM
 # Finalize build cmd
 read -r -d '' cmd <<EOM
 ${cmd} \
-    ${ALIAS_BUILD_DIR}/../..
+    ${PHM_BUILD_DIR}/../..
 EOM
 
 echo "=============================================================================="
@@ -852,19 +852,19 @@ DEPLOY_QT_BINARY_TYPE_OPTION=''
 if [[ -e ${MAC_QT_DIR}/bin/macdeployqt ]] ; then
     info ""
     info "Creating dmg:"
-    cd "${ALIAS_BUILD_DIR}" || die 1 "Unable to cd into ${ALIAS_BUILD_DIR}"
+    cd "${PHM_BUILD_DIR}" || die 1 "Unable to cd into ${PHM_BUILD_DIR}"
     ${MAC_QT_DIR}/bin/macdeployqt \
-        Alias.app \
+        Phantom.app \
         -qmldir="${ownLocation}"/../src/qt/res \
         -always-overwrite \
         -verbose=1 \
         "${DEPLOY_QT_BINARY_TYPE_OPTION}"
     ${MAC_QT_DIR}/bin/macdeployqt \
-        Alias.app \
+        Phantom.app \
         -dmg \
         -always-overwrite \
         -verbose=1
-    info " -> Alias.dmg created"
+    info " -> Phantom.dmg created"
 else
     die 23 "${MAC_QT_DIR}/bin/macdeployqt not found, unable to create dmg!"
 fi
@@ -873,16 +873,16 @@ info ""
 info "Performing post build steps:"
 info "============================"
 
-cd "${ALIAS_BUILD_DIR}" || die 1 "Unable to cd into Alias build directory '${ALIAS_BUILD_DIR}'"
-cp Alias.dmg Alias.dmg.bak
+cd "${PHM_BUILD_DIR}" || die 1 "Unable to cd into Phantom build directory '${PHM_BUILD_DIR}'"
+cp Phantom.dmg Phantom.dmg.bak
 
 info "Change permision of .dmg file"
-hdiutil convert "Alias.dmg" -format UDRW -o "Alias_Rw.dmg"
+hdiutil convert "Phantom.dmg" -format UDRW -o "Phantom_Rw.dmg"
 info " -> Done"
 
 info "Mount it and save the device"
-PATH_AT_VOLUME=/Volumes/Alias
-DEVICE=$(hdiutil attach -readwrite -noverify "Alias_Rw.dmg" | grep ${PATH_AT_VOLUME} | awk '{print $1}')
+PATH_AT_VOLUME=/Volumes/Phantom
+DEVICE=$(hdiutil attach -readwrite -noverify "Phantom_Rw.dmg" | grep ${PATH_AT_VOLUME} | awk '{print $1}')
 info " -> Done (${DEVICE})"
 
 sleep 2
@@ -901,7 +901,7 @@ info " -> Done"
 info "Resize window, set background, change icon size, place icons in the right position, etc."
 echo '
     tell application "Finder"
-    tell disk "Alias"   ## check Path inside cd /Volume/
+    tell disk "Phantom"   ## check Path inside cd /Volume/
         open
             set current view of container window to icon view
             set toolbar visible of container window to false
@@ -912,7 +912,7 @@ echo '
             set icon size of viewOptions to 200
             set text size of viewOptions to 16
             set background picture of viewOptions to file ".background:app-slide-arrow.png"
-            set position of item "Alias.app" of container window to {180, 200}
+            set position of item "Phantom.app" of container window to {180, 200}
             set position of item "Applications" of container window to {620, 200}
         close
         open
@@ -930,11 +930,11 @@ hdiutil detach "${DEVICE}"
 info " -> Done"
 
 info "Cleanup and convert"
-rm -f "Alias.dmg"
-hdiutil convert "Alias_Rw.dmg" -format UDZO -o "Alias.dmg"
-rm -f "Alias_Rw.dmg"
+rm -f "Phantom.dmg"
+hdiutil convert "Phantom_Rw.dmg" -format UDZO -o "Phantom.dmg"
+rm -f "Phantom_Rw.dmg"
 info " -> Done"
 
-info " -> Finished: ${ALIAS_BUILD_DIR}/Alias.dmg"
+info " -> Finished: ${PHM_BUILD_DIR}/Phantom.dmg"
 
 cd "${callDir}" || die 1 "Unable to cd back to where we came from (${callDir})"

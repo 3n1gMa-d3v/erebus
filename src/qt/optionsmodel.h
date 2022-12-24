@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: © 2020 Alias Developers
+// SPDX-FileCopyrightText: © 2020 Phantom Developers
 // SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 // SPDX-FileCopyrightText: © 2011 Bitcoin Developers
 //
@@ -26,7 +26,7 @@ public:
     enum OptionID {
         /// Main Options
         Fee,                 /**< Transaction Fee. qint64 - Optional transaction fee per kB that helps make sure your transactions are processed quickly.
-                               *< Most transactions are 1 kB. Fee 0.01 recommended. 0.0001 ALIAS */
+                               *< Most transactions are 1 kB. Fee 0.01 recommended. 0.0001 PHM */
         ReserveBalance,      /**< Reserve Balance. qint64 - Reserved amount does not participate in staking and is therefore spendable at any time. */
         StartAtStartup,      /**< Default Transaction Fee. bool */
         DetachDatabases,     /**< Default Transaction Fee. bool */

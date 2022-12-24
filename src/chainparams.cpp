@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: © 2020 Alias Developers
+// SPDX-FileCopyrightText: © 2020 Phantom Developers
 // SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 // SPDX-FileCopyrightText: © 2010 Satoshi Nakamoto
 // SPDX-FileCopyrightText: © 2009 Bitcoin Developers
@@ -115,7 +115,7 @@ static void convertSeeds(std::vector<CAddress> &vSeedsOut, const unsigned int *d
 class CBaseChainParams : public CChainParams {
 public:
     CBaseChainParams() {
-        const char* pszTimestamp = "https://www.cryptocoinsnews.com/encrypted-services-exec-bitcoins-price-history-follows-gartners-hype-cycle/";
+        const char* pszTimestamp = "Fenton Testnet | Stage One";
         CTransaction txNew;
         txNew.nTime = GENESIS_BLOCK_TIME;
         txNew.vin.resize(1);
@@ -128,10 +128,10 @@ public:
         genesis.nVersion = 1;
         genesis.nTime    = GENESIS_BLOCK_TIME;
 
-        vSeeds.push_back(CDNSSeedData("node1.spectreproject.io", "node1.spectreproject.io"));
-        vSeeds.push_back(CDNSSeedData("node2.spectreproject.io", "node2.spectreproject.io"));
-        vSeeds.push_back(CDNSSeedData("node3.spectreproject.io", "node3.spectreproject.io"));
-        vSeeds.push_back(CDNSSeedData("node4.spectreproject.io", "node4.spectreproject.io"));
+        vSeeds.push_back(CDNSSeedData("", ""));
+        vSeeds.push_back(CDNSSeedData("", ""));
+        vSeeds.push_back(CDNSSeedData("", ""));
+        vSeeds.push_back(CDNSSeedData("", ""));
       }
     virtual const CBlock& GenesisBlock() const { return genesis; }
     virtual const std::vector<CAddress>& FixedSeeds() const {
@@ -155,7 +155,7 @@ public:
         pchMessageStart[2] = 0x5c;
         pchMessageStart[3] = 0xd3;
 
-        vAlertPubKey = ParseHex("04f7bbad03208ea942e292080854d422d046d457949ea70ad3306438fc8357343dccaa73e52291ebe07de85c6701d88d87af2d29c2e3b024fb0ad53f045a6d3ad6");
+        vAlertPubKey = ParseHex("04dba01336e48d52bc625e4144549e7483eb193d6bc28ebabe44c2ea1d118eadc49dd432f96ecec15ebe0f194f34ac2deabbf70d8f17c215421b39abd96717297d");
 
         nDefaultPort = 37347;
         nRPCPort = 36657;
@@ -174,11 +174,11 @@ public:
         nStakeMinConfirmations = 450; // block time 96 seconds * 450 = 12 hours
 
         genesis.nBits    = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce   = 715015;
+        genesis.nNonce   = 251624;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000001fd6111f0d71d90b7d8c827c6028dbc867f6c527d90794a0d22f68fecd4"));
-        assert(genesis.hashMerkleRoot == uint256("0x48d79d88cdf7d5c84dbb2ffb4fcaab253cebe040a4e7b46cdd507fbb93623e3f"));
+        assert(hashGenesisBlock == uint256("0xfea263d08105f069b10b0fec357b8d5e102dc9d8a8e1443f82860fb7eb47a49e"));
+        assert(genesis.hashMerkleRoot == uint256("0x2b9855ce2c8db2d4e88cf4524a48571ea18c4907d59661e0b8de24632fb59d93"));
 
         base58Prefixes[PUBKEY_ADDRESS]      = list_of(63).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[SCRIPT_ADDRESS]      = list_of(136).convert_to_container<std::vector<unsigned char> >();
@@ -223,7 +223,7 @@ public:
         pchMessageStart[2] = 0x44;
         pchMessageStart[3] = 0xb4;
 
-        vAlertPubKey = ParseHex("04e564bc9bf28e6d395cd89c4d2bdb235c3873f59b1330d2e6a30c6fa85d8a8637693ae367ce39c2fe0f4e8e3c7c3a34feb82305388f19030aa4fcd4955abeb810");
+        vAlertPubKey = ParseHex("04dba01336e48d52bc625e4144549e7483eb193d6bc28ebabe44c2ea1d118eadc49dd432f96ecec15ebe0f194f34ac2deabbf70d8f17c215421b39abd96717297d");
 
         nDefaultPort = 37111;
         nRPCPort = 36757;
@@ -244,7 +244,7 @@ public:
         genesis.nNonce = 20;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x0a3e03a153b1713ebc1f03fefa5d013bba4d2677ae189fcb727396b98043d95c"));
+        assert(hashGenesisBlock == uint256("0x80b1d2841ab066b9041144711f4d33e11ffba078274ca82395086b64b6b9b006"));
 
         base58Prefixes[PUBKEY_ADDRESS]      = list_of(127).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[SCRIPT_ADDRESS]      = list_of(196).convert_to_container<std::vector<unsigned char> >();
@@ -281,6 +281,8 @@ public:
         strNetworkID = "regtest";
         strDataDir = "regtest";
 
+        nDefaultPort = 18444;
+
         nFirstPosv2Block = -1;
         nFirstPosv3Block = -1;
 
@@ -289,14 +291,12 @@ public:
         pchMessageStart[2] = 0x04;
         pchMessageStart[3] = 0x3a;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 1);
-        genesis.nTime = 1479594600;
+        genesis.nTime = 1671851644;
         genesis.nBits  = bnProofOfWorkLimit.GetCompact();
         genesis.nNonce = 2;
 
         hashGenesisBlock = genesis.GetHash();
-        nDefaultPort = 18444;
-
-        assert(hashGenesisBlock == uint256("0x562dba63b74b056329585b9779306f3d3caf447b5df40fb088cebbfb31fd5d5d"));
+        assert(hashGenesisBlock == uint256("0xbe731d5714b9ff20146ab61a3c5c6d95b71ab5dd3a4411464c48e1e8e4faaec6"));
 
         vSeeds.clear();  // Regtest mode doesn't have any DNS seeds.
     }

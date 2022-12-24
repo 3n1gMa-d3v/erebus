@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: © 2020 Alias Developers
+// SPDX-FileCopyrightText: © 2020 Phantom Developers
 // SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 // SPDX-FileCopyrightText: © 2014 ShadowCoin Developers
 // SPDX-FileCopyrightText: © 2014 BlackCoin Developers
@@ -575,7 +575,7 @@ inline uint32_t ByteReverse(uint32_t value)
 //    threadGroup.create_thread(boost::bind(&LoopForever<boost::function<void()> >, "nothing", f, milliseconds));
 template <typename Callable> void LoopForever(const char* name,  Callable func, int64_t msecs)
 {
-    std::string s = strprintf("alias-%s", name);
+    std::string s = strprintf("phantom-%s", name);
     RenameThread(s.c_str());
     LogPrintf("%s thread start\n", name);
     try
@@ -599,7 +599,7 @@ template <typename Callable> void LoopForever(const char* name,  Callable func, 
 // .. and a wrapper that just calls func once
 template <typename Callable> void TraceThread(const char* name,  Callable func)
 {
-    std::string s = strprintf("alias-%s", name);
+    std::string s = strprintf("phantom-%s", name);
     RenameThread(s.c_str());
     try
     {
@@ -619,7 +619,7 @@ template <typename Callable> void TraceThread(const char* name,  Callable func)
 
 template <typename Callable, typename T> void TraceThread(const char* name, Callable func, T arg)
 {
-    std::string s = strprintf("alias-%s", name);
+    std::string s = strprintf("phantom-%s", name);
     RenameThread(s.c_str());
     try
     {

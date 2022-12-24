@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: © 2020 Alias Developers
+# SPDX-FileCopyrightText: © 2020 Phantom Developers
 # SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 #
 # SPDX-License-Identifier: MIT
@@ -6,8 +6,8 @@
 src/*.exe
 src/spectrecoin
 src/spectrecoind
-src/aliaswallet
-src/aliaswalletd
+src/phantomwallet
+src/phantomwalletd
 src/test_spectre
 src/build.h
 src/clientversion.h
@@ -22,11 +22,11 @@ src/.libs
 *.dat
 *.autosave
 .spectrecoin
-.aliaswallet
+.phantomwallet
 #compilation and Qt preprocessor part
 *.qm
 spectre
-aliaswallet
+phantomwallet
 #resources cpp
 qrc_*.cpp
 #moc
@@ -120,7 +120,7 @@ moc_predefs.h
 
 # Temp build files
 releaseNotesToDeploy.txt
-Checksum-Aliaswallet-*
+Checksum-Phantomwallet-*
 
 # Visual Studio
 .vs/

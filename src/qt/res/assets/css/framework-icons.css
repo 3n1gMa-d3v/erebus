@@ -11,7 +11,7 @@
     font: normal normal normal 14px/1 framework-icon;
     font-size: inherit;
     text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antiphantomed;
     -moz-osx-font-smoothing: grayscale
 }
 

@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: © 2020 Alias Developers
+# SPDX-FileCopyrightText: © 2020 Phantom Developers
 # SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 #
 # SPDX-License-Identifier: MIT
@@ -13,7 +13,7 @@
 # https://stackoverflow.com/questions/48839127/qmake-derived-clang-in-osx-10-13-cannot-find-string-h
 # INCLUDEPATH += /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include
 
-ICON = $$PWD/qt/res/icons/alias-app.icns
+ICON = $$PWD/qt/res/icons/phantom-app.icns
 
 QMAKE_INFO_PLIST = $$PWD/osx/Info.plist
 

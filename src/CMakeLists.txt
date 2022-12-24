@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: © 2020 Alias Developers
+# SPDX-FileCopyrightText: © 2020 Phantom Developers
 # SPDX-FileCopyrightText: © 2019 SpectreCoin Developers
 # SPDX-License-Identifier: MIT
 
@@ -20,11 +20,11 @@ configure_file(
 set(DUMMY_SOURCE ${CMAKE_BINARY_DIR}/dummy.c)
 file(WRITE ${DUMMY_SOURCE} "")
 
-add_library(aliaswallet_lib
+add_library(phantomwallet_lib
         OBJECT
         ${DUMMY_SOURCE})
 
-target_link_libraries(aliaswallet_lib
+target_link_libraries(phantomwallet_lib
         Oracle::BerkeleyDB
         leveldb::leveldb
         OpenSSL::SSL
@@ -41,7 +41,7 @@ target_link_libraries(aliaswallet_lib
         Boost::thread
         )
 
-target_include_directories(aliaswallet_lib
+target_include_directories(phantomwallet_lib
         SYSTEM BEFORE PUBLIC
         ${PROJECT_BINARY_DIR}/usr/local/include
         ${PROJECT_BINARY_DIR}/libdb/libdb-install/include
@@ -51,7 +51,7 @@ target_include_directories(aliaswallet_lib
         )
 
 # Common sources
-target_sources(aliaswallet_lib
+target_sources(phantomwallet_lib
         PUBLIC
         ${CMAKE_CURRENT_LIST_DIR}/addrman.h
         ${CMAKE_CURRENT_LIST_DIR}/alert.h
@@ -181,19 +181,19 @@ elseif(CMAKE_SYSTEM_NAME STREQUAL "Windows")
     message(STATUS "No daemon build on Windows")
 else()
     # The daemon
-    add_executable(Aliaswalletd ${CMAKE_CURRENT_LIST_DIR}/spectrecoind.cpp)
+    add_executable(Phantomwalletd ${CMAKE_CURRENT_LIST_DIR}/spectrecoind.cpp)
 
     # Link the daemon as static binary
-    target_link_libraries(Aliaswalletd
+    target_link_libraries(Phantomwalletd
             OpenSSL::SSL
             OpenSSL::Crypto
             Oracle::BerkeleyDB
             leveldb::leveldb
-            aliaswallet_lib
+            phantomwallet_lib
             -static
             )
-    set_target_properties(Aliaswalletd PROPERTIES
-            OUTPUT_NAME aliaswalletd
+    set_target_properties(Phantomwalletd PROPERTIES
+            OUTPUT_NAME phantomwalletd
             )
 endif()
 
@@ -203,10 +203,10 @@ if (ENABLE_GUI)
     # the qrc file itself. We use configure_file() to copy the qrc file in the build
     # directory such that it can find the qm translations files. The qrc file is
     # copied if it doesn't exist in the destination or if it is modified.
-    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/qt/alias_locale.qrc ${CMAKE_BINARY_DIR} COPYONLY)
+    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/qt/phantom_locale.qrc ${CMAKE_BINARY_DIR} COPYONLY)
 
-    # Create only alias_en.ts new, to figure out if there are new strings to translate.
-    # If src/qt/locale/alias_en.ts is modified afterwards, there are new strings to
+    # Create only phantom_en.ts new, to figure out if there are new strings to translate.
+    # If src/qt/locale/phantom_en.ts is modified afterwards, there are new strings to
     # translate. Any further steps on transifex.com.
     # Don't forget to add new source files here too, if they contain strings to translate!
     qt5_create_translation(QM_FILES
@@ -219,8 +219,8 @@ if (ENABLE_GUI)
 
             ${CMAKE_CURRENT_LIST_DIR}/qt/aboutdialog.h
             ${CMAKE_CURRENT_LIST_DIR}/qt/addresstablemodel.h
-            ${CMAKE_CURRENT_LIST_DIR}/qt/aliasbridgestrings.h
-            ${CMAKE_CURRENT_LIST_DIR}/qt/aliascorestrings.h
+            ${CMAKE_CURRENT_LIST_DIR}/qt/phantombridgestrings.h
+            ${CMAKE_CURRENT_LIST_DIR}/qt/phantomcorestrings.h
             ${CMAKE_CURRENT_LIST_DIR}/qt/askpassphrasedialog.h
             ${CMAKE_CURRENT_LIST_DIR}/qt/bitcoinaddressvalidator.h
             ${CMAKE_CURRENT_LIST_DIR}/qt/bitcoinamountfield.h
@@ -290,99 +290,99 @@ if (ENABLE_GUI)
             ${CMAKE_CURRENT_LIST_DIR}/rpcserver.cpp
             ${CMAKE_CURRENT_LIST_DIR}/wallet.cpp
 
-            ${CMAKE_CURRENT_LIST_DIR}/qt/locale/alias_en.ts
+            ${CMAKE_CURRENT_LIST_DIR}/qt/locale/phantom_en.ts
             )
 
     # Call lrelease on each translation file to create qm files.
     qt5_add_translation(QM_FILES
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_af_ZA.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_ar.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_be.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_bg.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_bs.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_ca.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_ca_ES.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_cs.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_cy.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_da.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_de.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_el.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_el_GR.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_eo.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_es.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_es_MX.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_et.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_eu_ES.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_fa.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_fa_IR.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_fi.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_fr.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_fr_CA.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_gl.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_he.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_hi_IN.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_hr.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_hu.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_id_ID.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_it.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_ja.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_ka.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_kk.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_ko_KR.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_ky.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_la.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_lt.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_lv_LV.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_ms_MY.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_nb.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_nl.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_pl.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_pt_BR.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_pt_PT.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_ro_RO.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_ru.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_sk.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_sl_SI.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_sq.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_sr.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_sv.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_th.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_tr.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_uk.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_ur_PK.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_vi.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_vi_VN.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_zh_CN.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_zh_HK.ts
-            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/alias_zh_TW.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_af_ZA.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_ar.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_be.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_bg.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_bs.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_ca.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_ca_ES.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_cs.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_cy.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_da.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_de.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_el.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_el_GR.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_eo.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_es.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_es_MX.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_et.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_eu_ES.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_fa.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_fa_IR.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_fi.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_fr.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_fr_CA.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_gl.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_he.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_hi_IN.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_hr.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_hu.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_id_ID.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_it.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_ja.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_ka.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_kk.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_ko_KR.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_ky.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_la.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_lt.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_lv_LV.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_ms_MY.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_nb.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_nl.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_pl.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_pt_BR.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_pt_PT.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_ro_RO.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_ru.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_sk.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_sl_SI.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_sq.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_sr.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_sv.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_th.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_tr.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_uk.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_ur_PK.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_vi.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_vi_VN.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_zh_CN.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_zh_HK.ts
+            ${CMAKE_CURRENT_SOURCE_DIR}/qt/locale/phantom_zh_TW.ts
             )
 
     if (ANDROID)
-        # Create a shared library 'libAliaswallet_<arch>.so'
-        add_library(Aliaswallet
+        # Create a shared library 'libPhantomwallet_<arch>.so'
+        add_library(Phantomwallet
                 SHARED
                 ../spectre.qrc
                 ${CMAKE_CURRENT_LIST_DIR}/qt/spectre.cpp
-                ${CMAKE_BINARY_DIR}/alias_locale.qrc
+                ${CMAKE_BINARY_DIR}/phantom_locale.qrc
                 ${QM_FILES}
                 )
-#        set_target_properties(Aliaswallet
+#        set_target_properties(Phantomwallet
 #                PROPERTIES
-#                OUTPUT_NAME "Aliaswallet_${CMAKE_ANDROID_ARCH}"
+#                OUTPUT_NAME "Phantomwallet_${CMAKE_ANDROID_ARCH}"
 #                )
-        install(TARGETS Aliaswallet
+        install(TARGETS Phantomwallet
             LIBRARY DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/android-build/libs/${DCMAKE_ANDROID_ARCH_ABI}/"
             ARCHIVE DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/android-build/libs/${DCMAKE_ANDROID_ARCH_ABI}/"
             )
 
         # Link the UI wallet
         # QtWebEngine not static available, so no static binary here :-(
-        target_link_libraries(Aliaswallet
+        target_link_libraries(Phantomwallet
                 OpenSSL::SSL
                 OpenSSL::Crypto
                 Oracle::BerkeleyDB
                 leveldb::leveldb
-                aliaswallet_lib
+                phantomwallet_lib
                 Qt5::Core
                 Qt5::Widgets
                 Qt5::WebView
@@ -394,12 +394,12 @@ if (ENABLE_GUI)
                 Qt5::Concurrent
                 )
 
-        target_sources(Aliaswallet
+        target_sources(Phantomwallet
                 PUBLIC
                 ${CMAKE_CURRENT_LIST_DIR}/qt/aboutdialog.h
                 ${CMAKE_CURRENT_LIST_DIR}/qt/addresstablemodel.h
-                ${CMAKE_CURRENT_LIST_DIR}/qt/aliasbridgestrings.h
-                ${CMAKE_CURRENT_LIST_DIR}/qt/aliascorestrings.h
+                ${CMAKE_CURRENT_LIST_DIR}/qt/phantombridgestrings.h
+                ${CMAKE_CURRENT_LIST_DIR}/qt/phantomcorestrings.h
                 ${CMAKE_CURRENT_LIST_DIR}/qt/askpassphrasedialog.h
                 ${CMAKE_CURRENT_LIST_DIR}/qt/bitcoinaddressvalidator.h
                 ${CMAKE_CURRENT_LIST_DIR}/qt/bitcoinamountfield.h
@@ -467,50 +467,50 @@ if (ENABLE_GUI)
     else()
         # The UI wallet
         if(CMAKE_SYSTEM_NAME STREQUAL "Darwin")
-            # We have to reference the alias_locale.qrc copy in the build directory, not the
+            # We have to reference the phantom_locale.qrc copy in the build directory, not the
             # original file in the source directory. We also add qm files to the target to
             # create a dependency that will force rebuild in case the translation are
             # updated.
-            add_executable(Aliaswallet
+            add_executable(Phantomwallet
                     MACOSX_BUNDLE
                     ../spectre.qrc
                     ${CMAKE_CURRENT_LIST_DIR}/qt/spectre.cpp
-                    ${CMAKE_BINARY_DIR}/alias_locale.qrc
+                    ${CMAKE_BINARY_DIR}/phantom_locale.qrc
                     ${QM_FILES}
                     )
         elseif (CMAKE_SYSTEM_NAME STREQUAL "Windows")
-            # We have to reference the alias_locale.qrc copy in the build directory, not the
+            # We have to reference the phantom_locale.qrc copy in the build directory, not the
             # original file in the source directory. We also add qm files to the target to
             # create a dependency that will force rebuild in case the translation are
             # updated.
-            add_executable(Aliaswallet
+            add_executable(Phantomwallet
                     ../spectre.qrc
                     ${CMAKE_CURRENT_LIST_DIR}/qt/spectre.cpp
-                    ${CMAKE_CURRENT_LIST_DIR}/qt/res/alias-qt.rc
-                    ${CMAKE_BINARY_DIR}/alias_locale.qrc
+                    ${CMAKE_CURRENT_LIST_DIR}/qt/res/phantom-qt.rc
+                    ${CMAKE_BINARY_DIR}/phantom_locale.qrc
                     ${QM_FILES}
                     )
         else()
-            # We have to reference the alias_locale.qrc copy in the build directory, not the
+            # We have to reference the phantom_locale.qrc copy in the build directory, not the
             # original file in the source directory. We also add qm files to the target to
             # create a dependency that will force rebuild in case the translation are
             # updated.
-            add_executable(Aliaswallet
+            add_executable(Phantomwallet
                     ../spectre.qrc
                     ${CMAKE_CURRENT_LIST_DIR}/qt/spectre.cpp
-                    ${CMAKE_BINARY_DIR}/alias_locale.qrc
+                    ${CMAKE_BINARY_DIR}/phantom_locale.qrc
                     ${QM_FILES}
                     )
         endif()
 
         # Link the UI wallet
         # QtWebEngine not static available, so no static binary here :-(
-        target_link_libraries(Aliaswallet
+        target_link_libraries(Phantomwallet
                 OpenSSL::SSL
                 OpenSSL::Crypto
                 Oracle::BerkeleyDB
                 leveldb::leveldb
-                aliaswallet_lib
+                phantomwallet_lib
                 Qt5::Core
                 Qt5::Widgets
                 Qt5::WebView
@@ -522,12 +522,12 @@ if (ENABLE_GUI)
                 Qt5::Concurrent
                 )
 
-        target_sources(Aliaswallet
+        target_sources(Phantomwallet
                 PUBLIC
                 ${CMAKE_CURRENT_LIST_DIR}/qt/aboutdialog.h
                 ${CMAKE_CURRENT_LIST_DIR}/qt/addresstablemodel.h
-                ${CMAKE_CURRENT_LIST_DIR}/qt/aliasbridgestrings.h
-                ${CMAKE_CURRENT_LIST_DIR}/qt/aliascorestrings.h
+                ${CMAKE_CURRENT_LIST_DIR}/qt/phantombridgestrings.h
+                ${CMAKE_CURRENT_LIST_DIR}/qt/phantomcorestrings.h
                 ${CMAKE_CURRENT_LIST_DIR}/qt/askpassphrasedialog.h
                 ${CMAKE_CURRENT_LIST_DIR}/qt/bitcoinaddressvalidator.h
                 ${CMAKE_CURRENT_LIST_DIR}/qt/bitcoinamountfield.h
@@ -594,7 +594,7 @@ if (ENABLE_GUI)
                 )
 
         if(CMAKE_SYSTEM_NAME STREQUAL "Darwin")
-            target_sources(Aliaswallet
+            target_sources(Phantomwallet
                 PUBLIC
                 ${CMAKE_CURRENT_LIST_DIR}/qt/macdockiconhandler.h
                 ${CMAKE_CURRENT_LIST_DIR}/qt/macnotificationhandler.h
@@ -602,52 +602,52 @@ if (ENABLE_GUI)
                 ${CMAKE_CURRENT_LIST_DIR}/qt/macdockiconhandler.mm
                 ${CMAKE_CURRENT_LIST_DIR}/qt/macnotificationhandler.mm
                 )
-            set_target_properties(Aliaswallet PROPERTIES
-                MACOSX_BUNDLE_INFO_STRING "${PROJECT_NAME}${DBG_EXTENSION} Version ${VERSION_STRING}, © 2020 The Alias developers."
+            set_target_properties(Phantomwallet PROPERTIES
+                MACOSX_BUNDLE_INFO_STRING "${PROJECT_NAME}${DBG_EXTENSION} Version ${VERSION_STRING}, © 2020 The Phantom developers."
                 MACOSX_BUNDLE_GUI_IDENTIFIER "${PROJECT_NAME}${DBG_EXTENSION}"
                 MACOSX_BUNDLE_LONG_VERSION_STRING "${PROJECT_NAME}${DBG_EXTENSION} Version ${VERSION_STRING}"
                 MACOSX_BUNDLE_BUNDLE_NAME ${PROJECT_NAME}${DBG_EXTENSION}
                 MACOSX_BUNDLE_SHORT_VERSION_STRING ${VERSION_STRING}
                 MACOSX_BUNDLE_BUNDLE_VERSION ${VERSION_STRING}
-                MACOSX_BUNDLE_COPYRIGHT " © 2020 The Alias developers"
+                MACOSX_BUNDLE_COPYRIGHT " © 2020 The Phantom developers"
                 MACOSX_BUNDLE_INFO_PLIST ${CMAKE_CURRENT_LIST_DIR}/osx/MacOSXBundleInfo.plist.in
-                OUTPUT_NAME Alias
+                OUTPUT_NAME Phantom
                 )
-            target_link_libraries(Aliaswallet "-framework AppKit")
-            add_custom_command(TARGET Aliaswallet POST_BUILD
+            target_link_libraries(Phantomwallet "-framework AppKit")
+            add_custom_command(TARGET Phantomwallet POST_BUILD
 #                    COMMAND cd ${CMAKE_BINARY_DIR} && "${MACDEPLOYQT_EXECUTABLE}"
-#                    Alias.app
+#                    Phantom.app
 #                    -qmldir=${CMAKE_SOURCE_DIR}/src/qt/res
 #                    -always-overwrite
 #                    -verbose=1
 #                    ${DEPLOY_QT_BINARY_TYPE_OPTION}
-                    COMMAND rm -rf ${CMAKE_BINARY_DIR}/Alias.app/Contents/MacOS/Tor
-                    COMMAND unzip ${TOR_ARCHIVE} -d ${CMAKE_BINARY_DIR}/Alias.app/
-                    COMMAND chmod +x ${CMAKE_BINARY_DIR}/Alias.app/Contents/MacOS/Tor/tor.real
-                    COMMAND chmod +x ${CMAKE_BINARY_DIR}/Alias.app/Contents/MacOS/Tor/libevent*
-                    COMMAND chmod +x ${CMAKE_BINARY_DIR}/Alias.app/Contents/MacOS/Tor/PluggableTransports/*
-                    COMMAND mkdir -p ${CMAKE_BINARY_DIR}/Alias.app/Contents/Resources
-                    COMMAND cp ${CMAKE_SOURCE_DIR}/src/qt/res/icons/alias-app.icns ${CMAKE_BINARY_DIR}/Alias.app/Contents/Resources/
+                    COMMAND rm -rf ${CMAKE_BINARY_DIR}/Phantom.app/Contents/MacOS/Tor
+                    COMMAND unzip ${TOR_ARCHIVE} -d ${CMAKE_BINARY_DIR}/Phantom.app/
+                    COMMAND chmod +x ${CMAKE_BINARY_DIR}/Phantom.app/Contents/MacOS/Tor/tor.real
+                    COMMAND chmod +x ${CMAKE_BINARY_DIR}/Phantom.app/Contents/MacOS/Tor/libevent*
+                    COMMAND chmod +x ${CMAKE_BINARY_DIR}/Phantom.app/Contents/MacOS/Tor/PluggableTransports/*
+                    COMMAND mkdir -p ${CMAKE_BINARY_DIR}/Phantom.app/Contents/Resources
+                    COMMAND cp ${CMAKE_SOURCE_DIR}/src/qt/res/icons/phantom-app.icns ${CMAKE_BINARY_DIR}/Phantom.app/Contents/Resources/
 #                    COMMAND cd ${CMAKE_BINARY_DIR} && "${MACDEPLOYQT_EXECUTABLE}"
-#                    Alias.app
+#                    Phantom.app
 #                    -dmg
 #                    -always-overwrite
 #                    -verbose=1
                     COMMENT "Put additional content onto app directory"
                     )
         elseif(CMAKE_SYSTEM_NAME STREQUAL "Windows")
-            target_sources(Aliaswallet
+            target_sources(Phantomwallet
                 PUBLIC
                 ${CMAKE_CURRENT_LIST_DIR}/qt/winshutdownmonitor.h
                 PRIVATE
                 ${CMAKE_CURRENT_LIST_DIR}/qt/winshutdownmonitor.cpp
                 )
-            set_target_properties(Aliaswallet PROPERTIES
-                    OUTPUT_NAME Alias
+            set_target_properties(Phantomwallet PROPERTIES
+                    OUTPUT_NAME Phantom
                     )
-            target_link_libraries(Aliaswallet "Shlwapi")
-            add_custom_command(TARGET Aliaswallet POST_BUILD
-                    COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_BINARY_DIR}/delivery/Alias
+            target_link_libraries(Phantomwallet "Shlwapi")
+            add_custom_command(TARGET Phantomwallet POST_BUILD
+                    COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_BINARY_DIR}/delivery/Phantom
                     COMMAND "${CMAKE_COMMAND}" -E
                     env PATH="${_qt_bin_dir}" "${WINDEPLOYQT_EXECUTABLE}"
                     --force
@@ -658,16 +658,16 @@ if (ENABLE_GUI)
                     --qml
                     --quick
                     --webengine
-                    "$<TARGET_FILE:Aliaswallet>"
+                    "$<TARGET_FILE:Phantomwallet>"
                     COMMAND unzip -o ${VCRUNTIME_ARCHIVE} -d ${CMAKE_BINARY_DIR}/delivery/${WINDEPLOYQT_TARGET_FOLDER}/
                     COMMAND unzip -o ${TOR_ARCHIVE} -d ${CMAKE_BINARY_DIR}/delivery/${WINDEPLOYQT_TARGET_FOLDER}/
-                    COMMAND ${CMAKE_COMMAND} -E rename ${CMAKE_BINARY_DIR}/delivery/${WINDEPLOYQT_TARGET_FOLDER} ${CMAKE_BINARY_DIR}/delivery/Alias
+                    COMMAND ${CMAKE_COMMAND} -E rename ${CMAKE_BINARY_DIR}/delivery/${WINDEPLOYQT_TARGET_FOLDER} ${CMAKE_BINARY_DIR}/delivery/Phantom
                     COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_BINARY_DIR}/delivery/${WINDEPLOYQT_TARGET_FOLDER}
                     COMMENT "Running windeployqt..."
                     )
         else()
-            set_target_properties(Aliaswallet PROPERTIES
-                    OUTPUT_NAME aliaswallet
+            set_target_properties(Phantomwallet PROPERTIES
+                    OUTPUT_NAME phantomwallet
                     )
         endif()
     endif()

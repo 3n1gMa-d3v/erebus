@@ -1,10 +1,10 @@
-# SPDX-FileCopyrightText: © 2020 Alias Developers
+# SPDX-FileCopyrightText: © 2020 Phantom Developers
 # SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 #
 # SPDX-License-Identifier: MIT
 
 ### At first perform source build ###
-FROM aliascash/alias-wallet-builder-debian-stretch:2.6
+FROM phantomcash/phantom-wallet-builder-debian-stretch:2.6
 MAINTAINER HLXEasy <hlxeasy@gmail.com>
 
 # Build parameters
@@ -13,9 +13,9 @@ ARG BUILD_THREADS="6"
 # Runtime parameters
 ENV BUILD_THREADS=$BUILD_THREADS
 
-COPY . /alias-wallet
+COPY . /phantom-wallet
 
-RUN cd /alias-wallet \
+RUN cd /phantom-wallet \
  && ./scripts/cmake-build.sh -g -o -s -c ${BUILD_THREADS} \
- && strip /alias-wallet/cmake-build-cmdline/aliaswallet/src/aliaswalletd \
- && strip /alias-wallet/cmake-build-cmdline/aliaswallet/src/aliaswallet
+ && strip /phantom-wallet/cmake-build-cmdline/phantomwallet/src/phantomwalletd \
+ && strip /phantom-wallet/cmake-build-cmdline/phantomwallet/src/phantomwallet

@@ -1,5 +1,5 @@
 // Microsoft Visual C++ generated resource script.
-// SPDX-FileCopyrightText: © 2020 Alias Developers
+// SPDX-FileCopyrightText: © 2020 Phantom Developers
 // SPDX-FileCopyrightText: © 2016 SpectreCoin Developers
 // SPDX-License-Identifier: MIT
 //
@@ -49,7 +49,7 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDI_ICON1               ICON                    "qt/res/icons/alias-app.ico"
+IDI_ICON1               ICON                    "qt/res/icons/phantom-app.ico"
 
 
 VS_VERSION_INFO VERSIONINFO
@@ -73,8 +73,8 @@ VS_VERSION_INFO VERSIONINFO
 				VALUE "FileDescription", "\0"
 				VALUE "FileVersion", "0.0.0.0\0"
 				VALUE "LegalCopyright", "\0"
-                                VALUE "OriginalFilename", "Aliaswallet.exe\0"
-                                VALUE "ProductName", "Alias\0"
+                                VALUE "OriginalFilename", "Phantomwallet.exe\0"
+                                VALUE "ProductName", "Phantom\0"
 				VALUE "ProductVersion", "0.0.0.0\0"
 			END
 		END

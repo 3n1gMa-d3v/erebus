@@ -3,23 +3,23 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="14"/>
-        <source>About Alias</source>
-        <translation>О Alias</translation>
+        <source>About Phantom</source>
+        <translation>О Phantom</translation>
     </message>
     <message>
         <location filename="../forms/aboutdialog.ui" line="127"/>
-        <source>&lt;b&gt;Alias&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Alias&lt;/b&gt; версия</translation>
+        <source>&lt;b&gt;Phantom&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Phantom&lt;/b&gt; версия</translation>
     </message>
     <message>
         <location filename="../forms/aboutdialog.ui" line="216"/>
-        <source>© 2020 Alias developers
+        <source>© 2020 Phantom developers
 © 2016 Spectrecoin developers
 © 2014 ShadowCash developers
 © 2014 BlackCoin developers
 © 2012 NovaCoin developers
 © 2009 Bitcoin developers</source>
-        <translation>© 2020 разработчики Alias 
+        <translation>© 2020 разработчики Phantom 
 © 2016 разработчики Spectrecoin
 © 2014 разработчики ShadowCash
 © 2014 разработчики BlackCoin
@@ -127,13 +127,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="60"/>
-        <source>Your wallet contains locked ATXOs for which its spending state can only be determinate with your private key. Your &lt;b&gt;private ALIAS balance might be shown wrong&lt;/b&gt;.</source>
-        <translation>Ваш кошелек содержит заблокированные ATXO, для которых состояние расходов может быть определено только вашим личным ключом.&lt;b&gt; Ваш личный баланс ALIAS может быть показан неверно&lt;/b&gt;.</translation>
+        <source>Your wallet contains locked ATXOs for which its spending state can only be determinate with your private key. Your &lt;b&gt;private PHM balance might be shown wrong&lt;/b&gt;.</source>
+        <translation>Ваш кошелек содержит заблокированные ATXO, для которых состояние расходов может быть определено только вашим личным ключом.&lt;b&gt; Ваш личный баланс PHM может быть показан неверно&lt;/b&gt;.</translation>
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="62"/>
-        <source>&lt;b&gt;Alias Wallet Login&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Логин кошелька Alias&lt;/b&gt;</translation>
+        <source>&lt;b&gt;Phantom Wallet Login&lt;/b&gt;</source>
+        <translation>&lt;b&gt;Логин кошелька Phantom&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="64"/>
@@ -188,7 +188,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="134"/>
-        <source>Alias will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <source>Phantom will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
         <translation>Сейчас программа закроется для завершения процесса шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши монеты от кражи с помощью инфицирования вашего компьютера вредоносным ПО.</translation>
     </message>
     <message>
@@ -577,8 +577,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../editaddressdialog.cpp" line="121"/>
-        <source>The entered address &quot;%1&quot; is not a valid Alias address.</source>
-        <translation>Введённый адрес &quot;%1&quot; не является правильным Alias-адресом.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Phantom address.</source>
+        <translation>Введённый адрес &quot;%1&quot; не является правильным Phantom-адресом.</translation>
     </message>
     <message>
         <location filename="../editaddressdialog.cpp" line="126"/>
@@ -644,8 +644,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../guiutil.cpp" line="550"/>
         <location filename="../guiutil.cpp" line="562"/>
-        <source>Alias</source>
-        <translation>Alias</translation>
+        <source>Phantom</source>
+        <translation>Phantom</translation>
     </message>
     <message>
         <location filename="../guiutil.cpp" line="550"/>
@@ -842,7 +842,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="109"/>
-        <source>Cannot start Alias: click-to-pay handler</source>
+        <source>Cannot start Phantom: click-to-pay handler</source>
         <translation>Не могу запустить псевдоним: обработчик клик-оплаты</translation>
     </message>
 </context>
@@ -907,8 +907,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>RPCConsole</name>
     <message>
         <location filename="../forms/rpcconsole.ui" line="14"/>
-        <source>Alias - Debug window</source>
-        <translation>Alias - Окно отладки</translation>
+        <source>Phantom - Debug window</source>
+        <translation>Phantom - Окно отладки</translation>
     </message>
     <message>
         <location filename="../forms/rpcconsole.ui" line="24"/>
@@ -917,8 +917,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../forms/rpcconsole.ui" line="39"/>
-        <source>Alias Core</source>
-        <translation>Ядро Alias</translation>
+        <source>Phantom Core</source>
+        <translation>Ядро Phantom</translation>
     </message>
     <message>
         <location filename="../forms/rpcconsole.ui" line="46"/>
@@ -1022,8 +1022,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../forms/rpcconsole.ui" line="357"/>
-        <source>Open the Alias debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Откройте файл журнала отладки Alias из текущего каталога данных. Это может занять несколько секунд для больших файлов.</translation>
+        <source>Open the Phantom debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Откройте файл журнала отладки Phantom из текущего каталога данных. Это может занять несколько секунд для больших файлов.</translation>
     </message>
     <message>
         <location filename="../forms/rpcconsole.ui" line="360"/>
@@ -1037,8 +1037,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../forms/rpcconsole.ui" line="383"/>
-        <source>Show the Alias help message to get a list with possible Alias command-line options.</source>
-        <translation>Показать справочное сообщение Alias, чтобы получить список возможных параметров командной строки Alias.</translation>
+        <source>Show the Phantom help message to get a list with possible Phantom command-line options.</source>
+        <translation>Показать справочное сообщение Phantom, чтобы получить список возможных параметров командной строки Phantom.</translation>
     </message>
     <message>
         <location filename="../forms/rpcconsole.ui" line="386"/>
@@ -1171,8 +1171,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="353"/>
-        <source>Welcome to the Alias Core RPC console.</source>
-        <translation>Добро пожаловать на консоль Alias Core RPC.</translation>
+        <source>Welcome to the Phantom Core RPC console.</source>
+        <translation>Добро пожаловать на консоль Phantom Core RPC.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="354"/>
@@ -1259,8 +1259,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>SetupWalletWizard</name>
     <message>
         <location filename="../setupwalletwizard.cpp" line="41"/>
-        <source>Alias Wallet Setup</source>
-        <translation>Настройка кошелька Alias</translation>
+        <source>Phantom Wallet Setup</source>
+        <translation>Настройка кошелька Phantom</translation>
     </message>
     <message>
         <location filename="../setupwalletwizard.cpp" line="53"/>
@@ -1299,8 +1299,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../setupwalletwizard.cpp" line="78"/>
-        <source>Alias Wallet Setup Help</source>
-        <translation>Справка по настройке кошелька Alias</translation>
+        <source>Phantom Wallet Setup Help</source>
+        <translation>Справка по настройке кошелька Phantom</translation>
     </message>
 </context>
 <context>
@@ -1429,8 +1429,8 @@ Ring size of one is not anonymous.</source>
     </message>
     <message>
         <location filename="../spectrebridge.cpp" line="562"/>
-        <source>Only ALIAS from your Private balance can be send to a stealth address.</source>
-        <translation>Только Alias из вашего скрытого баланса могут быть отправлены на скрытый адрес.</translation>
+        <source>Only PHM from your Private balance can be send to a stealth address.</source>
+        <translation>Только Phantom из вашего скрытого баланса могут быть отправлены на скрытый адрес.</translation>
     </message>
     <message>
         <location filename="../spectrebridge.cpp" line="568"/>
@@ -1499,8 +1499,8 @@ Ring size of one is not anonymous.</source>
     </message>
     <message>
         <location filename="../spectrebridge.cpp" line="646"/>
-        <source>Convert Alias from Private to Public</source>
-        <translation>Перевести Alias из Скрытого в Открытый</translation>
+        <source>Convert Phantom from Private to Public</source>
+        <translation>Перевести Phantom из Скрытого в Открытый</translation>
     </message>
     <message>
         <location filename="../spectrebridge.cpp" line="647"/>
@@ -1509,13 +1509,13 @@ Ring size of one is not anonymous.</source>
     </message>
     <message>
         <location filename="../spectrebridge.cpp" line="653"/>
-        <source>The amount exceeds your ALIAS balance.</source>
-        <translation>Количество превышает ваш ALIAS баланс.</translation>
+        <source>The amount exceeds your PHM balance.</source>
+        <translation>Количество превышает ваш PHM баланс.</translation>
     </message>
     <message>
         <location filename="../spectrebridge.cpp" line="659"/>
-        <source>The total exceeds your private ALIAS balance when the %1 transaction fee is included.</source>
-        <translation>Суммарная сумма превышает Ваш личный баланс ALIAS, если учитывать комиссию за транзакцию в размере %1.</translation>
+        <source>The total exceeds your private PHM balance when the %1 transaction fee is included.</source>
+        <translation>Суммарная сумма превышает Ваш личный баланс PHM, если учитывать комиссию за транзакцию в размере %1.</translation>
     </message>
     <message>
         <location filename="../spectrebridge.cpp" line="665"/>
@@ -1632,8 +1632,8 @@ Please restart the wallet!</source>
         <location filename="../spectregui.cpp" line="405"/>
         <location filename="../spectregui.cpp" line="420"/>
         <location filename="../spectregui.cpp" line="480"/>
-        <source>Alias</source>
-        <translation>Alias</translation>
+        <source>Phantom</source>
+        <translation>Phantom</translation>
     </message>
     <message>
         <location filename="../spectregui.cpp" line="152"/>
@@ -1667,12 +1667,12 @@ Please restart the wallet!</source>
     </message>
     <message>
         <location filename="../spectregui.cpp" line="317"/>
-        <source>&amp;About Alias</source>
+        <source>&amp;About Phantom</source>
         <translation>О псевдониме</translation>
     </message>
     <message>
         <location filename="../spectregui.cpp" line="318"/>
-        <source>Show information about Alias</source>
+        <source>Show information about Phantom</source>
         <translation>Показать информацию о псевдониме</translation>
     </message>
     <message>
@@ -1692,7 +1692,7 @@ Please restart the wallet!</source>
     </message>
     <message>
         <location filename="../spectregui.cpp" line="324"/>
-        <source>Modify configuration options for Alias</source>
+        <source>Modify configuration options for Phantom</source>
         <translation>Изменить параметры конфигурации для псевдонима</translation>
     </message>
     <message>
@@ -1788,8 +1788,8 @@ Please restart the wallet!</source>
     </message>
     <message numerus="yes">
         <location filename="../spectregui.cpp" line="562"/>
-        <source>%n active connection(s) to Alias network</source>
-        <translation><numerusform>%n активные подключения к сети Alias</numerusform><numerusform>%n активные подключения к сети Alias</numerusform><numerusform>%n активные подключения к сети Alias</numerusform><numerusform>%n активные подключения к сети Alias</numerusform></translation>
+        <source>%n active connection(s) to Phantom network</source>
+        <translation><numerusform>%n активные подключения к сети Phantom</numerusform><numerusform>%n активные подключения к сети Phantom</numerusform><numerusform>%n активные подключения к сети Phantom</numerusform><numerusform>%n активные подключения к сети Phantom</numerusform></translation>
     </message>
     <message>
         <location filename="../spectregui.cpp" line="582"/>
@@ -1932,7 +1932,7 @@ Note: %2
     <message>
         <location filename="../spectregui.cpp" line="864"/>
         <location filename="../spectregui.cpp" line="886"/>
-        <source>URI can not be parsed! This can be caused by an invalid Alias address or malformed URI parameters.</source>
+        <source>URI can not be parsed! This can be caused by an invalid Phantom address or malformed URI parameters.</source>
         <translation>URI нельзя разобрать! Это может быть вызвано недействительным адресом псевдонима или неправильными параметрами URI.</translation>
     </message>
     <message>
@@ -2386,1042 +2386,1042 @@ Note: %2
     </message>
 </context>
 <context>
-    <name>alias-bridge</name>
+    <name>phantom-bridge</name>
     <message>
-        <location filename="../aliasbridgestrings.h" line="14"/>
+        <location filename="../phantombridgestrings.h" line="14"/>
         <source>Overview</source>
         <translation>Обзор</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="15"/>
+        <location filename="../phantombridgestrings.h" line="15"/>
         <source>Wallet</source>
         <translation>Бумажник</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="16"/>
+        <location filename="../phantombridgestrings.h" line="16"/>
         <source>Send</source>
         <translation>Отправить</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="17"/>
+        <location filename="../phantombridgestrings.h" line="17"/>
         <source>Receive</source>
         <translation>Получить</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="18"/>
+        <location filename="../phantombridgestrings.h" line="18"/>
         <source>Transactions</source>
         <translation>Сделки</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="19"/>
+        <location filename="../phantombridgestrings.h" line="19"/>
         <source>Address Book</source>
         <translation>адресная книга</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="20"/>
+        <location filename="../phantombridgestrings.h" line="20"/>
         <source>Options</source>
         <translation>Варианты</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="23"/>
+        <location filename="../phantombridgestrings.h" line="23"/>
         <source>Advanced</source>
         <translation>Расширенный сайт</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="24"/>
+        <location filename="../phantombridgestrings.h" line="24"/>
         <source>Backup Wallet</source>
         <translation>Backup кошелек</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="25"/>
+        <location filename="../phantombridgestrings.h" line="25"/>
         <source>Encrypt Wallet</source>
         <translation>Шифрованный кошелек</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="26"/>
+        <location filename="../phantombridgestrings.h" line="26"/>
         <source>Change Passphrase</source>
         <translation>Изменить пароль</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="27"/>
+        <location filename="../phantombridgestrings.h" line="27"/>
         <source>(Un)lock Wallet</source>
         <translation>(Un)lock Кошелек</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="28"/>
+        <location filename="../phantombridgestrings.h" line="28"/>
         <source>Tools</source>
         <translation>Инструменты</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="29"/>
+        <location filename="../phantombridgestrings.h" line="29"/>
         <source>Chain Data</source>
         <translation>Данные цепочки</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="30"/>
+        <location filename="../phantombridgestrings.h" line="30"/>
         <source>Block Explorer</source>
         <translation>Проводник блоков</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="31"/>
+        <location filename="../phantombridgestrings.h" line="31"/>
         <source>Sign Message</source>
         <translation>Знаковое сообщение</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="32"/>
+        <location filename="../phantombridgestrings.h" line="32"/>
         <source>Verify Message</source>
         <translation>Проверить сообщение</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="33"/>
+        <location filename="../phantombridgestrings.h" line="33"/>
         <source>Debug</source>
         <translation>Отладка</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="34"/>
-        <source>About Alias</source>
-        <translation>О Alias</translation>
+        <location filename="../phantombridgestrings.h" line="34"/>
+        <source>About Phantom</source>
+        <translation>О Phantom</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="35"/>
+        <location filename="../phantombridgestrings.h" line="35"/>
         <source>About QT</source>
         <translation>О КТ</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="36"/>
+        <location filename="../phantombridgestrings.h" line="36"/>
         <source>QR code</source>
         <translation>QR-код</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="37"/>
+        <location filename="../phantombridgestrings.h" line="37"/>
         <source>Address:</source>
         <translation>Адрес:</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="38"/>
+        <location filename="../phantombridgestrings.h" line="38"/>
         <source>Label:</source>
         <translation>Ярлык:</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="39"/>
+        <location filename="../phantombridgestrings.h" line="39"/>
         <source>Amount:</source>
         <translation>Сумма:</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="40"/>
+        <location filename="../phantombridgestrings.h" line="40"/>
         <source>Add new receive address</source>
         <translation>Добавить новый адрес получения</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="41"/>
+        <location filename="../phantombridgestrings.h" line="41"/>
         <source>Add Address</source>
         <translation>Адрес</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="42"/>
+        <location filename="../phantombridgestrings.h" line="42"/>
         <source>Add a new contact</source>
         <translation>Добавить новый контакт</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="43"/>
+        <location filename="../phantombridgestrings.h" line="43"/>
         <source>Address Lookup</source>
         <translation>Поиск адреса</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="44"/>
+        <location filename="../phantombridgestrings.h" line="44"/>
         <source>Address Type</source>
         <translation>Тип адреса</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="45"/>
+        <location filename="../phantombridgestrings.h" line="45"/>
         <source>Stealth</source>
         <translation>Стелс</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="46"/>
+        <location filename="../phantombridgestrings.h" line="46"/>
         <source>Group</source>
         <translation>Группа</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="47"/>
+        <location filename="../phantombridgestrings.h" line="47"/>
         <source>BIP32</source>
         <translation>BIP32</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="48"/>
+        <location filename="../phantombridgestrings.h" line="48"/>
         <source>Label</source>
         <translation>Ярлык</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="49"/>
+        <location filename="../phantombridgestrings.h" line="49"/>
         <source>Address</source>
         <translation>Адрес</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="50"/>
+        <location filename="../phantombridgestrings.h" line="50"/>
         <source>Public Key</source>
         <translation>Открытый ключ</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="51"/>
+        <location filename="../phantombridgestrings.h" line="51"/>
         <source>Transaction Hash</source>
         <translation>Хэш-транзакция</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="52"/>
+        <location filename="../phantombridgestrings.h" line="52"/>
         <source>Recent Transactions</source>
         <translation>Последние сделки</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="54"/>
+        <location filename="../phantombridgestrings.h" line="54"/>
         <source>Coin Control</source>
         <translation>Контроль за монетами</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="55"/>
+        <location filename="../phantombridgestrings.h" line="55"/>
         <source>Make payment</source>
         <translation>произвести оплату</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="56"/>
+        <location filename="../phantombridgestrings.h" line="56"/>
         <source>Balance transfer</source>
         <translation>Перевод баланса</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="57"/>
+        <location filename="../phantombridgestrings.h" line="57"/>
         <source>Select Inputs</source>
         <translation>Выберите Входы</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="58"/>
+        <location filename="../phantombridgestrings.h" line="58"/>
         <source>Automatically selected</source>
         <translation>Автоматически выбранный</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="59"/>
+        <location filename="../phantombridgestrings.h" line="59"/>
         <source>Quantity:</source>
         <translation>Количество:</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="60"/>
+        <location filename="../phantombridgestrings.h" line="60"/>
         <source>Fee:</source>
         <translation>Гонорар:</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="61"/>
+        <location filename="../phantombridgestrings.h" line="61"/>
         <source>After Fee:</source>
         <translation>После Фи:</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="62"/>
+        <location filename="../phantombridgestrings.h" line="62"/>
         <source>Bytes:</source>
         <translation>Байты:</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="63"/>
+        <location filename="../phantombridgestrings.h" line="63"/>
         <source>Priority:</source>
         <translation>Приоритет:</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="64"/>
+        <location filename="../phantombridgestrings.h" line="64"/>
         <source>LowOutput:</source>
         <translation>LowOutput:</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="65"/>
+        <location filename="../phantombridgestrings.h" line="65"/>
         <source>Change:</source>
         <translation>Перемены:</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="66"/>
+        <location filename="../phantombridgestrings.h" line="66"/>
         <source>Custom change address</source>
         <translation>Настраиваемый адрес изменения</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="67"/>
+        <location filename="../phantombridgestrings.h" line="67"/>
         <source>From account</source>
         <translation>Со счета</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="68"/>
+        <location filename="../phantombridgestrings.h" line="68"/>
         <source>PUBLIC</source>
         <translation>ПУБЛИКА</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="69"/>
+        <location filename="../phantombridgestrings.h" line="69"/>
         <source>PRIVATE</source>
         <translation>ЧАСТНЫЙ</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="70"/>
+        <location filename="../phantombridgestrings.h" line="70"/>
         <source>Balance:</source>
         <translation>Баланс:</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="71"/>
+        <location filename="../phantombridgestrings.h" line="71"/>
         <source>Ring Size:</source>
         <translation>Размер кольца:</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="72"/>
+        <location filename="../phantombridgestrings.h" line="72"/>
         <source>To account</source>
         <translation>Отчитаться</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="73"/>
+        <location filename="../phantombridgestrings.h" line="73"/>
         <source>Pay to</source>
         <translation>Платить до</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="74"/>
+        <location filename="../phantombridgestrings.h" line="74"/>
         <source>(no label)</source>
         <translation>(без этикетки)</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="75"/>
+        <location filename="../phantombridgestrings.h" line="75"/>
         <source>Master</source>
         <translation>Мастер</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="76"/>
+        <location filename="../phantombridgestrings.h" line="76"/>
         <source>Wallet is encrypted and currently locked</source>
         <translation>Бумажник зашифрован и в настоящее время заблокирован</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="77"/>
+        <location filename="../phantombridgestrings.h" line="77"/>
         <source>Not staking because wallet is locked</source>
         <translation>Не ставить, потому что кошелек заперт.</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="78"/>
-        <source>0 active connection(s) to Alias network</source>
-        <translation>0 активное подключение(я) к сети Alias</translation>
+        <location filename="../phantombridgestrings.h" line="78"/>
+        <source>0 active connection(s) to Phantom network</source>
+        <translation>0 активное подключение(я) к сети Phantom</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="79"/>
+        <location filename="../phantombridgestrings.h" line="79"/>
         <source>Enter a label for this address to add it to your address book</source>
         <translation>Введите ярлык для этого адреса, чтобы добавить его в адресную книгу.</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="80"/>
+        <location filename="../phantombridgestrings.h" line="80"/>
         <source>Enter a address to add it to your address book</source>
         <translation>Введите адрес, чтобы добавить его в адресную книгу.</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="81"/>
+        <location filename="../phantombridgestrings.h" line="81"/>
         <source>Inputs</source>
         <translation>Входы</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="82"/>
+        <location filename="../phantombridgestrings.h" line="82"/>
         <source>Values</source>
         <translation>Значения</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="83"/>
+        <location filename="../phantombridgestrings.h" line="83"/>
         <source>Outputs</source>
         <translation>Выходы</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="84"/>
-        <source>Enter a Alias address to sign the message with (e.g. SaKYqfD8J3vw4RTnqtgk2K9B67CBaL3mhV)</source>
-        <translation>Введите адрес Alias для подписи сообщения (например, SaKYqfD8J3vw4RTnqtgk2K9B67CBaL3mhV).</translation>
+        <location filename="../phantombridgestrings.h" line="84"/>
+        <source>Enter a Phantom address to sign the message with (e.g. SaKYqfD8J3vw4RTnqtgk2K9B67CBaL3mhV)</source>
+        <translation>Введите адрес Phantom для подписи сообщения (например, SaKYqfD8J3vw4RTnqtgk2K9B67CBaL3mhV).</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="85"/>
+        <location filename="../phantombridgestrings.h" line="85"/>
         <source>Enter the message you want to sign</source>
         <translation>Введите сообщение, которое вы хотите подписать</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="86"/>
+        <location filename="../phantombridgestrings.h" line="86"/>
         <source>Click sign message to generate signature</source>
         <translation>Нажмите на сообщение с подписью, чтобы сгенерировать подпись</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="87"/>
+        <location filename="../phantombridgestrings.h" line="87"/>
         <source>Copy the signed message signature</source>
         <translation>Скопируйте подпись подписанного сообщения</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="88"/>
-        <source>Enter a Alias address to verify the message with (e.g. SaKYqfD8J3vw4RTnqtgk2K9B67CBaL3mhV)</source>
-        <translation>Введите адрес Alias для проверки сообщения с помощью (например, SaKYqfD8J3vw4RTnqtgk2K9B67CBaL3mhV).</translation>
+        <location filename="../phantombridgestrings.h" line="88"/>
+        <source>Enter a Phantom address to verify the message with (e.g. SaKYqfD8J3vw4RTnqtgk2K9B67CBaL3mhV)</source>
+        <translation>Введите адрес Phantom для проверки сообщения с помощью (например, SaKYqfD8J3vw4RTnqtgk2K9B67CBaL3mhV).</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="89"/>
+        <location filename="../phantombridgestrings.h" line="89"/>
         <source>Enter the message you want to verify</source>
         <translation>Введите сообщение, которое вы хотите проверить.</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="90"/>
-        <source>Enter a Alias signature</source>
+        <location filename="../phantombridgestrings.h" line="90"/>
+        <source>Enter a Phantom signature</source>
         <translation>Введите подпись псевдонима</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="91"/>
+        <location filename="../phantombridgestrings.h" line="91"/>
         <source>Paste signature from clipboard</source>
         <translation>Вставить подпись из буфера обмена</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="92"/>
+        <location filename="../phantombridgestrings.h" line="92"/>
         <source>Your total balance</source>
         <translation>Ваш общий баланс</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="94"/>
+        <location filename="../phantombridgestrings.h" line="94"/>
         <source>Recent in/out transactions or stakes</source>
         <translation>Недавние входящие/исходящие сделки или ставки</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="95"/>
+        <location filename="../phantombridgestrings.h" line="95"/>
         <source>Select inputs to spend</source>
         <translation>Выберите входы, которые нужно потратить</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="96"/>
+        <location filename="../phantombridgestrings.h" line="96"/>
         <source>Optional address to receive transaction change</source>
         <translation>Необязательный адрес для получения изменения транзакции</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="97"/>
+        <location filename="../phantombridgestrings.h" line="97"/>
         <source>Choose from address book</source>
         <translation>Выберите из адресной книги</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="98"/>
+        <location filename="../phantombridgestrings.h" line="98"/>
         <source>Paste address from clipboard</source>
         <translation>Вставить адрес из буфера обмена</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="99"/>
+        <location filename="../phantombridgestrings.h" line="99"/>
         <source>Remove this recipient</source>
         <translation>Удалить этого получателя</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="100"/>
+        <location filename="../phantombridgestrings.h" line="100"/>
         <source>Send from public or private</source>
         <translation>Отправить из государственных или частных</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="101"/>
+        <location filename="../phantombridgestrings.h" line="101"/>
         <source>Current spendable send payment balance</source>
         <translation>Текущие расходы отправить платежный баланс</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="102"/>
+        <location filename="../phantombridgestrings.h" line="102"/>
         <source>Send to public or private</source>
         <translation>Отправить в общественный или частный</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="103"/>
+        <location filename="../phantombridgestrings.h" line="103"/>
         <source>Current spendable balance to account</source>
         <translation>Текущий расходный остаток на счету</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="104"/>
+        <location filename="../phantombridgestrings.h" line="104"/>
         <source>The label for this address</source>
         <translation>Ярлык для этого адреса</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="105"/>
+        <location filename="../phantombridgestrings.h" line="105"/>
         <source>Amount to transfer</source>
         <translation>Сумма, подлежащая перечислению</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="106"/>
+        <location filename="../phantombridgestrings.h" line="106"/>
         <source>Send to multiple recipients at once</source>
         <translation>Отправить нескольким получателям одновременно</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="107"/>
+        <location filename="../phantombridgestrings.h" line="107"/>
         <source>Date and time that the transaction was received.</source>
         <translation>Дата и время получения транзакции.</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="108"/>
+        <location filename="../phantombridgestrings.h" line="108"/>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
         <translation>Статус операции. Наведите курсор на это поле, чтобы показать количество подтверждений.</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="109"/>
+        <location filename="../phantombridgestrings.h" line="109"/>
         <source>Type of transaction.</source>
         <translation>Тип сделки.</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="110"/>
+        <location filename="../phantombridgestrings.h" line="110"/>
         <source>Destination address of transaction.</source>
         <translation>Адрес назначения сделки.</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="111"/>
+        <location filename="../phantombridgestrings.h" line="111"/>
         <source>Short payment note.</source>
         <translation>Краткое платежное извещение.</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="112"/>
+        <location filename="../phantombridgestrings.h" line="112"/>
         <source>Amount removed from or added to balance.</source>
         <translation>Сумма, снятая с баланса или добавленная к нему.</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="113"/>
+        <location filename="../phantombridgestrings.h" line="113"/>
         <source>Name for this Wallet</source>
         <translation>Имя для этого кошелька</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="114"/>
+        <location filename="../phantombridgestrings.h" line="114"/>
         <source>Enter a password</source>
         <translation>Введите пароль</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="115"/>
+        <location filename="../phantombridgestrings.h" line="115"/>
         <source>Would you like to create a bip44 path?</source>
         <translation>Хотите создать путь bip44?</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="116"/>
+        <location filename="../phantombridgestrings.h" line="116"/>
         <source>Your recovery phrase (Keep this safe!)</source>
         <translation>Ваша восстановительная фраза (Храните это в безопасности!)</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="117"/>
+        <location filename="../phantombridgestrings.h" line="117"/>
         <source>Recovery Phrase</source>
         <translation>Восстановительная фраза</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="118"/>
+        <location filename="../phantombridgestrings.h" line="118"/>
         <source>Wallet Name for recovered account</source>
         <translation>Имя кошелька для восстановленного счета</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="119"/>
+        <location filename="../phantombridgestrings.h" line="119"/>
         <source>Enter the password for the wallet you are trying to recover</source>
         <translation>Введите пароль для кошелька, который вы пытаетесь восстановить.</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="120"/>
+        <location filename="../phantombridgestrings.h" line="120"/>
         <source>Is this a bip44 path?</source>
         <translation>Это путь биф44?</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="121"/>
+        <location filename="../phantombridgestrings.h" line="121"/>
         <source>ID</source>
         <translation>ID</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="122"/>
+        <location filename="../phantombridgestrings.h" line="122"/>
         <source>Created</source>
         <translation>Создан</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="123"/>
+        <location filename="../phantombridgestrings.h" line="123"/>
         <source>Active Account</source>
         <translation>Активная учетная запись</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="124"/>
+        <location filename="../phantombridgestrings.h" line="124"/>
         <source>Default</source>
         <translation>По умолчанию</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="125"/>
+        <location filename="../phantombridgestrings.h" line="125"/>
         <source>Path</source>
         <translation>Путь</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="126"/>
+        <location filename="../phantombridgestrings.h" line="126"/>
         <source>Active</source>
         <translation>Активный сайт</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="127"/>
+        <location filename="../phantombridgestrings.h" line="127"/>
         <source>Amount</source>
         <translation>Сумма</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="128"/>
+        <location filename="../phantombridgestrings.h" line="128"/>
         <source>Note</source>
         <translation>Примечание</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="129"/>
+        <location filename="../phantombridgestrings.h" line="129"/>
         <source>Public coins, visible on blockchain</source>
         <translation>Государственные монеты, видимые на блок-папке</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="130"/>
+        <location filename="../phantombridgestrings.h" line="130"/>
         <source>Private coins, untraceable and unlinkable on blockchain</source>
         <translation>Частные монеты, неотслеживаемые и несвязанные на блок-постели.</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="131"/>
+        <location filename="../phantombridgestrings.h" line="131"/>
         <source>Available coins for spending</source>
         <translation>Доступные для расходования монеты</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="132"/>
+        <location filename="../phantombridgestrings.h" line="132"/>
         <source>Reserved coins are not used for staking</source>
         <translation>Зарезервированные монеты не используются для ставок</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="133"/>
+        <location filename="../phantombridgestrings.h" line="133"/>
         <source>Staked coins must mature before they can be accessed</source>
         <translation>Штампованные монеты должны созреть до того, как они будут доступны.</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="180"/>
+        <location filename="../phantombridgestrings.h" line="180"/>
         <source>Stake</source>
         <translation>Кол</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="181"/>
+        <location filename="../phantombridgestrings.h" line="181"/>
         <source>Sub-Wallets</source>
         <translation>Субкошельки</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="182"/>
-        <source>Start Alias on system login</source>
+        <location filename="../phantombridgestrings.h" line="182"/>
+        <source>Start Phantom on system login</source>
         <translation>Запустите псевдоним на системном логине</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="183"/>
+        <location filename="../phantombridgestrings.h" line="183"/>
         <source>Detach databases at shutdown</source>
         <translation>Отсоединить базы данных при выключении</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="184"/>
+        <location filename="../phantombridgestrings.h" line="184"/>
         <source>Pay transaction fee</source>
         <translation>оплатить транзакционный взнос</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="185"/>
+        <location filename="../phantombridgestrings.h" line="185"/>
         <source>Transaction fee per kB. A higher fee makes sure your transactions are processed quickly in times of high transaction volume.</source>
         <translation>Сбор за транзакцию за кБ. Более высокая комиссия обеспечивает быструю обработку Ваших транзакций в периоды большого объема транзакций.</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="186"/>
+        <location filename="../phantombridgestrings.h" line="186"/>
         <source>Most transactions are 1kB. The minimal fee is 0.0001</source>
         <translation>Большинство сделок составляет 1 кБ. Минимальная комиссия составляет 0.0001</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="187"/>
+        <location filename="../phantombridgestrings.h" line="187"/>
         <source>Enable Staking</source>
         <translation>Включить ставку</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="188"/>
+        <location filename="../phantombridgestrings.h" line="188"/>
         <source>Enables or disables the staking process. If your wallet is encrypted, you will need to unlock it for staking.</source>
         <translation>Включает или выключает процесс стадирования. Если ваш кошелек зашифрован, вам нужно будет разблокировать его для размещения ставки.</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="189"/>
+        <location filename="../phantombridgestrings.h" line="189"/>
         <source>Staking Donation</source>
         <translation>Ставка Пожертвование</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="190"/>
+        <location filename="../phantombridgestrings.h" line="190"/>
         <source>Every sixth block on the blockchain is a development contribution block (DCB). Staking rewards of DCBs are contributed to the development fund no matter the donation percentage setting. Please feel free to additionally donate from your remaining stake rewards by defining a donation chance. Thank you.</source>
         <translation>Каждый шестой блок на цепочке является блоком вклада в развитие (БВР). Взносы DCB вносятся в фонд развития независимо от того, какой процент пожертвований установлен. Пожалуйста, не стесняйтесь делать дополнительные пожертвования из оставшихся бонусов долевого участия, определив шанс пожертвования. Спасибо.</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="191"/>
+        <location filename="../phantombridgestrings.h" line="191"/>
         <source>Reserve</source>
         <translation>Резерв</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="192"/>
+        <location filename="../phantombridgestrings.h" line="192"/>
         <source>Reserved amount does not participate in staking and is therefore spendable at any time.</source>
         <translation>Зарезервированная сумма не участвует в ставках и поэтому может быть потрачена в любое время.</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="193"/>
+        <location filename="../phantombridgestrings.h" line="193"/>
         <source>Minimum Stake Interval</source>
         <translation>Минимальный интервал ставок</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="194"/>
+        <location filename="../phantombridgestrings.h" line="194"/>
         <source>Main</source>
         <translation>Главный</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="195"/>
+        <location filename="../phantombridgestrings.h" line="195"/>
         <source>Window</source>
         <translation>Окно</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="196"/>
+        <location filename="../phantombridgestrings.h" line="196"/>
         <source>Display</source>
         <translation>Показать</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="197"/>
+        <location filename="../phantombridgestrings.h" line="197"/>
         <source>Minimize to the tray instead of the taskbar</source>
         <translation>Минимизируйте до лотка, а не до панели задач.</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="198"/>
+        <location filename="../phantombridgestrings.h" line="198"/>
         <source>Minimize on close</source>
         <translation>Минимум на близком расстоянии</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="199"/>
+        <location filename="../phantombridgestrings.h" line="199"/>
         <source>User Interface language</source>
         <translation>Язык пользовательского интерфейса</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="200"/>
+        <location filename="../phantombridgestrings.h" line="200"/>
         <source>Unit to show amounts in</source>
         <translation>Единица измерения для показа сумм в</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="201"/>
+        <location filename="../phantombridgestrings.h" line="201"/>
         <source>Rows per page</source>
         <translation>Ряды на страницу</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="202"/>
+        <location filename="../phantombridgestrings.h" line="202"/>
         <source>Display addresses in transaction list</source>
         <translation>Отображение адресов в списке транзакций</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="203"/>
+        <location filename="../phantombridgestrings.h" line="203"/>
         <source>Notifications</source>
         <translation>Уведомления</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="204"/>
+        <location filename="../phantombridgestrings.h" line="204"/>
         <source>Visible Transaction Types</source>
         <translation>Видимые виды сделок</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="205"/>
+        <location filename="../phantombridgestrings.h" line="205"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="206"/>
+        <location filename="../phantombridgestrings.h" line="206"/>
         <source>Apply</source>
         <translation>Подать заявку на сайте .</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="207"/>
+        <location filename="../phantombridgestrings.h" line="207"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="208"/>
+        <location filename="../phantombridgestrings.h" line="208"/>
         <source>Reserved</source>
         <translation>Зарезервирован</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="209"/>
+        <location filename="../phantombridgestrings.h" line="209"/>
         <source>Unconfirmed</source>
         <translation>Неподтверждённый</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="210"/>
+        <location filename="../phantombridgestrings.h" line="210"/>
         <source>Immature</source>
         <translation>Незрелый</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="135"/>
+        <location filename="../phantombridgestrings.h" line="135"/>
         <source>Type</source>
         <translation>Введите .</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="136"/>
+        <location filename="../phantombridgestrings.h" line="136"/>
         <source>Date</source>
         <translation>Дата</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="137"/>
+        <location filename="../phantombridgestrings.h" line="137"/>
         <source>Send Payment</source>
         <translation>Отправить оплату</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="138"/>
+        <location filename="../phantombridgestrings.h" line="138"/>
         <source>The address to send the payment to</source>
         <translation>Адрес для отправки платежа</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="139"/>
+        <location filename="../phantombridgestrings.h" line="139"/>
         <source>Enter a label for this address</source>
         <translation>Введите ярлык для этого адреса</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="21"/>
+        <location filename="../phantombridgestrings.h" line="21"/>
         <source>Add Sub-Wallet</source>
         <translation>Добавить суб-кошелек</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="22"/>
+        <location filename="../phantombridgestrings.h" line="22"/>
         <source>Immature generated coins with Proof-of-Work</source>
         <translation>Незрелые сгенерированные монеты с доказательством подлинности.</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="53"/>
+        <location filename="../phantombridgestrings.h" line="53"/>
         <source>Blockchain Info</source>
         <translation>Информация о блокировке</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="93"/>
+        <location filename="../phantombridgestrings.h" line="93"/>
         <source>Checking wallet state with network</source>
         <translation>Проверка состояния кошелька в сети</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="134"/>
-        <source>Public ALIAS requires 1 confirmation&lt;br&gt;Private ALIAS requires 10 confirmations</source>
-        <translation>Публичный ALIAS требует 1 подтверждения &lt;br&gt;Приватный ALIAS требует 10 подтверждений</translation>
+        <location filename="../phantombridgestrings.h" line="134"/>
+        <source>Public PHM requires 1 confirmation&lt;br&gt;Private PHM requires 10 confirmations</source>
+        <translation>Публичный PHM требует 1 подтверждения &lt;br&gt;Приватный PHM требует 10 подтверждений</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="140"/>
+        <location filename="../phantombridgestrings.h" line="140"/>
         <source>Total Balance</source>
         <translation>Общий баланс</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="141"/>
+        <location filename="../phantombridgestrings.h" line="141"/>
         <source>Balance</source>
         <translation>Баланс</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="142"/>
+        <location filename="../phantombridgestrings.h" line="142"/>
         <source>Available</source>
         <translation>Имеется на вебсайте .</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="143"/>
+        <location filename="../phantombridgestrings.h" line="143"/>
         <source>Public</source>
         <translation>Общественный</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="144"/>
+        <location filename="../phantombridgestrings.h" line="144"/>
         <source>Private</source>
         <translation>Частный</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="145"/>
+        <location filename="../phantombridgestrings.h" line="145"/>
         <source>Tor+OBFS4 connection online</source>
         <translation>Подключение Tor+OBFS4 онлайн</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="146"/>
+        <location filename="../phantombridgestrings.h" line="146"/>
         <source>Wallet Encryption</source>
         <translation>Бумажник Шифрование</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="147"/>
+        <location filename="../phantombridgestrings.h" line="147"/>
         <source>A short reference for the recipient (max 24 characters)</source>
         <translation>Краткая ссылка для получателя (не более 24 символов).</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="148"/>
-        <source>ALIAS Denomination Value</source>
+        <location filename="../phantombridgestrings.h" line="148"/>
+        <source>PHM Denomination Value</source>
         <translation>Значение деноминации АЛИАС</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="149"/>
+        <location filename="../phantombridgestrings.h" line="149"/>
         <source>No. Owned (* = Immature)</source>
         <translation>Нет. Собственный (* = Незрелый)</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="150"/>
+        <location filename="../phantombridgestrings.h" line="150"/>
         <source>No. System Unspent (* = Immature)</source>
         <translation>Нет. Система не израсходована (* = незрелая).</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="151"/>
+        <location filename="../phantombridgestrings.h" line="151"/>
         <source>No. available Mixins (* = Immature)</source>
         <translation>Нет. Доступные смесители (* = незрелые)</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="152"/>
+        <location filename="../phantombridgestrings.h" line="152"/>
         <source>No. System (** = Compromised)</source>
         <translation>Нет. Система (** = Скомпрометированная)</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="153"/>
+        <location filename="../phantombridgestrings.h" line="153"/>
         <source>The last block a coin of this denomination was created</source>
         <translation>Последний блок монеты этого номинала был создан...</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="154"/>
+        <location filename="../phantombridgestrings.h" line="154"/>
         <source>Owned (*)</source>
         <translation>Собственный (*)</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="155"/>
+        <location filename="../phantombridgestrings.h" line="155"/>
         <source>Unspent (*)</source>
         <translation>Неизрасходованный (*)</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="156"/>
+        <location filename="../phantombridgestrings.h" line="156"/>
         <source>Mixins (*)</source>
         <translation>Смесители (*)</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="157"/>
+        <location filename="../phantombridgestrings.h" line="157"/>
         <source>System (**)</source>
         <translation>Система (**)</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="158"/>
+        <location filename="../phantombridgestrings.h" line="158"/>
         <source>Least Depth</source>
         <translation>Наименьшая глубина</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="159"/>
+        <location filename="../phantombridgestrings.h" line="159"/>
         <source>Value Out</source>
         <translation>Значение на выходе</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="160"/>
+        <location filename="../phantombridgestrings.h" line="160"/>
         <source>Value</source>
         <translation>Значение</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="161"/>
+        <location filename="../phantombridgestrings.h" line="161"/>
         <source>Addressbook</source>
         <translation>Адресная книга</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="162"/>
+        <location filename="../phantombridgestrings.h" line="162"/>
         <source>Refresh</source>
         <translation>Обновить</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="163"/>
+        <location filename="../phantombridgestrings.h" line="163"/>
         <source>Hash</source>
         <translation>Хаш</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="164"/>
+        <location filename="../phantombridgestrings.h" line="164"/>
         <source>Height</source>
         <translation>Высота</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="165"/>
+        <location filename="../phantombridgestrings.h" line="165"/>
         <source>Timestamp</source>
         <translation>Таймштамп</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="166"/>
-        <source>Enter a Alias address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
-        <translation>Введите адрес Alias (например, SXywGBZBowrppUwNUo1GCRDTibzJi7g2M).</translation>
+        <location filename="../phantombridgestrings.h" line="166"/>
+        <source>Enter a Phantom address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <translation>Введите адрес Phantom (например, SXywGBZBowrppUwNUo1GCRDTibzJi7g2M).</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="167"/>
+        <location filename="../phantombridgestrings.h" line="167"/>
         <source>An address label for the payment senders address book</source>
         <translation>Адресная этикетка для адресной книги отправителя платежа</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="168"/>
+        <location filename="../phantombridgestrings.h" line="168"/>
         <source>Enter a short note to send with a payment (max 24 characters)</source>
         <translation>Введите короткое сообщение для отправки с оплатой (максимум 24 символа).</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="169"/>
+        <location filename="../phantombridgestrings.h" line="169"/>
         <source>Filter by label or address...</source>
         <translation>Фильтровать по ярлыку или адресу...</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="170"/>
+        <location filename="../phantombridgestrings.h" line="170"/>
         <source>Note to send with payment (max 24 characters)</source>
         <translation>Примечание для отправки с оплатой (макс. 24 символа)</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="171"/>
+        <location filename="../phantombridgestrings.h" line="171"/>
         <source>The private address to transfer the balance to</source>
         <translation>Личный адрес для перевода остатка на</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="172"/>
+        <location filename="../phantombridgestrings.h" line="172"/>
         <source>Search by label or address</source>
         <translation>Поиск по метке или адресу</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="173"/>
+        <location filename="../phantombridgestrings.h" line="173"/>
         <source>Search</source>
         <translation>Поиск</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="176"/>
+        <location filename="../phantombridgestrings.h" line="176"/>
         <source>Family vacation funds</source>
         <translation>Фонды семейного отдыха</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="177"/>
+        <location filename="../phantombridgestrings.h" line="177"/>
         <source>Grouping will consolidate transactions of chosen</source>
         <translation>Группировка будет консолидировать сделки выбранных</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="178"/>
+        <location filename="../phantombridgestrings.h" line="178"/>
         <source>Reset form</source>
         <translation>Форма сброса</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="179"/>
+        <location filename="../phantombridgestrings.h" line="179"/>
         <source>Restore Sub-Wallet</source>
         <translation>Восстановление субкошелька</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="174"/>
+        <location filename="../phantombridgestrings.h" line="174"/>
         <source>Filter outputs</source>
         <translation>Выходы фильтра</translation>
     </message>
     <message>
-        <location filename="../aliasbridgestrings.h" line="175"/>
+        <location filename="../phantombridgestrings.h" line="175"/>
         <source>Find Block by hash/height/transaction</source>
         <translation>Найти блок по хэшу/высоте/транзакции</translation>
     </message>
 </context>
 <context>
-    <name>alias-core</name>
+    <name>phantom-core</name>
     <message>
-        <location filename="../aliascorestrings.h" line="15"/>
+        <location filename="../phantomcorestrings.h" line="15"/>
         <source>To use the %s option</source>
         <translation>Использовать опцию %s</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="16"/>
+        <location filename="../phantomcorestrings.h" line="16"/>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=aliasrpc
+rpcuser=phantomrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Alias Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Phantom Alert&quot; admin@foo.com
 </source>
         <translation>%s, в конфигурационном файле необходимо задать rpcpassword:
 %s
 Рекомендуется использовать следующий случайный пароль:
-rpcuser=aliasrpc
+rpcuser=phantomrpc
 rpcpassword=%s
 (тебе не нужно запоминать этот пароль)
 Имя пользователя и пароль НЕ ДОЛЖНЫ совпадать.
 Если файл не существует, создайте его с разрешениями только для чтения владельцем.
 Рекомендуется также установить alertnotify, чтобы вы получали уведомления о проблемах;
-например: alertnotify=echo %s | mail -s &quot;Alias Alert&quot; admin@foo.com.
+например: alertnotify=echo %s | mail -s &quot;Phantom Alert&quot; admin@foo.com.
 </translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="29"/>
+        <location filename="../phantomcorestrings.h" line="29"/>
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="30"/>
+        <location filename="../phantomcorestrings.h" line="30"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv6, falling back to IPv4: %s</source>
         <translation>Произошла ошибка при настройке порта RPC %u для прослушивания на IPv6, возвращаясь к IPv4: %s.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="33"/>
+        <location filename="../phantomcorestrings.h" line="33"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
         <translation>Произошла ошибка при настройке порта RPC %u для прослушивания на IPv4: %s.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="35"/>
+        <location filename="../phantomcorestrings.h" line="35"/>
         <source>You must set rpcpassword=&lt;password&gt; in the configuration file:
 %s
 If the file does not exist, create it with owner-readable-only file permissions.</source>
@@ -3430,891 +3430,891 @@ If the file does not exist, create it with owner-readable-only file permissions.
 Если файл не существует, создайте его с разрешениями только для чтения владельцем.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="40"/>
-        <source>Alias version</source>
+        <location filename="../phantomcorestrings.h" line="40"/>
+        <source>Phantom version</source>
         <translation>псевдонимная версия</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="41"/>
+        <location filename="../phantomcorestrings.h" line="41"/>
         <source>Usage:</source>
         <translation>Использование:</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="42"/>
-        <source>Send command to -server or aliaswalletd</source>
-        <translation>Отправьте команду -server или aliaswalletd</translation>
+        <location filename="../phantomcorestrings.h" line="42"/>
+        <source>Send command to -server or phantomwalletd</source>
+        <translation>Отправьте команду -server или phantomwalletd</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="43"/>
+        <location filename="../phantomcorestrings.h" line="43"/>
         <source>List commands</source>
         <translation>Список команд</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="44"/>
+        <location filename="../phantomcorestrings.h" line="44"/>
         <source>Get help for a command</source>
         <translation>Получить помощь для команды</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="45"/>
-        <source>Alias</source>
-        <translation>Alias</translation>
+        <location filename="../phantomcorestrings.h" line="45"/>
+        <source>Phantom</source>
+        <translation>Phantom</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="46"/>
+        <location filename="../phantomcorestrings.h" line="46"/>
         <source>Options:</source>
         <translation>Варианты:</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="47"/>
+        <location filename="../phantomcorestrings.h" line="47"/>
         <source>This help message</source>
         <translation>Это справочное сообщение</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="48"/>
-        <source>Specify configuration file (default: alias.conf)</source>
-        <translation>Укажите файл конфигурации (по умолчанию: alias.conf).</translation>
+        <location filename="../phantomcorestrings.h" line="48"/>
+        <source>Specify configuration file (default: phantom.conf)</source>
+        <translation>Укажите файл конфигурации (по умолчанию: phantom.conf).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="49"/>
-        <source>Specify pid file (default: alias.pid)</source>
-        <translation>Укажите файл pid (по умолчанию: alias.pid).</translation>
+        <location filename="../phantomcorestrings.h" line="49"/>
+        <source>Specify pid file (default: phantom.pid)</source>
+        <translation>Укажите файл pid (по умолчанию: phantom.pid).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="50"/>
+        <location filename="../phantomcorestrings.h" line="50"/>
         <source>Specify data directory</source>
         <translation>Укажите каталог данных</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="51"/>
+        <location filename="../phantomcorestrings.h" line="51"/>
         <source>Specify wallet file (within data directory)</source>
         <translation>Укажите файл кошелька (в каталоге данных).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="52"/>
+        <location filename="../phantomcorestrings.h" line="52"/>
         <source>Set database cache size in megabytes (default: 25)</source>
         <translation>Установить размер кэша базы данных в мегабайтах (по умолчанию: 25)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="53"/>
+        <location filename="../phantomcorestrings.h" line="53"/>
         <source>Set database disk log size in megabytes (default: 100)</source>
         <translation>Установить размер журнала базы данных в мегабайтах (по умолчанию: 100)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="54"/>
+        <location filename="../phantomcorestrings.h" line="54"/>
         <source>Specify connection timeout in milliseconds (default: 5000)</source>
         <translation>Укажите время ожидания соединения в миллисекундах (по умолчанию: 5000).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="55"/>
+        <location filename="../phantomcorestrings.h" line="55"/>
         <source>Connect through socks proxy</source>
         <translation>Подключиться через прокси-сервер носков</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="56"/>
+        <location filename="../phantomcorestrings.h" line="56"/>
         <source>Select the version of socks proxy to use (4-5, default: 5)</source>
         <translation>Выберите версию прокси-сервера для носков (4-5, по умолчанию: 5)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="57"/>
+        <location filename="../phantomcorestrings.h" line="57"/>
         <source>Use proxy to reach tor hidden services (default: same as -proxy)</source>
         <translation>Использовать прокси для доступа к скрытым сервисам тор (по умолчанию: то же самое, что и -proxy).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="58"/>
+        <location filename="../phantomcorestrings.h" line="58"/>
         <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
         <translation>Разрешить поиск DNS для -addnode, -seednode и -connect</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="59"/>
+        <location filename="../phantomcorestrings.h" line="59"/>
         <source>Listen for connections on &lt;port&gt; (default: 37347 or testnet: 37111)</source>
         <translation>Прослушивайте соединения&lt;port&gt; (по умолчанию: 37347 или тестируемый телефон: 37111).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="60"/>
+        <location filename="../phantomcorestrings.h" line="60"/>
         <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
         <translation>Поддерживать максимум&lt;n&gt; соединений с коллегами (по умолчанию: 125)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="61"/>
+        <location filename="../phantomcorestrings.h" line="61"/>
         <source>Add a node to connect to and attempt to keep the connection open</source>
         <translation>Добавить узел для подключения и попытаться сохранить соединение открытым.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="62"/>
+        <location filename="../phantomcorestrings.h" line="62"/>
         <source>Connect only to the specified node(s)</source>
         <translation>Подключайтесь только к указанному узлу (узлам).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="63"/>
+        <location filename="../phantomcorestrings.h" line="63"/>
         <source>Connect to a node to retrieve peer addresses, and disconnect</source>
         <translation>Подключение к узлу для получения одноранговых адресов и отключение</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="64"/>
+        <location filename="../phantomcorestrings.h" line="64"/>
         <source>Specify your own public address</source>
         <translation>Укажите свой собственный публичный адрес</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="65"/>
+        <location filename="../phantomcorestrings.h" line="65"/>
         <source>Only connect to nodes in network &lt;net&gt; (IPv4, IPv6 or Tor)</source>
         <translation>Подключайтесь только к узлам в сети &lt;net&gt;(IPv4, IPv6 или Tor).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="66"/>
+        <location filename="../phantomcorestrings.h" line="66"/>
         <source>Discover own IP address (default: 1 when listening and no -externalip)</source>
         <translation>Обнаружить собственный IP-адрес (по умолчанию: 1 при прослушивании и нет -внешний).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="67"/>
+        <location filename="../phantomcorestrings.h" line="67"/>
         <source>Find peers using internet relay chat (default: 0)</source>
         <translation>Поиск коллег с помощью ретрансляционного интернет-чата (по умолчанию: 0)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="68"/>
+        <location filename="../phantomcorestrings.h" line="68"/>
         <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
         <translation>Принимать подключения извне (по умолчанию: 1, если нет -прокси или -подключить).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="69"/>
+        <location filename="../phantomcorestrings.h" line="69"/>
         <source>Bind to given address. Use [host]:port notation for IPv6</source>
         <translation>Привяжите к указанному адресу. Используйте [host]:port notation для IPv6.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="70"/>
+        <location filename="../phantomcorestrings.h" line="70"/>
         <source>Find peers using DNS lookup (default: 1)</source>
         <translation>Поиск коллег с помощью DNS поиска (по умолчанию: 1)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="71"/>
+        <location filename="../phantomcorestrings.h" line="71"/>
         <source>Stake your coins to support network and gain reward (default: 1)</source>
         <translation>Ставьте ваши монеты для поддержки сети и получения вознаграждения (по умолчанию: 1)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="72"/>
+        <location filename="../phantomcorestrings.h" line="72"/>
         <source>Sync time with other nodes. Disable if time on your system is precise e.g. syncing with NTP (default: 1)</source>
         <translation>Синхронизация времени с другими узлами. Отключите, если время в системе точное, например, синхронизация с NTP (по умолчанию: 1).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="75"/>
+        <location filename="../phantomcorestrings.h" line="75"/>
         <source>Sync checkpoints policy (default: strict)</source>
         <translation>Синхронизация политики контрольных точек (по умолчанию: строгая)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="76"/>
+        <location filename="../phantomcorestrings.h" line="76"/>
         <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
         <translation>Порог отключения для отключения недобросовестных коллег (по умолчанию: 100)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="77"/>
+        <location filename="../phantomcorestrings.h" line="77"/>
         <source>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</source>
         <translation>Количество секунд, чтобы не допустить переподключения ошибочно настроенных коллег (по умолчанию: 86400).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="80"/>
+        <location filename="../phantomcorestrings.h" line="80"/>
         <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 5000)</source>
         <translation>Максимальный буфер приема на каждое соединение, &lt;n&gt;*1000 байт (по умолчанию: 5000)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="81"/>
+        <location filename="../phantomcorestrings.h" line="81"/>
         <source>Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: 1000)</source>
         <translation>Максимальный буфер отправки на каждое соединение, &lt;n&gt;*1000 байт (по умолчанию: 1000)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="82"/>
+        <location filename="../phantomcorestrings.h" line="82"/>
         <source>Use UPnP to map the listening port (default: 1 when listening)</source>
         <translation>Используйте UPnP для отображения порта прослушивания (по умолчанию: 1 при прослушивании).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="83"/>
+        <location filename="../phantomcorestrings.h" line="83"/>
         <source>Use UPnP to map the listening port (default: 0)</source>
         <translation>Используйте UPnP для отображения порта прослушивания (по умолчанию: 0).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="84"/>
+        <location filename="../phantomcorestrings.h" line="84"/>
         <source>Detach block and address databases. Increases shutdown time (default: 0)</source>
         <translation>Отсоедините блок и адресные базы данных. Увеличивает время выключения (по умолчанию: 0).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="86"/>
+        <location filename="../phantomcorestrings.h" line="86"/>
         <source>Fee per KB to add to transactions you send</source>
         <translation>Комиссионный сбор за KB для добавления к отправленным транзакциям</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="87"/>
+        <location filename="../phantomcorestrings.h" line="87"/>
         <source>When creating transactions, ignore inputs with value less than this (default: 0.01)</source>
         <translation>При создании транзакций игнорируйте входы со значением меньше этого (по умолчанию: 0.01).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="90"/>
+        <location filename="../phantomcorestrings.h" line="90"/>
         <source>Accept command line and JSON-RPC commands</source>
         <translation>Принять команды командной строки и JSON-RPC</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="91"/>
+        <location filename="../phantomcorestrings.h" line="91"/>
         <source>Run in the background as a daemon and accept commands</source>
         <translation>Бегите в фоновом режиме как демон и принимайте команды.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="92"/>
+        <location filename="../phantomcorestrings.h" line="92"/>
         <source>Use the test network</source>
         <translation>Использовать тестовую сеть</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="93"/>
+        <location filename="../phantomcorestrings.h" line="93"/>
         <source>Output extra debugging information. Implies all other -debug* options</source>
         <translation>Выводите дополнительную отладочную информацию. Подразумевает все остальные опции -debug*.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="94"/>
+        <location filename="../phantomcorestrings.h" line="94"/>
         <source>Output extra network debugging information</source>
         <translation>Вывод дополнительной информации об отладке сети</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="95"/>
+        <location filename="../phantomcorestrings.h" line="95"/>
         <source>Prepend debug output with timestamp</source>
         <translation>Подготовка отладочного вывода с временной меткой</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="96"/>
+        <location filename="../phantomcorestrings.h" line="96"/>
         <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
         <translation>Уменьшить файл debug.log при запуске клиента (по умолчанию: 1 при отсутствии -debug)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="97"/>
+        <location filename="../phantomcorestrings.h" line="97"/>
         <source>Send trace/debug info to console instead of debug.log file</source>
         <translation>Отправка информации о трассировке/отладке в консоль вместо файла debug.log</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="98"/>
+        <location filename="../phantomcorestrings.h" line="98"/>
         <source>Send trace/debug info to debugger</source>
         <translation>Отправить информацию об отслеживании/отладке в отладчик</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="99"/>
+        <location filename="../phantomcorestrings.h" line="99"/>
         <source>Username for JSON-RPC connections</source>
         <translation>Имя пользователя для JSON-RPC соединений</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="100"/>
+        <location filename="../phantomcorestrings.h" line="100"/>
         <source>Password for JSON-RPC connections</source>
         <translation>Пароль для JSON-RPC соединений</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="101"/>
+        <location filename="../phantomcorestrings.h" line="101"/>
         <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 36657 or testnet: 36757)</source>
         <translation>Прослушайте JSON-RPC соединения&lt;port&gt; (по умолчанию: 36657 или тестируемый телефон: 36757).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="103"/>
+        <location filename="../phantomcorestrings.h" line="103"/>
         <source>Allow JSON-RPC connections from specified IP address</source>
         <translation>Разрешать JSON-RPC соединения с указанного IP-адреса</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="104"/>
+        <location filename="../phantomcorestrings.h" line="104"/>
         <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
         <translation>Отправлять команды на запущенный узел&lt;ip&gt; (по умолчанию: 127.0.0.1)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="105"/>
+        <location filename="../phantomcorestrings.h" line="105"/>
         <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
         <translation>Выполнить команду, когда меняется лучший блок (%s в команде заменяется на хэш блока)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="108"/>
+        <location filename="../phantomcorestrings.h" line="108"/>
         <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
         <translation>Выполнять команду, когда изменяется транзакция кошелька (%s в команде заменяется на TxID)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="111"/>
+        <location filename="../phantomcorestrings.h" line="111"/>
         <source>Require a confirmations for change (default: 0)</source>
         <translation>Необходимые подтверждения для изменения (по умолчанию: 0)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="112"/>
+        <location filename="../phantomcorestrings.h" line="112"/>
         <source>Enforce transaction scripts to use canonical PUSH operators (default: 1)</source>
         <translation>Внедрить скрипты транзакций для использования канонических операторов PUSH (по умолчанию: 1)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="114"/>
+        <location filename="../phantomcorestrings.h" line="114"/>
         <source>Execute command when a relevant alert is received (%s in cmd is replaced by message)</source>
         <translation>Выполнить команду при получении соответствующего предупреждения (%s в команде заменяется на сообщение).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="117"/>
+        <location filename="../phantomcorestrings.h" line="117"/>
         <source>Upgrade wallet to latest format</source>
         <translation>Обновить кошелёк до последнего формата</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="118"/>
+        <location filename="../phantomcorestrings.h" line="118"/>
         <source>Set key pool size to &lt;n&gt; (default: 100)</source>
         <translation>Установить размер общего фонда ключей в &lt;n&gt; (по умолчанию: 100)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="119"/>
+        <location filename="../phantomcorestrings.h" line="119"/>
         <source>Rescan the block chain for missing wallet transactions</source>
         <translation>Перепроверить цепь блоков на предмет отсутствующих в бумажнике транзакций</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="120"/>
+        <location filename="../phantomcorestrings.h" line="120"/>
         <source>Attempt to recover private keys from a corrupt wallet.dat</source>
         <translation>Попытка восстановить личные ключи из поврежденного кошелька.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="121"/>
+        <location filename="../phantomcorestrings.h" line="121"/>
         <source>How many blocks to check at startup (default: 2500, 0 = all)</source>
         <translation>Сколько блоков нужно проверить при запуске (по умолчанию: 2500, 0 = все).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="122"/>
+        <location filename="../phantomcorestrings.h" line="122"/>
         <source>How thorough the block verification is (0-6, default: 1)</source>
         <translation>Насколько тщательна проверка блока (0-6, по умолчанию: 1).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="123"/>
+        <location filename="../phantomcorestrings.h" line="123"/>
         <source>Imports blocks from external blk000?.dat file</source>
         <translation>Импортирует блоки из внешнего файла blk000?.dat.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="124"/>
+        <location filename="../phantomcorestrings.h" line="124"/>
         <source>Block creation options:</source>
         <translation>Параметры создания блоков:</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="125"/>
+        <location filename="../phantomcorestrings.h" line="125"/>
         <source>Set minimum block size in bytes (default: 0)</source>
         <translation>Установить минимальный размер блока в байтах (по умолчанию: 0).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="126"/>
+        <location filename="../phantomcorestrings.h" line="126"/>
         <source>Set maximum block size in bytes (default: 250000)</source>
         <translation>Установить максимальный размер блока в байтах (по умолчанию: 250000).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="127"/>
+        <location filename="../phantomcorestrings.h" line="127"/>
         <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</source>
         <translation>Установить максимальный размер высокоприоритетных/низкопороговых транзакций в байтах (по умолчанию: 27000).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="130"/>
+        <location filename="../phantomcorestrings.h" line="130"/>
         <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
         <translation>SSL-опции: (инструкции по настройке SSL см. в Вики-библиотеке Bitcoin).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="131"/>
+        <location filename="../phantomcorestrings.h" line="131"/>
         <source>Use OpenSSL (https) for JSON-RPC connections</source>
         <translation>Используйте OpenSSL (https) для соединений JSON-RPC.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="132"/>
+        <location filename="../phantomcorestrings.h" line="132"/>
         <source>Server certificate file (default: server.cert)</source>
         <translation>Файл серверного сертификата (по умолчанию: server.cert)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="133"/>
+        <location filename="../phantomcorestrings.h" line="133"/>
         <source>Server private key (default: server.pem)</source>
         <translation>Скрытый ключ сервера (по умолчанию: server.pem)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="134"/>
+        <location filename="../phantomcorestrings.h" line="134"/>
         <source>Acceptable ciphers (default: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</source>
         <translation>Допустимые шифры (по умолчанию: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="137"/>
+        <location filename="../phantomcorestrings.h" line="137"/>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
         <translation>Неверное количество в параметре -paytxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="138"/>
+        <location filename="../phantomcorestrings.h" line="138"/>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
         <translation>Внимание: -paytxfee установлен очень высоко! Это плата за транзакцию, которую вы заплатите, если отправите транзакцию.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="141"/>
+        <location filename="../phantomcorestrings.h" line="141"/>
         <source>Invalid amount for -mininput=&lt;amount&gt;: &apos;%s&apos;</source>
         <translation>Недействительная сумма для -mininput=&lt;amount&gt;: &apos;%s&apos;.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="142"/>
+        <location filename="../phantomcorestrings.h" line="142"/>
         <source>Wallet %s resides outside data directory %s.</source>
         <translation>Бумажник %s находится вне каталога данных %s.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="143"/>
-        <location filename="../aliascorestrings.h" line="221"/>
-        <source>Cannot obtain a lock on data directory %s.  Alias is probably already running.</source>
+        <location filename="../phantomcorestrings.h" line="143"/>
+        <location filename="../phantomcorestrings.h" line="221"/>
+        <source>Cannot obtain a lock on data directory %s.  Phantom is probably already running.</source>
         <translation>Не могу получить блокировку каталога данных %s. Вероятно, псевдоним уже запущен.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="146"/>
+        <location filename="../phantomcorestrings.h" line="146"/>
         <source>Verifying database integrity...</source>
         <translation>Проверка целостности базы данных...</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="147"/>
+        <location filename="../phantomcorestrings.h" line="147"/>
         <source>Error initializing database environment %s! To recover, BACKUP THAT DIRECTORY, then remove everything from it except for wallet.dat.</source>
         <translation>Ошибка инициализации среды БД %s! Чтобы восстановить, ОБНАРУЖИВАЙТЕ ЭТУ ДИРЕКТОРИЮ, затем удалите из нее все, кроме wallet.dat.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="150"/>
+        <location filename="../phantomcorestrings.h" line="150"/>
         <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
         <translation>Внимание: кошелек.dat поврежден, данные сохранены! Оригинальный кошелек.dat сохранен как кошелек.{timestamp}.bak in %s; если ваш баланс или транзакции некорректны, вы должны восстановить из резервной копии.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="154"/>
+        <location filename="../phantomcorestrings.h" line="154"/>
         <source>wallet.dat corrupt, salvage failed</source>
         <translation>wallet.dat поврежден, восстановление не удалось</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="155"/>
+        <location filename="../phantomcorestrings.h" line="155"/>
         <source>Unknown -socks proxy version requested: %i</source>
         <translation>Запрошена неизвестная -socks прокси версия: %i</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="156"/>
+        <location filename="../phantomcorestrings.h" line="156"/>
         <source>Unknown network specified in -onlynet: &apos;%s&apos;</source>
         <translation>Неизвестная сеть, указанная в -onlynet: &apos;%s&apos;.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="157"/>
+        <location filename="../phantomcorestrings.h" line="157"/>
         <source>Invalid -proxy address: &apos;%s&apos;</source>
         <translation>Неверный адрес -proxy: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="158"/>
+        <location filename="../phantomcorestrings.h" line="158"/>
         <source>Invalid -tor address: &apos;%s&apos;</source>
         <translation>Неверный адрес -tor: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="159"/>
+        <location filename="../phantomcorestrings.h" line="159"/>
         <source>Cannot resolve -bind address: &apos;%s&apos;</source>
         <translation>Невозможно решить -привязать адрес: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="160"/>
+        <location filename="../phantomcorestrings.h" line="160"/>
         <source>Failed to listen on any port.</source>
         <translation>Не удалось прослушать ни один порт.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="161"/>
+        <location filename="../phantomcorestrings.h" line="161"/>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>Не слушал ни один порт. Используйте -listen=0, если хотите.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="162"/>
+        <location filename="../phantomcorestrings.h" line="162"/>
         <source>Cannot resolve -externalip address: &apos;%s&apos;</source>
         <translation>Не удаётся разрешить -externalip address: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="163"/>
+        <location filename="../phantomcorestrings.h" line="163"/>
         <source>Invalid amount for -reservebalance=&lt;amount&gt;</source>
         <translation>Неверное количество в параметре -reservebalance=&lt;amount&gt;</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="164"/>
+        <location filename="../phantomcorestrings.h" line="164"/>
         <source>Unable to sign checkpoint, wrong checkpointkey?
 </source>
         <translation>Невозможно подписать контрольно-пропускной пункт, неправильный контрольно-пропускной пункт?
 </translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="165"/>
+        <location filename="../phantomcorestrings.h" line="165"/>
         <source>Loading block index...</source>
         <translation>Загрузка индекса блоков...</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="166"/>
+        <location filename="../phantomcorestrings.h" line="166"/>
         <source>Error loading blk0001.dat</source>
         <translation>Ошибка загрузки blk0001.dat</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="167"/>
+        <location filename="../phantomcorestrings.h" line="167"/>
         <source>Loading wallet...</source>
         <translation>Загрузка кошелька...</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="168"/>
+        <location filename="../phantomcorestrings.h" line="168"/>
         <source>Error loading wallet.dat: Wallet corrupted</source>
         <translation>Ошибка при загрузке кошелька: Бумажник испорчен</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="169"/>
-        <location filename="../aliascorestrings.h" line="227"/>
+        <location filename="../phantomcorestrings.h" line="169"/>
+        <location filename="../phantomcorestrings.h" line="227"/>
         <source>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
         <translation>Внимание: ошибка чтения кошелька.dat! Все ключи читаются правильно, но данные транзакции или записи в адресной книге могут отсутствовать или быть неправильными.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="172"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Alias</source>
+        <location filename="../phantomcorestrings.h" line="172"/>
+        <source>Error loading wallet.dat: Wallet requires newer version of Phantom</source>
         <translation>Ошибка при загрузке кошелька: Бумажник требует более новую версию псевдонима</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="173"/>
-        <source>Wallet needed to be rewritten: restart Alias to complete</source>
+        <location filename="../phantomcorestrings.h" line="173"/>
+        <source>Wallet needed to be rewritten: restart Phantom to complete</source>
         <translation>Бумажник необходимо переписать: перезапустить псевдоним для завершения</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="174"/>
+        <location filename="../phantomcorestrings.h" line="174"/>
         <source>Error loading wallet.dat</source>
         <translation>Ошибка при загрузке wallet.dat</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="175"/>
+        <location filename="../phantomcorestrings.h" line="175"/>
         <source>Cannot downgrade wallet</source>
         <translation>Невозможно понизить класс кошелька</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="176"/>
+        <location filename="../phantomcorestrings.h" line="176"/>
         <source>Cannot initialize keypool</source>
         <translation>Не могу инициализировать клавиатурный пул</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="177"/>
+        <location filename="../phantomcorestrings.h" line="177"/>
         <source>Cannot write default address</source>
         <translation>Не удаётся записать адрес по умолчанию</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="178"/>
+        <location filename="../phantomcorestrings.h" line="178"/>
         <source>Rescanning...</source>
         <translation>Повторное сканирование...</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="179"/>
+        <location filename="../phantomcorestrings.h" line="179"/>
         <source>Importing blockchain data file.</source>
         <translation>Импортируется файл цепи блоков.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="180"/>
+        <location filename="../phantomcorestrings.h" line="180"/>
         <source>Importing bootstrap blockchain data file.</source>
         <translation>Импортируется bootstrap-файл цепи блоков.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="181"/>
+        <location filename="../phantomcorestrings.h" line="181"/>
         <source>Loading addresses...</source>
         <translation>Загрузка адресов...</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="182"/>
+        <location filename="../phantomcorestrings.h" line="182"/>
         <source>Error: could not start node</source>
         <translation>Ошибка: не удалось запустить узел</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="183"/>
+        <location filename="../phantomcorestrings.h" line="183"/>
         <source>Done loading</source>
         <translation>Загрузка завершена</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="184"/>
-        <source>Unable to bind to %s on this computer. Alias is probably already running.</source>
+        <location filename="../phantomcorestrings.h" line="184"/>
+        <source>Unable to bind to %s on this computer. Phantom is probably already running.</source>
         <translation>Невозможно привязать к %s на этом компьютере. Псевдоним, вероятно, уже работает.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="186"/>
+        <location filename="../phantomcorestrings.h" line="186"/>
         <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
         <translation>Невозможно связать с %s на этом компьютере (связать возвращаемую ошибку %d, %s)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="187"/>
+        <location filename="../phantomcorestrings.h" line="187"/>
         <source>Error: Wallet locked, unable to create transaction  </source>
         <translation>Ошибка: Бумажник заблокирован, не может создать транзакцию </translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="188"/>
+        <location filename="../phantomcorestrings.h" line="188"/>
         <source>Error: Wallet unlocked for staking only, unable to create transaction.</source>
         <translation>Ошибка: Бумажник разблокирован только для ставки, не может создать сделку.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="189"/>
+        <location filename="../phantomcorestrings.h" line="189"/>
         <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds  </source>
         <translation>Ошибка: Данная транзакция требует плату за транзакцию в размере не менее %s из-за ее объема, сложности или использования недавно полученных средств. </translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="192"/>
+        <location filename="../phantomcorestrings.h" line="192"/>
         <source>Error: Transaction creation failed  </source>
         <translation>Ошибка: Создание транзакции не удалось  </translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="193"/>
+        <location filename="../phantomcorestrings.h" line="193"/>
         <source>Sending...</source>
         <translation>Отправка....</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="194"/>
+        <location filename="../phantomcorestrings.h" line="194"/>
         <source>Error: The transaction was rejected.  This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
         <translation>Ошибка: Сделка была отклонена. Это может произойти, если некоторые монеты в вашем кошельке уже были потрачены, например, если вы использовали копию wallet.dat и монеты были потрачены в копии, но не помечены как потраченные здесь.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="198"/>
+        <location filename="../phantomcorestrings.h" line="198"/>
         <source>Invalid amount</source>
         <translation>Неверное количество</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="199"/>
+        <location filename="../phantomcorestrings.h" line="199"/>
         <source>Insufficient funds</source>
         <translation>Недостаточно монет</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="200"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Alias will not work properly.</source>
+        <location filename="../phantomcorestrings.h" line="200"/>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Phantom will not work properly.</source>
         <translation>Внимание: Пожалуйста, проверьте правильность даты и времени на вашем компьютере! Если ваши часы неправильные, псевдоним будет работать неправильно.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="203"/>
+        <location filename="../phantomcorestrings.h" line="203"/>
         <source>Warning: This version is obsolete, upgrade required!</source>
         <translation>Внимание: данная версия устарела, необходимо обновление!</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="204"/>
+        <location filename="../phantomcorestrings.h" line="204"/>
         <source>WARNING: syncronized checkpoint violation detected, but skipped!</source>
         <translation>ВНИМАНИЕ: синхронизация контрольной точки нарушено, но пропущено!</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="205"/>
+        <location filename="../phantomcorestrings.h" line="205"/>
         <source>Warning: Disk space is low!</source>
         <translation>Внимание: мало места на диске!</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="206"/>
+        <location filename="../phantomcorestrings.h" line="206"/>
         <source>WARNING: Invalid checkpoint found! Displayed transactions may not be correct! You may need to upgrade, or notify developers.</source>
         <translation>ВНИМАНИЕ: Недействительный контрольно-пропускной пункт найден! Отображаемые транзакции могут быть некорректными! Может потребоваться обновление или уведомление разработчиков.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="209"/>
+        <location filename="../phantomcorestrings.h" line="209"/>
         <source>Read ATXOs... (%d)</source>
         <translation>Читайте ATXO... (%d)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="210"/>
+        <location filename="../phantomcorestrings.h" line="210"/>
         <source>Read spent ATXOs... (%d)</source>
         <translation>Читать потраченные ATXO... (%d)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="211"/>
+        <location filename="../phantomcorestrings.h" line="211"/>
         <source>Note must be 24 characters or less.</source>
         <translation>Запись должна состоять из 24 символов или меньше.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="212"/>
+        <location filename="../phantomcorestrings.h" line="212"/>
         <source>Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
         <translation>Ошибка: Сделка была отклонена. Это может произойти, если некоторые монеты в вашем кошельке уже были потрачены, например, если вы использовали копию wallet.dat и монеты были потрачены в копии, но не помечены как потраченные здесь.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="215"/>
+        <location filename="../phantomcorestrings.h" line="215"/>
         <source>Error: Unsupported argument -socks found. Setting SOCKS version isn&apos;t possible anymore, only SOCKS5 proxies are supported.</source>
         <translation>Ошибка: Найдены неподдерживаемые аргументы - носки. Установка версии SOCKS больше не возможна, поддерживаются только SOCKS5 прокси.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="216"/>
-        <source>Initialization sanity check failed. Alias is shutting down.</source>
-        <translation>Ошибка проверки работоспособности. Alias завершает работу.</translation>
+        <location filename="../phantomcorestrings.h" line="216"/>
+        <source>Initialization sanity check failed. Phantom is shutting down.</source>
+        <translation>Ошибка проверки работоспособности. Phantom завершает работу.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="217"/>
+        <location filename="../phantomcorestrings.h" line="217"/>
         <source>Loading block index... (%d)</source>
         <translation>Загружается индекс блока... (%d)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="218"/>
+        <location filename="../phantomcorestrings.h" line="218"/>
         <source>Calculating chain trust... (%d)</source>
         <translation>Рассчёт доверительной цепи... (%d)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="219"/>
+        <location filename="../phantomcorestrings.h" line="219"/>
         <source>Validating last %d block...</source>
         <translation>Проверка последнего %d блока...</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="220"/>
+        <location filename="../phantomcorestrings.h" line="220"/>
         <source>-bip44key is not allowed if wallet.dat already exists</source>
         <translation>-bip44key не допускается, если файл wallet.dat уже существует</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="222"/>
+        <location filename="../phantomcorestrings.h" line="222"/>
         <source>Cannot resolve binding address: &apos;%s&apos;</source>
         <translation>Не удаётся разрешить привязку адреса: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="223"/>
+        <location filename="../phantomcorestrings.h" line="223"/>
         <source>Error: could not start tor node</source>
         <translation>Ошибка: не удалось запустить узел tor</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="224"/>
+        <location filename="../phantomcorestrings.h" line="224"/>
         <source>Timed out waiting for onion hostname.</source>
         <translation>Истекло время ожидания для onion хоста.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="225"/>
+        <location filename="../phantomcorestrings.h" line="225"/>
         <source>Error loading blk0001.dat: Invalid chain detected, please resync or use bootstrap files.</source>
         <translation>Ошибка загрузки blk0001.dat: обнаружена неверная цепочка блоков, пожалуйста выполните повторную синхронизацию или используйте файл начальной загрузки (bootstrap).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="226"/>
+        <location filename="../phantomcorestrings.h" line="226"/>
         <source>Loading wallet items... (%d)</source>
         <translation>Загрузка элементов кошелька... (%d)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="229"/>
+        <location filename="../phantomcorestrings.h" line="229"/>
         <source>Reindexing from blk000?.dat files.</source>
         <translation>Повторная индексация блока из blk000?.dat файлов.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="230"/>
+        <location filename="../phantomcorestrings.h" line="230"/>
         <source>Reindexing block... (%d)</source>
         <translation>Повторная индексация блока... (%d)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="231"/>
+        <location filename="../phantomcorestrings.h" line="231"/>
         <source>Core started!</source>
         <translation>Ядро запущено!</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="232"/>
+        <location filename="../phantomcorestrings.h" line="232"/>
         <source>Use tor hidden services version 2 instead of version 3</source>
         <translation>Использовать скрытые службы TOR версии 2 вместо версии 3</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="233"/>
+        <location filename="../phantomcorestrings.h" line="233"/>
         <source>Find peers using .onion seeds (default: 1 unless -connect)</source>
         <translation>Найти узлы с использованием .onion семян(по умолчанию: 1, если не используется -connect)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="234"/>
+        <location filename="../phantomcorestrings.h" line="234"/>
         <source>Minimum time in seconds between successful stakes (default: 30)</source>
         <translation>Минимальное время в секундах, между добытыми блоками (по умолчанию: 30)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="235"/>
+        <location filename="../phantomcorestrings.h" line="235"/>
         <source>Percentage of staking rewards to donate to the developers (between 0 and 100 inclusive, default 5)</source>
         <translation>Процент от вознаграждения за добычу блоков, который будет пожертвован разработчикам (между 0 и 100 включительно, по умолчанию 5)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="236"/>
+        <location filename="../phantomcorestrings.h" line="236"/>
         <source>Milliseconds between stake attempts. Lowering this param will not result in more stakes. (default: 500)</source>
         <translation>Милисекунды между попытками стейкинга.  Уменьшение параметра не приведёт к увеличению вознаграждений. (по умолчанию: 500)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="237"/>
+        <location filename="../phantomcorestrings.h" line="237"/>
         <source>Number of seconds to keep soft banned peers from reconnecting (default: 3600)</source>
         <translation>Количество секунд для повторного подключения одноранговых узлов (по умолчанию: 3600)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="238"/>
+        <location filename="../phantomcorestrings.h" line="238"/>
         <source>Simple command line interface - if not run as daemon</source>
         <translation>Внешний вид простой командной строки - если не запущен как демон</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="239"/>
+        <location filename="../phantomcorestrings.h" line="239"/>
         <source>Output extra blockchain debugging information</source>
         <translation>Вывести дополнительную информацию для отладки о цепочке блоков</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="240"/>
+        <location filename="../phantomcorestrings.h" line="240"/>
         <source>Output extra Proof of Stake debugging information</source>
         <translation>Вывести дополнительную информацию о Доказательстве Доли(PoS) для отладки</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="241"/>
+        <location filename="../phantomcorestrings.h" line="241"/>
         <source>Send trace/debug info to debug.log file</source>
         <translation>Отправить информацию отслеживания/отладки в debug.log файл</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="242"/>
+        <location filename="../phantomcorestrings.h" line="242"/>
         <source>Wait for RPC server to start</source>
         <translation>Ожидание удалённого вызова процедур сервера, для запуска</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="243"/>
+        <location filename="../phantomcorestrings.h" line="243"/>
         <source>Keep at most &lt;n&gt; MiB of unconnectable blocks in memory (default: %u)</source>
         <translation>Хранить в памяти&lt;n&gt; максимум МиБ неприсоединяемых блоков (по умолчанию: %u)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="244"/>
+        <location filename="../phantomcorestrings.h" line="244"/>
         <source>Rebuild block chain index from current blk000?.dat files on startup</source>
         <translation>Перестроить индексацию цепочки блоков с текущего blk000?.dat файла при запуске</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="245"/>
+        <location filename="../phantomcorestrings.h" line="245"/>
         <source>Show version and exit</source>
         <translation>Показать версию и выйти</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="246"/>
+        <location filename="../phantomcorestrings.h" line="246"/>
         <source>Thin options:</source>
         <translation>Тонкая настройка:</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="247"/>
+        <location filename="../phantomcorestrings.h" line="247"/>
         <source>Operate in less secure, less resource hungry &apos;thin&apos; mode</source>
         <translation>Работать в менее безопасном, менее ресурсоёмком &quot;тонком&quot; режиме</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="248"/>
+        <location filename="../phantomcorestrings.h" line="248"/>
         <source>Keep the entire block index in memory. (default: 0)</source>
         <translation>Держать в памяти полный индекс блока. (по умолчанию:0)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="249"/>
+        <location filename="../phantomcorestrings.h" line="249"/>
         <source>When not thinfullindex, the max number of block headers to keep in memory. (default: 4096)</source>
         <translation>Когда не тонкая ссылка, максимальное количество заголовков блоков для сохранения в памяти. (по умолчанию: 4096)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="250"/>
+        <location filename="../phantomcorestrings.h" line="250"/>
         <source>Disable supporting thin nodes. (default: 0)</source>
         <translation>Отключить поддержку тонких узлов. (по умолчанию: 0)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="251"/>
+        <location filename="../phantomcorestrings.h" line="251"/>
         <source>Disable forwarding, or requesting all stealth txns. (default: 0)</source>
         <translation>Отключить пересылку, или запросить все стелс-тексты. (по умолчанию: 0)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="252"/>
+        <location filename="../phantomcorestrings.h" line="252"/>
         <source>Don&apos;t connect to more than &lt;n&gt; thin peers (default: 8)</source>
         <translation>Не подключайтесь к более чем&lt;n&gt; тонким аналогам (по умолчанию: 8).</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="253"/>
+        <location filename="../phantomcorestrings.h" line="253"/>
         <source>Acceptable ciphers (default: TLSv1.2+HIGH:TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!3DES:@STRENGTH)</source>
         <translation>Допустимые шифры (по умолчанию: TLSv1.2+HIGH:TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!3DES:@STRENGTH)</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="254"/>
+        <location filename="../phantomcorestrings.h" line="254"/>
         <source>conn</source>
         <translation>conn</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="255"/>
+        <location filename="../phantomcorestrings.h" line="255"/>
         <source>Error: Wallet locked, unable to create transaction.</source>
         <translation>Ошибка: Кошелёк заблокирован, невозможно создать перевод.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="256"/>
+        <location filename="../phantomcorestrings.h" line="256"/>
         <source>Error: Must be in full mode.</source>
         <translation>Ошибка: Нужно находиться в полноценном режиме.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="257"/>
+        <location filename="../phantomcorestrings.h" line="257"/>
         <source>Error: Block chain must be fully synced first.</source>
         <translation>Ошибка: Сначала цепочка блоков должна быть полностью согласована.</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="258"/>
-        <source>Error: Alias is not connected!</source>
-        <translation>Ошибка: Alias не установил соединение!</translation>
+        <location filename="../phantomcorestrings.h" line="258"/>
+        <source>Error: Phantom is not connected!</source>
+        <translation>Ошибка: Phantom не установил соединение!</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="259"/>
+        <location filename="../phantomcorestrings.h" line="259"/>
         <source>Update balance...</source>
         <translation>Обновить баланс...</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="260"/>
+        <location filename="../phantomcorestrings.h" line="260"/>
         <source>...Start UI...</source>
         <translation>...Запуск интерфейса...</translation>
     </message>
     <message>
-        <location filename="../aliascorestrings.h" line="261"/>
+        <location filename="../phantomcorestrings.h" line="261"/>
         <source>Shutdown...</source>
         <translation>Выключение...</translation>
     </message>
