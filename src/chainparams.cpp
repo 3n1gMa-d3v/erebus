@@ -150,15 +150,15 @@ public:
         // The message start string is designed to be unlikely to occur in normal data.
         // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
         // a large 4-byte int at any alignment.
-        pchMessageStart[0] = 0xb5;
-        pchMessageStart[1] = 0x22;
-        pchMessageStart[2] = 0x5c;
-        pchMessageStart[3] = 0xd3;
+        pchMessageStart[0] = 0xa1;
+        pchMessageStart[1] = 0x33;
+        pchMessageStart[2] = 0x1d;
+        pchMessageStart[3] = 0xa7;
 
         vAlertPubKey = ParseHex("04dba01336e48d52bc625e4144549e7483eb193d6bc28ebabe44c2ea1d118eadc49dd432f96ecec15ebe0f194f34ac2deabbf70d8f17c215421b39abd96717297d");
 
-        nDefaultPort = 37347;
-        nRPCPort = 36657;
+        nDefaultPort = 12600;
+        nRPCPort = 12601;
         nBIP44ID = 0x800000d5;
 
         //nLastPOWBlock = 2016; // Running for 1 Week after ICO
@@ -218,15 +218,15 @@ public:
         // The message start string is designed to be unlikely to occur in normal data.
         // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
         // a large 4-byte int at any alignment.
-        pchMessageStart[0] = 0xa3;
-        pchMessageStart[1] = 0x2c;
-        pchMessageStart[2] = 0x44;
-        pchMessageStart[3] = 0xb4;
+        pchMessageStart[0] = 0xb1;
+        pchMessageStart[1] = 0x3a;
+        pchMessageStart[2] = 0x25;
+        pchMessageStart[3] = 0xc1;
 
         vAlertPubKey = ParseHex("04dba01336e48d52bc625e4144549e7483eb193d6bc28ebabe44c2ea1d118eadc49dd432f96ecec15ebe0f194f34ac2deabbf70d8f17c215421b39abd96717297d");
 
-        nDefaultPort = 37111;
-        nRPCPort = 36757;
+        nDefaultPort = 12700;
+        nRPCPort = 12701;
         nBIP44ID = 0x80000001;
 
         nLastPOWBlock = 20;
@@ -281,15 +281,15 @@ public:
         strNetworkID = "regtest";
         strDataDir = "regtest";
 
-        nDefaultPort = 18444;
+        nDefaultPort = 12800;
 
         nFirstPosv2Block = -1;
         nFirstPosv3Block = -1;
 
-        pchMessageStart[0] = 0x05;
-        pchMessageStart[1] = 0xc5;
-        pchMessageStart[2] = 0x04;
-        pchMessageStart[3] = 0x3a;
+        pchMessageStart[0] = 0x2a;
+        pchMessageStart[1] = 0xd3;
+        pchMessageStart[2] = 0xb4;
+        pchMessageStart[3] = 0x3c;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 1);
         genesis.nTime = 1671851644;
         genesis.nBits  = bnProofOfWorkLimit.GetCompact();
