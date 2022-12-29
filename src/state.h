@@ -54,7 +54,7 @@ const int64_t GENESIS_BLOCK_TIME = 1671851644;
 static const int64_t COIN = 100000000;
 static const int64_t CENT = 1000000;
 
-static const int64_t COIN_YEAR_REWARD = 5 * CENT; // 5% per year
+static const int64_t COIN_YEAR_REWARD = 8 * CENT; // 5% per year
 
 static const int64_t MBLK_RECEIVE_TIMEOUT = 60; // seconds
 

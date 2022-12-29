@@ -30,7 +30,7 @@ int64_t CChainParams::GetProofOfWorkReward(int nHeight, int64_t nFees) const
         nSubsidy = (NetworkID() == CChainParams::TESTNET ? 2000000 : 20000000) * COIN;  // 20Mill Pre-mine on MainNet, 2Mill pre-mine on TestNet
 
     else if(nHeight <= nLastPOWBlock)
-        nSubsidy = 0;
+        nSubsidy = 3;
 
     if (fDebug && GetBoolArg("-printcreation"))
         LogPrintf("GetProofOfWorkReward() : create=%s nSubsidy=%d\n", FormatMoney(nSubsidy).c_str(), nSubsidy);

@@ -57,8 +57,8 @@ unsigned int nBlockMinSize;
 int64_t nMinTxFee = 10000;
 int64_t nMinRelayTxFee = nMinTxFee;
 
-int64_t nStakeReward = 2 * COIN;
-int64_t nAnonStakeReward = 3 * COIN;
+int64_t nStakeReward = 0.5 * COIN;
+int64_t nAnonStakeReward = 1 * COIN;
 
 unsigned int nStakeSplitAge = 1 * 24 * 60 * 60;
 int64_t nStakeCombineThreshold = 1000 * COIN;
